@@ -1,0 +1,146 @@
+html {
+    background-color:  #f0f0f0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding-left: 2rem;
+    width: 100%;
+    height: 4.5rem;
+    background-color:  #29bde0;
+}
+
+.carte {
+    display: inline-block;
+    margin-top: 1.25rem;
+    width: 2.5rem;
+    height: 2.25rem;
+    background: url(./images/1.png) no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding-top: 4.5rem;
+    width: 100%;
+    background-color:  #f0f0f0;
+}
+.father {
+    padding: 1.3rem 1.8rem 0;
+    width: 100%;
+    height: 100%;
+}
+
+.son {
+    display: block;
+    width: 100%;
+    height: 5.8rem;
+    text-align: center;
+    line-height: 5.8rem;
+    letter-spacing: .2rem;
+    font-size: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #9a9a9a;
+    background: url(./images/9.png) no-repeat 98% 50%;
+    background-size:  1.5rem auto;  
+    background-color: #fff;
+    border: solid .1rem #c9c9c9;
+}
+
+.son:hover {
+    text-decoration:none;
+    color:  #9a9a9a;
+}
+
+.two {
+    display: block;
+    margin-top: 1.3rem;
+    width: 100%;
+    height: 40rem;
+    text-align: center;
+    background-color: #fff;
+    border:  solid .1rem #c9c9c9;
+}
+
+.title {
+    width: 100%;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: #fbb435;
+    border-bottom: solid .2rem #fde1ae;
+}
+
+.three {
+    display: block;
+    padding: 1.5rem 2.7rem 0;
+    text-align: center;
+}
+
+.branch {
+    display: block;
+    width: 100%;
+    height: 7rem;
+    line-height: 7rem;
+    font-size: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #69d1e9;
+}
+
+.branch:hover {
+    text-decoration:none;
+    color: #fff;    
+}
+
+p {
+    margin: 1rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.right {
+    position: relative;
+    top: -20rem;
+    right: calc(-50% - 3.6rem);
+    display: inline-block;
+    width: 2rem;
+    height: 4rem;
+    background: url(./images/2.png) no-repeat;
+    background-size:  auto 100%;
+}
+
+.dot {
+    position: relative;
+    display: inline-block;
+    top: -3.7rem;
+    right: 1.1rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.dot:nth-last-of-type(4) {
+    color: #69d1e9;
+}
+
+.dot:hover {
+    text-decoration: none;
+    color: #c33;    
+}
+

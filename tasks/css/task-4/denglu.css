@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+    font-size: 625%;
+}
+body{
+    background-color: #eff0f4;
+    height: 100%;
+}
+
+.header{
+    top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    position: absolute;
+}
+
+.chunk{
+    left: 0;
+    right: 0;
+    height: .5rem;
+    background-color: #5fc0cd;
+    position: relative;
+}
+
+.out{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+.font{
+    font-size: .15rem;
+    font-weight: bolder;
+    color: #fff;
+    margin-left: -50%;
+    margin-top: -25%;
+}
+
+.close{
+    left: .165rem;
+    top: .16rem;
+    font-size: .15rem;
+    font-weight: bolder;
+    color: #fff;
+    position: absolute;
+    text-decoration:none;
+}
+
+.register{
+    right: .165rem;
+    top: .16rem;
+    font-size: .15rem;
+    font-weight: bolder;
+    color: #fff;
+    position: absolute;
+    text-decoration:none;
+}
+
+
+.text{
+    left: 0;
+    right: 0;
+    height: .5rem;
+    margin-top: .1rem;
+    background-color:#FFF;
+    position: relative;
+    
+}	
+    
+.texts{
+    margin: .05rem .2rem;
+    width: .5rem;
+    height: .5rem;
+    background: url("6.png") no-repeat;
+    position: absolute;
+}
+
+.bot{
+    left: .9rem;
+    margin: .13rem 0rem .13rem -.2rem;
+    width: .5rem;
+    height: .24rem;
+    background: url("8.png") no-repeat;
+    position: absolute;
+}
+
+.form{
+    left: .9rem;
+    margin: .17rem 0rem;
+    position: absolute;
+}
+
+.password{
+    width: 100%;
+    height: .5rem;
+    margin-top: .1rem;
+    background-color:#FFF;
+    overflow: hidden;
+}
+
+.passwords{
+    margin: .05rem .2rem;
+    width: .5rem;
+    height: .5rem;
+    background: url("7.png") no-repeat;
+    float: left;
+}
+.color{
+    width: 80%;
+    color: #000;
+    border: none;
+    float: left;
+    
+}
+
+.chunks{
+    height: .5rem;
+    margin-top:  .1rem;
+    background-color: #5fc0cd;
+}
+
+.button{
+    width: 100%;
+    height: .5rem;
+    font-size: .2rem;
+    font-weight: bold;
+    color: #FFF;
+    border:none;
+    background: none;
+    float: left;
+    }
+
+.a{
+    margin-top: .1rem;
+    padding-right: 3%;
+    font-size: .1rem;
+    text-decoration:none;
+    float: right;
+    }

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+}
+html {
+    font-size: 625%;/*设置根rem值为1rem=10px*/
+}
+.header {
+    position: fixed;
+    top: 0;/* 始终在窗口顶部 */
+    width: 100%;
+    height: .55rem;
+    line-height:  .55rem;/*行高，垂直居中*/
+    font-size: 0;
+    text-align: center;
+    background: #66cccc;
+}
+
+.return {   
+    float: left;
+    width: .55rem;
+    height: .55rem;
+    font-size: .2rem;
+    color: #FFF;
+    border: none;
+    background: none;
+}
+
+.web {
+    padding-right: .4rem;/*填充右边让文本居中看起来更舒服*/
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .2rem;
+    color: #fff;
+}
+
+.main {
+    margin: .5rem 0;
+    width: 100%;
+}
+
+.background {
+    display: flex;
+    align-items: center;/*下面图片垂直居中*/
+    height:  2rem;
+    background: url(16.png) no-repeat;
+    background-size:  cover;
+}
+
+.backgrounds {
+    margin-left: .1rem;
+    width: .9rem;
+    height: .9rem;
+    border-radius: 60%;
+    background: url(12.png) no-repeat -.2rem -.2rem;
+    background-size: 1.3rem 1.3rem;
+}
+
+.text {
+    margin-left: .2rem;
+    width: 1.2rem;
+    height:  .6rem;
+    color: #fff;
+}
+
+.name {
+    font-size: .2rem;
+}
+
+.age {
+    margin-left: .1rem;
+    font-size: .2rem;
+}
+
+.position {
+    margin-top: .1rem;
+    width: 1.5rem;
+    height: .25rem;
+    background: url(13.png) no-repeat;
+    background-size: .1rem .15rem;
+}
+
+.address {
+    margin-left: .2rem;
+    font-size: .15rem;
+}
+
+.title {
+    height: .5rem;
+    line-height: .5rem;
+    border-bottom: .01rem solid #e1e5e7;
+    background: url(14.png) no-repeat .2rem;
+}
+
+.names {
+    margin-left: .35rem;
+    font-size: .2rem;
+}
+
+.list {
+    font-size: .16rem;
+}
+
+.first {
+    margin: 0 .2rem;
+    height: .5rem;
+    line-height: .5rem;
+    border-bottom: .01rem solid #e1e5e7;
+}
+.star {
+    display: inline-block;
+    line-height: .2rem;
+    padding-left: .2rem;
+    background: url(15.png) no-repeat;
+    background-size: .16rem;
+}
+
+.star:nth-of-type(1) {
+    padding-right:  .2rem;
+    border-right: .01rem solid #e1e5e7;
+    background-position:  0 center;
+}
+
+.star:nth-of-type(2) {
+    margin-left: .16rem;
+    background-position:  0 center;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    margin: 0 .2rem;
+    height: .5rem;
+    border-bottom: .01rem solid #e1e5e7;
+}
+
+.seconds {
+    display: flex;
+    align-items: center;
+    margin: 0 .2rem;
+    height: 1rem;
+    border-bottom: .01rem solid #e1e5e7;
+}
+.job {
+    padding-right: .1rem;
+    color: #999999;
+    border-right: .01rem solid #e1e5e7;
+}
+
+.numb {
+    flex: 1;
+    padding-left: .16rem;
+}
+
+.numbs{
+    flex: 1;
+    padding-left: .16rem;
+    color: #f00;
+}
+.footer {
+    position: fixed;
+    bottom: 0;/* 始终在窗口底部 */
+    width: 100%;
+    height: .5rem;
+    padding: .1rem 0 ;
+    line-height:  .5rem;/*行高，垂直居中*/
+    text-align: center;
+    font-size: .2rem;
+    font-weight: bold;
+    background: #fff;
+}
+
+.button {
+    width: 40%;
+    text-decoration: none;
+    border-radius: .06rem;
+    border: .01rem solid #66cccc;/*边框 大小 颜色 实线*/
+}
+
+.button:nth-of-type(1) {
+    margin-left:  .2rem;
+    float: left;/*最后还是选择了float*/
+    color: #66cccc;
+}
+
+.button:nth-of-type(2) {
+    margin-right: .2rem;
+    float: right;
+    color: #fff;
+    background: #66cccc;
+}

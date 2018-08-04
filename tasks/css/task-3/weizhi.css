@@ -1,0 +1,71 @@
+html{
+    font-size: 625%;
+    height: 100%;
+}
+
+body{
+    margin: 0 10%;
+    background-color: #68cdd5;
+}
+.one{
+    width: .5rem;
+    height: .5rem;
+    margin-left: -10%;
+    background: url("task3_03.png" ) no-repeat  50%/.3rem;
+}
+
+.two{
+    height: .8rem;
+    margin: .8rem 0rem;
+    font-weight: bold;
+    color: white;
+    background: url(task3_07.png) no-repeat 50% /1.5rem;
+}
+
+.three{
+    margin-bottom: .8rem;
+    height: .8rem;
+    text-align: center;
+    font-weight: bold;
+    color:  white;
+    font-size: .15rem;
+}
+
+.four{
+    text-align: left;
+    display: inline-block;
+}
+
+.five{
+    width: .5rem;
+    height: .5rem;
+    color: white;   
+    background: url("task3_11.png") no-repeat 50%/.5rem;
+    float: left;
+}
+
+.six{
+    top: .6rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: .1rem;
+    color:  white;
+    position: relative;
+}
+
+.seven{
+    width: .5rem;
+    height: .5rem;
+    color: white;   
+    background: url("task3_14.png") no-repeat 50%/.5rem;
+    float: right;
+}
+
+.night{
+    top: .6rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: .1rem;
+    color:  white;
+    position: relative;
+}
