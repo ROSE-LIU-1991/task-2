@@ -46,20 +46,20 @@
 
 .im {
     margin-left: 1.5rem;
-    margin: 2.5rem 0 ;
+    margin: 2.5rem 0;
     width: 18rem;
     height: 3rem;
     background: url(./images/26.png) no-repeat 50%;
     background-size: auto 100%;
 }
 
-.nav > li {
+.nav>li {
     height: 10rem;
     line-height: 10rem;
     text-align: center;
 }
 
-.nav > li > a {
+.nav>li>a {
     width: 100%;
     height: 100%;
     padding-top: 3.6rem !important;
@@ -78,11 +78,11 @@
     background: #000;
 }
 
-.nav > li > a:hover {
+.nav>li>a:hover {
     text-decoration: none !important;
     border-bottom: solid .1rem #fff !important;
     color: #fff;
-    background-color: #29b078 !important; 
+    background-color: #29b078 !important;
 }
 
 main {
@@ -98,13 +98,13 @@ main {
     line-height: 8rem;
 }
 
-.row > p {
+.row>p {
     display: inline-block;
     margin: 0;
     font-size: 1.6rem;
 }
 
-.row > a {
+.row>a {
     display: inline-block;
     font-size: 1.6rem;
     color: #29b078;
@@ -120,22 +120,33 @@ main {
 
 .row-1-text {
     display: inline-block;
-    padding: 2.2rem 0;
     width: 100%;
+    font-size: 1.4rem;
+    line-height: 6rem;
+    color: #999;
+}
+
+.row-1-text>span {
+    display: inline-block;
+    height: 100%;
+}
+
+.row-1-text-2 {
+    display: inline-block;
+    width: 80%;
     font-size: 1.4rem;
     line-height: 1.4rem;
     color: #999;
-    border-bottom: solid .2rem #edf1f2;
 }
 
-.row-1-text > a {
+.row-1-text-2>a {
     margin: 0 1rem 0 2.5rem;
     font-size: 1.4rem;
     line-height: 1.4rem;
     color: #000;
 }
 
-.row-1-text > a:hover {
+.row-1-text>a:hover {
     color: #fff;
     text-decoration: none;
     background-color: #29b078;
@@ -155,39 +166,14 @@ main {
     width: 100%;
 }
 
-.row-images-left {
+.row-images-word {
     position: relative;
     display: inline-block;
-    float: left;
     margin-top: 4.8rem;
-    width: 30%;
-    height: 50.6rem;
+    height: 45.6rem;
     border-radius: .3rem;
     box-shadow: 0 0 .2rem .2rem #e2e2e2;
-    z-index: 1;
-}
-
-.row-images-mid {
-    position: relative;
-    display: inline-block;
-    left: 5.62rem;
-    margin-top: 4.8rem;
-    width: 30%;
-    height: 50.6rem;
-    border-radius: .3rem;
-    box-shadow: 0 0 .2rem .2rem #e2e2e2;
-    z-index: 1;
-}
-
-.row-images-right {
-    position: relative;
-    display: inline-block;
-    float: right;
-    margin-top: 4.8rem;
-    width: 30%;
-    height: 50.6rem;
-    border-radius: .3rem;
-    box-shadow: 0 0 .2rem .2rem #e2e2e2;
+    transition: 1s;
     z-index: 1;
 }
 
@@ -195,7 +181,7 @@ main {
     display: inline-block;
     float: left;
     margin-right: .5rem;
-    width: 45%;
+    width: 14rem;
     height: 14rem;
     background: url(./images/29.png) no-repeat;
     background-size: cover;
@@ -215,11 +201,15 @@ main {
     z-index: 2;
 }
 
-.hidden-text > p {
+.hidden-text>p {
     text-align: left;
 }
 
-.row-images-left:hover .hidden-text{
+.row-images-word:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.row-images-word:hover .hidden-text {
     display: inline-block;
 }
 
@@ -229,13 +219,13 @@ main {
     width: 100%;
 }
 
-.row-images-top > h1 {
+.row-images-top>h1 {
     line-height: 3rem;
     font-size: 1.6rem;
     font-weight: bolder;
 }
 
-.row-images-top > p {
+.row-images-top>p {
     font-size: 1.4rem;
     word-break: break-all;
 }
@@ -249,7 +239,7 @@ main {
 .row-images-bottom-1 {
     display: inline-block;
     float: left;
-    padding:  0 1rem;
+    padding: 0 1rem;
     width: 50%;
     line-height: 4rem;
     font-size: 1.2rem;
@@ -295,9 +285,9 @@ main {
     line-height: 3.6rem;
     color: #000;
     border: solid .1rem #edf1f2;
-}   
+}
 
-.row-images-bottom-3 > span {
+.row-images-bottom-3>span {
     float: left;
     padding-left: 2.4rem;
 }
@@ -313,7 +303,7 @@ main {
     color: #000;
 }
 
-.row-images-bottom-4 > span {
+.row-images-bottom-4>span {
     color: #f01400;
 }
 
@@ -329,7 +319,7 @@ main {
 }
 
 footer {
-    background-color: #26a26f;    
+    background-color: #26a26f;
 }
 
 .web-2 {
@@ -339,11 +329,10 @@ footer {
 .web-3 {
     float: left;
     padding: 3.5rem 0;
-    width: 25%;
     height: 100%;
 }
 
-.web-3 > p {
+.web-3>p {
     display: inline-block;
     margin-bottom: 6rem;
     font-size: 1.6rem;
@@ -372,33 +361,36 @@ footer {
 .web-5 {
     float: left;
     padding: 3.5rem 0;
-    width: 25%;
     height: 100%;
 }
 
-.web-5 > p {
+.web-5>p {
     margin-bottom: 1rem;
     font-size: 1.6rem;
     line-height: 1.6rem;
     color: #fff;
 }
 
-.web-5 > a {
+.web-5>a {
     margin-right: 3rem;
     font-size: 1.4rem;
     line-height: 4rem;
     color: #fff;
 }
 
+.none {
+    padding: 3.5rem 0;
+    height: 100%;
+}
+
 .web-6 {
     float: right;
     padding: 3.5rem 0;
-    width: 25%;
     height: 100%;
     text-align: right;
 }
 
-.web-6 > p {
+.web-6>p {
     margin-bottom: 2rem;
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -423,4 +415,114 @@ footer {
     text-align: center;
     color: #fff;
     border-top: solid .05rem #32c086;
+}
+
+@media screen and (max-width: 406px) {
+    .row-images-word {
+        height: 56rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .row-images-word {
+        height: 60rem;
+    }
+}
+
+@media screen and (max-width: 453px) {
+    .row-1-text-2{
+        transform: translateY(1.25rem);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .row-1-text-2>a {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-one {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-two {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-three {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text {
+        height: 4rem;
+        padding-left: 1.25rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .web-6 {
+        float: left;
+        text-align: text;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .im {
+        margin: 1rem 0 0 3rem !important;
+        padding: 0 !important;
+        width: 18rem;
+        height: 3rem !important;
+        background-position: 0 0;
+        background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin: .8rem 1.5rem !important;
+        padding: .9rem .5rem !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icon-bar {
+        background: #000;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav>li {
+        height: 5rem;
+        ;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav>li>a {
+        width: 100%;
+        height: 100%;
+        padding-top: 1.8rem !important;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icon-bar {
+        width: 2.2rem !important;
+        height: .2rem !important;
+        background: #000;
+    }
 }

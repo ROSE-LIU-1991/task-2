@@ -46,20 +46,20 @@
 
 .im {
     margin-left: 1.5rem;
-    margin: 2.5rem 0 ;
+    margin: 2.5rem 0;
     width: 18rem;
     height: 3rem;
     background: url(./images/26.png) no-repeat 50%;
     background-size: auto 100%;
 }
 
-.nav > li {
+.nav>li {
     height: 10rem;
     line-height: 10rem;
     text-align: center;
 }
 
-.nav > li > a {
+.nav>li>a {
     width: 100%;
     height: 100%;
     padding-top: 3.6rem !important;
@@ -78,24 +78,18 @@
     background: #000;
 }
 
-.nav > li > a:hover {
+.nav>li>a:hover {
     text-decoration: none !important;
     border-bottom: solid .1rem #fff !important;
     color: #fff;
-    background-color: #29b078 !important; 
-}
-
-.images {
-    width: 100%;
-    height: 24.8rem;
-    background-color: #f1a750;
+    background-color: #29b078 !important;
 }
 
 .images-1 {
     width: 100%;
-    height: 24.8rem;
+    padding-bottom: 20%;
     background: url(./images/27.png) no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 main {
@@ -109,13 +103,13 @@ main {
     line-height: 8rem;
 }
 
-.row > p {
+.row>p {
     display: inline-block;
     margin: 0;
     font-size: 1.6rem;
 }
 
-.row > a {
+.row>a {
     display: inline-block;
     font-size: 1.6rem;
     color: #29b078;
@@ -129,9 +123,12 @@ main {
 
 .row-1-left {
     display: inline-block;
-    width: 26rem;
+    margin-bottom: 2rem;
     height: 70rem;
     background-color: #fff;
+}
+
+.row-1-left > div {
     box-shadow: 0 0 .2rem .2rem #ededed;
 }
 
@@ -144,12 +141,12 @@ main {
     text-align: center;
     font-weight: bolder;
     color: #333;
-    box-shadow: 0 0 .2rem .2rem #ededed;
+    border-bottom: solid .2rem #ededed;
 }
 
 .company {
     display: block;
-    padding: 0 0 0 9.7rem;
+    padding-left: calc(50% - 3.5rem);
     width: 100%;
     font-size: 1.4rem;
     line-height: 5rem;
@@ -179,34 +176,30 @@ main {
 
 .row-1-right {
     display: inline-block;
-    float: right;
-    width: 83rem;
     height: 110rem;
     background-color: #fff;
+}
+
+
+.row-1-right > div {
     box-shadow: 0 0 .2rem .2rem #ededed;
 }
 
 .images-2 {
     display: inline-block;
-    margin: 5.8rem 3.6rem 5.5rem 8.5rem;
+    margin: 1rem 1rem 0;
     width: 12.2rem;
-    height: 3.3rem;
+    padding: 1.65rem;
     background: url(./images/28.png) no-repeat;
 }
 
-.row-1-right-text-2 {
-    display: block;
-    float: right;
-    margin: 3.8rem 2.4rem 3.1rem 0;
-    width: 56rem;
-    font-size: 1.4rem;
-    color: #999;
-}
 
 .row-1-right-text {
     display: inline-block;
+    padding: 4rem 3rem;
     width: 100%;
-    height: 15.8rem;
+    font-size: 1.4rem;
+    color: #999;
     box-shadow: 0 0 .2rem .2rem #ededed;
 }
 
@@ -220,7 +213,7 @@ main {
 }
 
 footer {
-    background-color: #26a26f;    
+    background-color: #26a26f;
 }
 
 .web-2 {
@@ -230,11 +223,10 @@ footer {
 .web-3 {
     float: left;
     padding: 3.5rem 0;
-    width: 25%;
     height: 100%;
 }
 
-.web-3 > p {
+.web-3>p {
     display: inline-block;
     margin-bottom: 6rem;
     font-size: 1.6rem;
@@ -263,18 +255,17 @@ footer {
 .web-5 {
     float: left;
     padding: 3.5rem 0;
-    width: 25%;
     height: 100%;
 }
 
-.web-5 > p {
+.web-5>p {
     margin-bottom: 1rem;
     font-size: 1.6rem;
     line-height: 1.6rem;
     color: #fff;
 }
 
-.web-5 > a {
+.web-5>a {
     margin-right: 3rem;
     font-size: 1.4rem;
     line-height: 4rem;
@@ -283,17 +274,21 @@ footer {
 
 .web-6 {
     float: right;
-    padding: 3.5rem 0;
-    width: 25%;
+    padding: 3.5rem 0;  
     height: 100%;
     text-align: right;
 }
 
-.web-6 > p {
+.web-6>p {
     margin-bottom: 2rem;
     font-size: 1.6rem;
     line-height: 1.6rem;
     color: #fff;
+}
+
+.none {
+    padding: 3.5rem 0;
+    height: 100%;
 }
 
 .web-7 {
@@ -314,4 +309,97 @@ footer {
     text-align: center;
     color: #fff;
     border-top: solid .05rem #32c086;
+}
+
+@media screen and (max-width: 380px) {
+    .container-one {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-two {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-three {
+        float: right;
+        margin: .75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text {
+        height: 4rem;
+        padding-left: 1.25rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .web-6 {
+        float: left;
+        text-align: text;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .im {
+        margin: 1rem 0 0 3rem !important;
+        padding: 0 !important;
+        width: 18rem;
+        height: 3rem !important;
+        background-position: 0 0;
+        background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin: .8rem 1.5rem !important;
+        padding: .9rem .5rem !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icon-bar {
+        background: #000;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav>li {
+        height: 5rem;
+        ;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav>li>a {
+        width: 100%;
+        height: 100%;
+        padding-top: 1.8rem !important;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icon-bar {
+        width: 2.2rem !important;
+        height: .2rem !important;
+        background: #000;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .web-6 {
+        float: left;
+        text-align: left;
+    }
 }
