@@ -70,6 +70,12 @@ p {
     background: #000;
 }
 
+.nav>li {
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
 .nav>li>a:hover {
     text-decoration: none;
     border-bottom: solid .1rem #fff;
@@ -570,12 +576,21 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-    .web {
-        padding: 1.5rem 0 0 calc( 50% - 3rem);
-        
-    }
-    
     .web-1 {
         margin-top: .5rem;
+    }
+
+    .web {
+        padding-left: calc(40% - 6.5rem);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .web-1 {
+        margin-top: .5rem;
+    }
+
+    .web {
+        padding-left: calc(40% - 4rem);
     }
 }

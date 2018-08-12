@@ -121,29 +121,41 @@ main {
 .row-1-text {
     display: inline-block;
     width: 100%;
+    height: 6rem;
     font-size: 1.4rem;
-    line-height: 6rem;
     color: #999;
 }
 
 .row-1-text>span {
-    display: inline-block;
-    height: 100%;
+    float: left;
+    padding: 2rem 0;
 }
 
 .row-1-text-2 {
-    display: inline-block;
+    float: left;
     width: 80%;
+    height: 6rem;
     font-size: 1.4rem;
     line-height: 1.4rem;
     color: #999;
 }
 
 .row-1-text-2>a {
-    margin: 0 1rem 0 2.5rem;
+    display: inline-block;
+    margin: 2.2rem 1rem 0 2.5rem;
     font-size: 1.4rem;
-    line-height: 1.4rem;
     color: #000;
+    text-decoration: none;
+}
+
+.row-1-text-2> a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+.row-1-text-2> a:visited {
+    color: #000;
+    text-decoration: none;
 }
 
 .row-1-text-2>a:hover {
@@ -151,6 +163,7 @@ main {
     text-decoration: none;
     background-color: #29b078;
 }
+
 
 .row-1-title {
     margin-left: 1.6rem;
@@ -170,7 +183,6 @@ main {
     position: relative;
     display: inline-block;
     margin-top: 4.8rem;
-    height: 45.6rem;
     border-radius: .3rem;
     box-shadow: 0 0 .2rem .2rem #e2e2e2;
     transition: 1s;
@@ -309,10 +321,9 @@ main {
 
 .row-images-bottom-5 {
     display: inline-block;
-    padding-left: 1rem;
+    padding: 1.5rem 0 1.5rem 1rem;
     width: 100%;
     font-size: 1rem;
-    line-height: 4.2rem;
     letter-spacing: .05rem;
     color: #999;
     border-top: solid .1rem #edf1f2;
@@ -417,30 +428,6 @@ footer {
     border-top: solid .05rem #32c086;
 }
 
-@media screen and (max-width: 406px) {
-    .row-images-word {
-        height: 56rem;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .row-images-word {
-        height: 60rem;
-    }
-}
-
-@media screen and (max-width: 453px) {
-    .row-1-text-2 {
-        transform: translateY(1.25rem);
-    }
-}
-
-@media screen and (max-width: 715px) {
-    .row-1-text-2>a {
-        margin: 0;
-    }
-}
-
 @media screen and (max-width: 380px) {
     .container-one {
         float: right;
@@ -524,5 +511,23 @@ footer {
         width: 2.2rem !important;
         height: .2rem !important;
         background: #000;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .row-1-text-2 > a {
+        margin: 1.1rem 1rem 0 2.5rem;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .row-1-text-2 > a {
+        margin: .5rem 1rem 0 2.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width :991px) {
+    .row-1-text-2 > a {
+        margin: 1.1rem 1rem 0 2.5rem;
     }
 }

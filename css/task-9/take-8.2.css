@@ -125,10 +125,10 @@ main {
     display: inline-block;
     margin-bottom: 2rem;
     height: 70rem;
-    background-color: #fff;
 }
 
 .row-1-left > div {
+    background-color: #fff;
     box-shadow: 0 0 .2rem .2rem #ededed;
 }
 
@@ -177,11 +177,11 @@ main {
 .row-1-right {
     display: inline-block;
     height: 110rem;
-    background-color: #fff;
 }
 
 
 .row-1-right > div {
+    background-color: #fff;
     box-shadow: 0 0 .2rem .2rem #ededed;
 }
 
