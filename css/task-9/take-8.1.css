@@ -1,0 +1,581 @@
+p {
+    margin: 0;
+}
+
+.container-one {
+    float: right;
+    margin: .375rem 1.5rem .375rem .75rem;
+    width: 1.25rem;
+    height: 1.2rem;
+    background: url(./images/17.png) no-repeat;
+    background-size: cover;
+}
+
+.container-two {
+    float: right;
+    margin: .375rem 1.5rem .375rem .75rem;
+    width: 1.25rem;
+    height: 1.2rem;
+    background: url(./images/16.png) no-repeat;
+    background-size: cover;
+}
+
+.container-three {
+    float: right;
+    margin: .375rem 1.5rem .375rem .75rem;
+    width: 1.25rem;
+    height: 1.2rem;
+    background: url(./images/15.png) no-repeat;
+    background-size: cover;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding-left: 1.25rem;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #29b078;
+}
+
+.back {
+    margin: 0;
+    background-color: #29b078;
+    color: #fff;
+}
+
+.im {
+    display: inline-block;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    width: 18rem;
+    height: 3rem;
+    background: url(./images/22.png) no-repeat;
+    background-size: auto 100%;
+}
+
+.nav>li>a {
+    color: #fff;
+}
+
+.logo {
+    padding: .9rem .5rem;
+    background: rgba(0, 0, 0, 0.1)
+}
+
+.icon-bar {
+    background: #000;
+}
+
+.nav>li>a:hover {
+    text-decoration: none;
+    border-bottom: solid .1rem #fff;
+    color: #fff;
+    background-color: #29b078;
+}
+
+main {
+    padding-top: 8rem;
+    background-color: #fafafa;
+}
+
+.row-01 {
+    display: inline-block;
+    width: 100%;
+    height: 12rem;
+}
+
+.picture {
+    float: left;
+    padding: 0 5rem;
+    height: 100%;
+    text-align: center;
+}
+
+.picture-one {
+    display: inline-block;
+    width: 2.2rem;
+    height: 3.2rem;
+    background: url(./images/24.png) no-repeat;
+    background-size: cover;
+}
+
+.picture-one-2 {
+    display: inline-block;
+    width: 4.1rem;
+    height: 3.2rem;
+    background: url(./images/6.png) no-repeat;
+    background-size: cover;
+}
+
+.picture-one-3 {
+    display: inline-block;
+    width: 3rem;
+    height: 3.2rem;
+    background: url(./images/5.png) no-repeat;
+    background-size: cover;
+}
+
+.picture-two {
+    margin: 1.5rem 0;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.picture-three {
+    font-size: .8rem;
+    letter-spacing: 0.1rem;
+    color: #999;
+}
+
+.mub {
+    float: left;
+    padding: 2rem 2rem 2rem 5rem;
+    height: 100%;
+    text-align: left;
+    border-left: dashed .1rem #999;
+}
+
+.pop {
+    margin-left: 1.5rem;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: .9rem;
+    background: url(./images/7.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.mub>p {
+    margin: -1rem .75rem 1rem;
+    font-size: .9rem;
+    color: #999;
+}
+
+.row-title {
+    padding-top: 5rem;
+    font-size: .9rem;
+    line-height: .9rem;
+    text-align: center;
+}
+
+.way {
+    position: relative;
+    height: 9rem;
+    text-align: center;
+}
+
+.way-1 {
+    display: inline-block;
+    float: left;
+    margin: 2.5rem 0;
+    padding-top: 1.4rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: .9rem;
+    line-height: .9rem;
+    color: #29b078;
+    background: url(./images/25.png) no-repeat;
+    background-size: cover;
+}
+
+.row>.way>p {
+    display: block;
+    position: relative;
+    top: 2.5rem;
+    margin: 0;
+    padding: .7rem 5rem;
+    font-size: .7rem;
+    color: #999;
+}
+
+.way-2 {
+    display: inline-block;
+    position: absolute;
+    top: 3.25rem;
+    right: 5%;
+    width: 1.4rem;
+    height: 1.3rem;
+    background: url(./images/8.png) no-repeat;
+    background-size: cover;
+}
+
+.images {
+    float: left;
+    padding: 3.8rem 1rem 0;
+    height: 22.5rem;
+    ;
+}
+
+.image {
+    padding: 1rem 1.7rem 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0 0.2rem 0.2rem #e2e2e2;
+}
+
+.image-1 {
+    margin: 1rem calc(50% - 2.5rem);
+    width: 5rem;
+    height: 5rem;
+    background: url(./images/4.png) no-repeat;
+    background-size: cover;
+}
+
+.image-2 {
+    margin: 1rem calc(50% - 2.5rem);
+    width: 5rem;
+    height: 5rem;
+    background: url(./images/1.png) no-repeat;
+    background-size: cover;
+}
+
+.image-3 {
+    margin: 1rem calc(50% - 2.5rem);
+    width: 5rem;
+    height: 5rem;
+    background: url(./images/2.png) no-repeat;
+    background-size: cover;
+}
+
+.image-4 {
+    margin: 1rem calc(50% - 2.5rem);
+    width: 5rem;
+    height: 5rem;
+    background: url(./images/3.png) no-repeat;
+    background-size: cover;
+}
+
+b {
+    display: inline-block;
+    margin: 1.8rem 0 1.2rem;
+    font-size: .9rem;
+    line-height: .9rem;
+    letter-spacing: .1rem;
+}
+
+.image>p {
+    font-size: .8rem;
+    line-height: 1.3rem;
+    color: #999;
+    letter-spacing: .1rem;
+}
+
+.dot {
+    display: inline-block;
+    margin: 1rem 0 0 calc(50% - 3rem);
+    width: 8rem;
+    height: 1.5rem;
+}
+
+.dot>div {
+    display: inline-block;
+    padding: 0 .25rem;
+    float: left;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 .1rem .5rem #999;
+}
+
+.dot>div:hover {
+    color: #29b078;
+}
+
+.enterprise {
+    display: flex;
+    align-items: flex-start;
+    padding: 3rem 1rem 0;
+    width: 100%;
+    height: 13rem;
+}
+
+.enterprise-1 {
+    display: inline-block;
+    padding: 3rem 0;
+    margin: 0 .1rem;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.enterprise-1:hover {
+    border-radius: .3rem;
+    box-shadow: 0 0 .3rem .3rem #e2e2e2;
+}
+
+.image-5 {
+    display: inline-block;
+    width: 7.2rem;
+    height: 2.7rem;
+    background: url(./images/11.png) no-repeat;
+    background-size: cover;
+}
+
+.image-6 {
+    display: inline-block;
+    width: 2.7rem;
+    height: 2.9rem;
+    background: url(./images/9.png) no-repeat;
+    background-size: cover;
+}
+
+.image-7 {
+    display: inline-block;
+    width: 6.7rem;
+    height: 2.4rem;
+    background: url(./images/12.png) no-repeat;
+    background-size: cover;
+}
+
+.image-8 {
+    display: inline-block;
+    width: 8.5rem;
+    height: 2rem;
+    background: url(./images/13.png) no-repeat;
+    background-size: cover;
+}
+
+.image-9 {
+    display: inline-block;
+    width: 6.3rem;
+    height: 2.8rem;
+    background: url(./images/10.png) no-repeat;
+    background-size: cover;
+}
+
+.web {
+    margin: 0;
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 4.8rem;
+}
+
+.web-1 {
+    float: left;
+    font-size: .7rem;
+    line-height: 1.5rem;
+    color: #999;
+}
+
+footer {
+    background-color: #26a26f;
+}
+
+.web-2 {
+    height: 8.5rem;
+}
+
+.web-3 {
+    float: left;
+    padding: 1.75rem 0;
+    height: 100%;
+}
+
+.web-3>p {
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-size: .8rem;
+    line-height: .8rem;
+    color: #fff;
+}
+
+.web-4 {
+    width: 6.9rem;
+    font-size: .7rem;
+    line-height: .7rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.web-4:nth-of-type(1) {
+    padding-right: .55rem;
+    border-right: solid .1rem #fff;
+}
+
+.web-4:nth-of-type(2) {
+    padding-right: .55rem;
+    border-right: solid .1rem #fff;
+}
+
+.web-5 {
+    float: left;
+    padding: 1.75rem 0;
+    height: 100%;
+}
+
+.web-5>p {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    line-height: .8rem;
+    color: #fff;
+}
+
+.web-5>a {
+    margin-right: 3rem;
+    font-size: .7rem;
+    line-height: 2rem;
+    color: #fff;
+}
+
+.web-6 {
+    padding: 1.75rem 0;
+    height: 100%;
+    text-align: right;
+}
+
+.web-6>p {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    line-height: .8rem;
+    color: #fff;
+}
+
+.web-7 {
+    float: right;
+    margin: 0 1rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    background: url(./images/14.png) no-repeat;
+    background-size: cover;
+}
+
+.web-8 {
+    display: inline-block;
+    width: 100%;
+    line-height: 3rem;
+    font-size: .6rem;
+    text-align: center;
+    color: #fff;
+    border-top: solid .05rem #32c086;
+}
+
+.none {
+    padding: 3.5rem 0;
+    height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .web-6 {
+        float: left;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .web-7 {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .web {
+        padding: 1.5rem 5rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .web-1 {
+        float: left;
+        margin-left: 2rem;
+        width: 8%;
+        font-size: .7rem;
+        line-height: 1.5rem;
+        color: #999;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .mub {
+        margin-left: -1.25rem;
+        text-align: center;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .pop {
+        margin-left: calc( 50% - 2.5rem);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .pop {
+        margin-left: calc( 50% - 2.5rem);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-5 {
+        width: 100%;
+        height: 100%;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-7 {
+        width: 100%;
+        height: 100%;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-6 {
+        margin-top: .725rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-8 {
+        width: 100%;
+        height: 100%;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-9 {
+        width: 100%;
+        height: 100%;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .col-md-2 {
+        margin-left: 1rem;
+        width: 16.66666667%;
+    }
+
+    .web {
+        padding: 1.5rem 5rem 0 18rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .web {
+        padding: 1.5rem 5rem 0 14.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .web {
+        padding: 1.5rem 0 0 calc( 50% - 3rem);
+        
+    }
+    
+    .web-1 {
+        margin-top: .5rem;
+    }
+}
