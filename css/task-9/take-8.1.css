@@ -488,7 +488,7 @@ footer {
 @media screen and (min-width: 1200px) {
     .web-1 {
         float: left;
-        margin-left: 2rem;
+        margin-left: 1.8rem;
         width: 8%;
         font-size: .7rem;
         line-height: 1.5rem;
