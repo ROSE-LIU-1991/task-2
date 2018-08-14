@@ -86,7 +86,7 @@ header {
     background-color: #1d7ad9;
 }
 
-.dropdown>.btn {
+.dropdowns>.btn {
     padding: 1.2rem .8rem;
 }
 
@@ -109,8 +109,8 @@ header {
 }
 
 .bottom {
-    height: 1px;
-    margin: 9px 0;
+    height: .1rem;
+    margin: .9rem 0;
     overflow: hidden;
     background-color: #e5e5e5
 }
@@ -158,7 +158,7 @@ header {
 }
 
 .case {
-    margin-bottom: 1.6rem 0;
+    margin-bottom: 2rem;
     font-size: 2.6rem;
     line-height: 2.6rem;
     text-align: left;
@@ -178,15 +178,15 @@ header {
     display: inline-block;
     margin-left: -2.9rem;
     margin-right: 1rem;
-    width: 19px;
-    height: 15px;
-    background: url(./images/4.png) -20px -20px;
+    width: 1.9rem;
+    height: 1.5rem;
+    background: url(./images/4.png) -2rem -2rem;
 }
 
 .box-1 {
+    display: inline-block;
     padding: 2.3rem 1.8rem 2.3rem 4.5rem;
     width: 100%;
-    height: 8.5rem;
     text-align: left;
     background-color: #fbfcff;
     border: 1px solid #e8e8e8;
@@ -223,4 +223,226 @@ input[type="radio"] + label::before {
 input[type="radio"]:checked + label::before {
     border: 8px solid #1d7ad9;
     background-color: #fff;
+}
+
+.box-2 {
+    float: right;
+    width: 12.6rem;
+    height: 3.7rem;
+}
+
+.box-2 > button {
+    padding: .5rem 0 .5rem 1.5rem;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: #999;
+}
+
+.box-3 {
+    display:inline-block;
+    margin-left: 1.5rem;
+    width: 2.5rem;
+    height: 100%;
+    vertical-align: middle;
+    background-color: #1d7ad9;
+    color: #fff;
+}
+
+.box-4 {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: .4rem solid;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+}
+
+.dropdown-menmu > li >a {
+    display: block;
+    padding: .6rem 3rem;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.win {
+    margin-top: -.5rem;
+}
+
+.bg-2 {
+    display: inline-block;
+    margin-left: -2.9rem;
+    margin-right: 1rem;
+    width: 2.2rem;
+    height: 2rem;
+    background: url(./images/4.png) -2rem -7.5rem;
+}
+
+.box-5 {
+    display: inline-block;
+    padding: 2.3rem 1.8rem 2.3rem 4.5rem;
+    width: 100%;
+    text-align: left;
+    background-color: #fbfcff;
+    border: 1px solid #e8e8e8;
+}
+
+.length {
+    float: left;
+    margin: 3rem 6rem 1rem 0;
+    font-size: 1.8rem;
+}
+
+.input-text {
+    width: 7rem;
+    height: 2.4rem;
+    line-height: 3rem;
+    border: solid .1rem #e8e8e8;
+}
+
+.box-5 > label {
+    clear: left;
+    margin-top: 3rem;
+}
+
+.box-5 > .box-2 {
+    top: -1.5rem;
+}
+
+.bg-3 {
+    display: inline-block;
+    margin-left: -2.9rem;
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 2rem;
+    background: url(./images/4.png) -2rem -13.5rem;
+}
+
+.box-6 {
+    display: inline-block;
+    padding: 2.3rem 1.8rem 2.3rem 4.5rem;
+    width: 100%;
+    text-align: left;
+    background-color: #fbfcff;
+    border: 1px solid #e8e8e8;
+}
+
+.box-6 > label {
+    margin-right: 5rem;
+}
+
+.box-7 {
+    margin-bottom: 5.5rem;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+}
+
+.next {
+    padding: 12rem 0;
+    width: 100%;
+    height: 28.8rem;
+    text-align: center;
+}
+
+.red {
+    display: inline-block;
+    width: 18rem;
+    height: 4.8rem;
+    font-size: 2.4rem;
+    line-height: 4.8rem;
+    border-radius: .4rem;
+    background-color: #e15053;
+    color: #fff;
+}
+
+.red:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.red:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.packing {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.packing-1 {
+    float: left;
+    margin: 0;
+    height: 100%;
+    font-size: 1.6rem;
+    line-height: 20rem;
+    color: #999;
+}
+
+.packing-2 {
+    display: inline-block;
+    padding-top: 9rem;
+    height: 20rem;
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.packing-2 > a{
+    float: left;
+    margin-bottom: 2.3rem;
+    padding: .1rem 0 0 6rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #999;
+}
+
+.packing-2 > a:focus {
+    color: #1d7ad9;
+    font-weight: 900;
+}
+
+.packing-2 > a:hover {
+    color: #1d7ad9;
+    font-weight: 900;
+}
+
+.packing-3 {
+    float: right;
+    padding-top: 6rem;
+    height: 20rem;
+}
+
+.packing-4 {
+    display: inline-block;
+    float: right;
+    width: 9.2rem;
+    height: 9.2rem;
+    background: url(./images/5.png) no-repeat;
+}
+
+.packing-3 > p {
+    float: right;
+    margin: 0;
+    padding: .65rem 0;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    text-align: left;
+    color: #999;
+}
+
+.packing-5 {
+    margin: 0;
+    width: 100%;
+    height: 3.3rem;
+    line-height: 3.3rem;
+    text-align: center;
+    color: #defade;
+    background-color: #1d7ad9;
 }
