@@ -1,0 +1,15 @@
+.bg-1 {
+    width: 27px; height: 41px;
+    background: url('css_sprites.png') -20px -20px;
+}
+
+x
+.bg-2 {
+    width: 29px; height: 43px;
+    background: url('css_sprites.png') -20px -101px;
+}
+
+x
+.bg-3 {
+    width: 2px; height: 52px;
+    background: url('css_sprites.png') -20px -184px;

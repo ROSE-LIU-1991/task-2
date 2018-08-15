@@ -1,0 +1,142 @@
+html body .text, html body .login-2 {
+  width: 100%;
+  height: 1rem;
+}
+
+html body .text {
+  margin-top: .16rem;
+  line-height: 1rem;
+  background-color: #fff;
+}
+
+html body .text .iphone, html body .text .bot, html body .text .locked {
+  float: left;
+  background: url(./images/4.png) no-repeat;
+}
+
+html {
+  font-size: 625%;
+}
+
+html body {
+  background-color: #eff0f4;
+}
+
+html body header {
+  width: 100%;
+  height: .9rem;
+  background-color: #5fc0cd;
+  font-size: 0.36rem;
+  line-height: .9rem;
+  text-align: center;
+  color: #fff;
+}
+
+html body header .logout {
+  float: right;
+  margin-right: .3rem;
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body header .logout:hover {
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body header .logout:focus {
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body header .login {
+  float: left;
+  margin-left: .3rem;
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body header .login:hover {
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body header .login:focus {
+  font-size: 0.32rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+html body .text .iphone {
+  margin: .3rem 0 .29rem .43rem;
+  width: .27rem;
+  height: .41rem;
+  background-position: -.2rem -.2rem;
+}
+
+html body .text .bot {
+  margin: .24rem .33rem .25rem .46rem;
+  width: .02rem;
+  height: .52rem;
+  background-position: -.2rem -1.84rem;
+}
+
+html body .text .color {
+  float: left;
+  padding: 0;
+  width: 60%;
+  font-size: 0.32rem;
+  color: #000;
+  border: none;
+}
+
+html body .text .locked {
+  margin: .3rem 0 .29rem .43rem;
+  width: .29rem;
+  height: .43rem;
+  background-position: -.2rem -1.01rem;
+}
+
+html body .login-2 {
+  margin-top: .69rem;
+  font-size: 0.36rem;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #5fc0cd;
+  border: none;
+}
+
+html body .password {
+  margin-top: .2rem;
+  float: right;
+  font-size: 0.36rem;
+  color: #5fc0cd;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 424px) {
+  html {
+    font-size: 312.5%;
+  }
+  html .iphone {
+    margin: .09rem  0 .09rem .215rem !important;
+    width: .54rem !important;
+    height: .82rem !important;
+    background-position: -.4rem -.4rem !important;
+  }
+  html .bot {
+    margin: .24rem .33rem .25rem .23rem !important;
+    background-position: -.4rem -3.68rem !important;
+  }
+  html .locked {
+    margin: 0.07rem 0 0.09rem 0.215rem !important;
+    width: .58rem !important;
+    height: .86rem !important;
+    background-position: -.4rem -2.02rem !important;
+  }
+}
