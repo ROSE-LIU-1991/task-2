@@ -1,0 +1,302 @@
+$color: #fff #5fc0cd #999999 #e63b0e #333333 #55a8b3 #e1e5e7 #afbac0 #f8fafb;
+$font-size: .34rem .28rem .3rem .2rem;
+$width: 100%;
+$float: left !default;
+$display: inline-block !default;
+$background: url(./images/12.png) no-repeat;
+%positiong {
+    position: fixed;
+    width: $width;
+    text-align: center;
+}
+
+%drop {
+    color: nth($list: $color, $n: 3);
+    text-decoration: none;
+}
+
+%list {
+    font-size: nth($list: $font-size, $n: 2);
+    color: nth($list: $color, $n: 3);
+}
+
+%wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%ft {
+    display: $display;
+    width: .5rem;
+    height: 100%;
+    font-size: nth($list: $font-size, $n: 4);
+    color: nth($list: $color, $n: 6);
+}
+%triangle {
+    border-top: .13rem solid nth($list: $color, $n: 8);
+    border-left: .13rem solid transparent;
+    border-right: .13rem solid transparent;
+}
+
+html {
+    font-size: 625%;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-size: 0;
+    }
+}
+
+header {
+    @extend %positiong;
+    top: 0;
+    height: .88rem;
+    background-color: nth($list: $color, $n: 2);
+    .button {
+        position: relative;
+        margin: .1rem 0 0 0;
+        width: 1.45rem;
+        height: .7rem;
+        font-size: nth($list: $font-size, $n: 1);
+        color: nth($list: $color, $n: 1);
+        background-color: nth($list: $color, $n: 6);
+        border-radius: .09rem;
+        border: none;
+        outline: none;
+        z-index: 1;
+        &:hover {
+            color: nth($list: $color, $n: 2);
+            background-color: nth($list: $color, $n: 1);
+            z-index: 2;
+        }
+        &:nth-of-type(1) {
+            margin-left: 1rem;
+            margin-right: -.09rem;
+        }
+    }
+    .images {
+        float: right;
+        margin: .22rem 4.16% 0 0;
+        width: .42rem;
+        height: .44rem;
+        background: $background;
+        background-position: -.2rem -4.52rem;
+    }
+    .drop {
+        margin-top: .1rem;
+        width: 100%;
+        background-color: nth($list: $color, $n: 1);
+        border-bottom: solid .01rem nth($list: $color, $n: 7);
+        .drop-down {
+            display: $display;
+            position: relative;
+            width: 33%;
+            height: .8rem;
+            font-size: nth($list: $font-size, $n: 2);
+            text-align: center;
+            .drop-nav {
+                position: relative;
+                display: block;
+                top: .1rem;
+                width: 100%;
+                line-height: .6rem;
+                border-right: .01rem solid nth($list: $color, $n: 7);
+                &:hover .drop-content {
+                    display: block;
+                }
+                .drop-bar {
+                    margin-left: .39rem;
+                    @extend %drop;
+                }
+                .triangle {
+                    float: right;
+                    margin: .26rem .12rem 0 0;
+                    @extend %triangle;
+                }
+            }
+            .no {
+                border: none;
+            }
+            .drop-content {
+                position: absolute;
+                display: none;
+                margin-top: .1rem;
+                width: 100%;
+                &>li {
+                    list-style-type: none;
+                }
+                .drop-a {
+                    display: block;
+                    @extend %drop;
+                    width: 100%;
+                    background-color: nth($list: $color, $n: 1);
+                    &:hover {
+                        background-color: nth($list: $color, $n: 7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 1.68rem;
+    .list {
+        display: $display;
+        width: $width;
+        padding: .3rem 0;
+        border-bottom: solid .01rem nth($list: $color, $n: 7);
+        .list-1 {
+            display: $display;
+            width: 50%;
+            .list-top {
+                @extend %list;
+                @extend %wrap;
+                .list-top-1 {
+                    display: $display;
+                    margin: 0 .15rem 0 .3rem;
+                    width: .24rem;
+                    height: .24rem;
+                    background: $background;
+                    background-position: -.2rem -1.46rem;
+                }
+            }
+            .list-mid {
+                @extend %list;
+                padding-left: .69rem;
+                color: nth($list: $color, $n: 5);
+                @extend %wrap;
+            }
+            .list-bottom {
+                @extend %list;
+                @extend %wrap;
+                .list-bottom-1 {
+                    display: $display;
+                    margin: 0 .16rem 0 .3rem;
+                    width: .19rem;
+                    height: .23rem;
+                    background: $background;
+                    background-position: -.2rem -.83rem;
+                }
+            }
+        }
+        .list-right {
+            float: right;
+            width: 25%;
+            line-height: .96rem;
+            font-size: nth($list: $font-size, $n: 2);
+            text-align: right;
+            color: nth($list: $color, $n: 4);
+            @extend %wrap;
+            .list-right-1 {
+                display: inline-block;
+                margin-top: -.04rem;
+                margin-right: .3rem;
+                width: .19rem;
+                height: .32rem;
+                background: url(./images/11.png) no-repeat;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+footer {
+    @extend %positiong;
+    bottom: 0;
+    height: 1rem;
+    background-color: nth($list: $color, $n: 9);
+    border-top: solid .01rem nth($list: $color, $n: 8);
+    .footer-nav {
+        padding: 0 22.91%;
+        height: 1rem;
+        .footer-left {
+            float: left;
+            @extend %ft;
+            .footer-left-1 {
+                display: $display;
+                margin: .12rem 0 .14rem 0;
+                width: .46rem;
+                height: .4rem;
+                background: $background;
+                background-position: -.2rem -2.1rem;
+            }
+        }
+        .footer-mid {
+            display: $display;
+            margin: .03rem 0;
+            width: .94rem;
+            height: .94rem;
+            background-color: nth($list: $color, $n: 6);
+            border-radius: 50%;
+            .footer-mid-1 {
+                margin: .26rem 0 0 .255rem;
+                width: .4rem;
+                height: .41rem;
+                background: $background;
+                background-position: -.2rem -2.9rem;
+            }
+        }
+        .footer-right {
+            float: right;
+            @extend %ft;
+            .footer-right-1 {
+                margin: .14rem 0 .135rem 0;
+                width: .42rem;
+                height: .41rem;
+                background: $background;
+                background-position: -.2rem -3.71rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 719px) {
+    %ft {
+        width: 1rem;
+    }
+    html {
+        font-size: 312.5%;
+        .images {
+            margin: 0 4.16% 0 0;
+            width: .84rem !important;
+            height: .88rem !important;
+            background-position: -.4rem -9.04rem !important;
+            transform: scale(.5);
+        }
+        .list-right {
+            width: 20% !important;
+            .list-right-1 {
+                width: .38rem !important;
+                height: .64rem !important;
+                transform: scale(.5);
+            }
+        }
+        .footer-left-1 {
+            margin: 0 !important;
+            width: .92rem !important;
+            height: .8rem !important;
+            background: $background;
+            background-position: -.4rem -4.2rem !important;
+            transform: scale(.5);
+        }
+        .footer-mid-1 {
+            margin: .05rem .1rem !important;
+            width: .8rem !important;
+            height: .82rem !important;
+            background: $background;
+            background-position: -.4rem -5.8rem !important;
+            transform: scale(.5);
+        }
+        .footer-right-1 {
+            margin: 0 !important;
+            width: .9rem !important;
+            height: .82rem !important;
+            background-position: -.3rem -7.42rem !important;
+            transform: scale(.5);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+
+x
+.bg-4 {
+    width: 18px; height: 23px;
+    background: url('css_sprites.png') -20px -20px;
+}
+
+x
+.bg-5 {
+    width: 42px; height: 44px;
+    background: url('css_sprites.png') -20px -452px;
+}
+
+x
+.bg-6 {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -20px -146px;
+}
+
+x
+.bg-7 {
+    width: 19px; height: 23px;
+    background: url('css_sprites.png') -20px -83px;
+}
+
+x
+.bg-8 {
+    width: 46px; height: 40px;
+    background: url('css_sprites.png') -20px -210px;
+}
+
+x
+.bg-9 {
+    width: 40px; height: 41px;
+    background: url('css_sprites.png') -20px -290px;
+}
+
+x
+.bg-10 {
+    width: 42px; height: 41px;
+    background: url('css_sprites.png') -20px -371px;
+}

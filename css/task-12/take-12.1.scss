@@ -1,0 +1,184 @@
+$color: #5fc0cd #fff #e1e5e7 #e26163;
+$font-size: .24rem .28rem .32rem .34rem .36rem;
+$width: 100%;
+$float: left !default;
+$display: inline-block !default;
+%positiong {
+    position: fixed;
+    width: $width;
+    text-align: center;
+    font-weight: bold;
+}
+
+%text {
+    width: $width;
+    height: 1rem;
+    font-size: nth($list: $font-size, $n: 3);
+    border-bottom: solid .01rem nth($list: $color, $n: 3);
+}
+
+%margin {
+    display: $display;
+    margin-top: .31rem;
+}
+
+html {
+    font-size: 625%;
+    * {
+        margin: 0;
+    }
+}
+
+header {
+    @extend %positiong;
+    top: 0;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: nth($list: $font-size, $n: 5);
+    color: nth($color, 2);
+    background-color: nth($list: $color, $n: 1);
+    .return {
+        float: $float;
+        margin-left: .35rem;
+        color: nth($list: $color, $n: 2);
+        text-decoration: none;
+    }
+    .homepage {
+        display: $display;
+        margin: 0 0 0 -.35rem;
+    }
+}
+
+main {
+    margin-top: .8rem;
+    margin-bottom: 2.26rem;
+    .background {
+        width: $width;
+        height: 3.27rem;
+        color: nth($list: $color, $n: 2);
+        background: url(./images/1.png) no-repeat;
+        background-size: cover;
+        .heads {
+            float: $float;
+            margin: .8rem 0 0 .3rem;
+            width: 1.7rem;
+            height: 1.7rem;
+            background: url(./images/3.png) no-repeat -.25rem 0;
+            border-radius: 50%;
+        }
+        .name {
+            padding: 1.16rem 0 .26rem 2.4rem;
+            font-size: nth($list: $font-size, $n: 5);
+            .year {
+                font-size: nth($list: $font-size, $n: 2);
+            }
+        }
+        .position {
+            float: $float;
+            margin-left: .46rem;
+            padding-left: .33rem;
+            font-size: nth($list: $font-size, $n: 1);
+            background: url(./images/4.png) no-repeat 0 .03rem;
+        }
+    }
+    .title {
+        @extend %text;
+        .title-1 {
+            display: $display;
+            margin: .31rem 0 0 .3rem;
+            padding-left: .3rem;
+            font-weight: bold;
+            border-left: solid .03rem nth($list: $color, $n: 1);
+        }
+    }
+    .first {
+        @extend %text;
+        margin-left: .6rem;
+        .star {
+            @extend %margin;
+            font-weight: 900;
+            color: nth($list: $color, $n: 4);
+        }
+        .text {
+            display: $display;
+            padding-right: .2rem;
+            border-right: solid .01rem nth($list: $color, $n: 3);
+            &:nth-of-type(2) {
+                border: none;
+            }
+        }
+    }
+    .second {
+        @extend %text;
+        margin-left: .6rem;
+        .job {
+            @extend %margin;
+            padding-right: .26rem;
+            color: nth($list: $color, $n: 3);
+            border-right: solid .01rem nth($list: $color, $n: 3);
+        }
+        .years {
+            @extend %margin;
+            padding-left: .1rem;
+        }
+        .years-1 {
+            @extend %margin;
+            padding-left: .1rem;
+            font-weight: 900;
+            color: nth($list: $color, $n: 4)
+        }
+        .years-2 {
+            display: $display;
+            padding: .18rem 0;
+            width: 60%;
+            padding-left: .1rem;
+            vertical-align: middle;
+            font-size: nth($list: $font-size, $n: 2);
+        }
+    }
+}
+
+footer {
+    @extend %positiong;
+    bottom: 0;
+    background-color: nth($list: $color, $n: 2);
+    .button {
+        display: $display;
+        padding: .225rem 0;
+        width: 43%;
+        font-size: nth($list: $font-size, $n: 4);
+        text-decoration: none;
+        border: solid .02rem nth($list: $color, $n: 1);
+        border-radius: .06rem;
+        &:nth-of-type(1) {
+            color: nth($list: $color, $n: 1);
+            background-color: nth($list: $color, $n: 2);
+        }
+        &:nth-of-type(2) {
+            color: nth($list: $color, $n: 2);
+            background-color: nth($list: $color, $n: 1);
+        }
+    }
+}
+
+@media screen and (max-width: 719px) {
+    html {
+        font-size: 312.5%;
+        .heads {
+            background-position: -1.4rem 0 !important;
+        }
+        .position {
+            margin-left: .23rem !important;
+            padding: .12rem 0 .12rem .44rem !important;
+        }
+        .years {
+            font-size: nth($list: $font-size, $n: 1) !important;
+        }
+        .years-1 {
+            font-size: nth($list: $font-size, $n: 1) !important;
+        }
+        .years-2 {
+            font-size: nth($list: $font-size, $n: 1) !important;
+        }
+    }
+}
