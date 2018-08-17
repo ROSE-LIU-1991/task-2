@@ -88,7 +88,7 @@ header .images {
 }
 
 header .drop {
-  margin-top: .1rem;
+  margin-top: .08rem;
   width: 100%;
   background-color: #fff;
   border-bottom: solid 0.01rem #e1e5e7;
@@ -152,6 +152,7 @@ header .drop .drop-down .drop-content .drop-a:hover {
 
 main {
   margin-top: 1.68rem;
+  margin-bottom: 1.2rem;
 }
 
 main .list {

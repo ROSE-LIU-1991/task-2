@@ -86,7 +86,7 @@ header {
         background-position: -.2rem -4.52rem;
     }
     .drop {
-        margin-top: .1rem;
+        margin-top: .08rem;
         width: 100%;
         background-color: nth($list: $color, $n: 1);
         border-bottom: solid .01rem nth($list: $color, $n: 7);
@@ -144,6 +144,7 @@ header {
 
 main {
     margin-top: 1.68rem;
+    margin-bottom: 1.2rem;
     .list {
         display: $display;
         width: $width;
