@@ -74,7 +74,7 @@ main {
         .num {
             font-size: nth($fs, 4);
             color: nth($color, 3);
-        }
+        } // 直接切图的三角形
         .triangle {
             float: right;
             margin: .68rem .08rem 0 0;
