@@ -1,0 +1,40 @@
+.bg-5 {
+    width: 39px; height: 40px;
+    background: url('css_sprites.png') -10px -223px;
+}
+
+x
+.bg-6 {
+    width: 36px; height: 36px;
+    background: url('css_sprites.png') -10px -167px;
+}
+
+x
+.bg-7 {
+    width: 52px; height: 52px;
+    background: url('css_sprites.png') -10px -283px;
+}
+
+x
+.bg-8 {
+    width: 27px; height: 17px;
+    background: url('css_sprites.png') -10px -44px;
+}
+
+x
+.bg-9 {
+    width: 19px; height: 21px;
+    background: url('css_sprites.png') -10px -81px;
+}
+
+x
+.bg-10 {
+    width: 26px; height: 25px;
+    background: url('css_sprites.png') -10px -122px;
+}
+
+x
+.bg-11 {
+    width: 14px; height: 14px;
+    background: url('css_sprites.png') -10px -10px;
+}

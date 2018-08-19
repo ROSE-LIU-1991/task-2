@@ -1,0 +1,138 @@
+$color: #29bde0 #f0f0f0 #9a9a9a #e7e7e7 #fbb435 #fff #69d1e9 #fff;
+$fs: .35rem .38rem .32rem .24rem 625%;
+$width: 100%;
+$bi: url(./images/4.png);
+$border:solid .01rem nth($color, 3);
+%ta {
+    text-align: center;
+}
+
+html {
+    font-size: nth($fs, 5);
+    body {
+        background-color: nth($color, 2);
+    }
+}
+
+header {
+    width: $width;
+    height: .9rem;
+    background-color: nth($color, 1);
+    .home {
+        float: left;
+        margin: .42rem 0 0 .22rem;
+        width: .34rem;
+        height: .27rem;
+        background: $bi;
+        background-position: -.2rem -.2rem;
+    }
+}
+
+main {
+    margin: .26rem .35rem .61rem .35rem;
+    .title {
+        width: $width;
+        height: 1.16rem;
+        border: $border;
+        line-height: 1.16rem;
+        @extend %ta;
+        font-size: nth($fs, 1);
+        color: nth($color, 3);
+        background-color: nth($color, 6);
+        .next {
+            float: right;
+            margin: .38rem .14rem 0 0;
+            width: .24rem;
+            height: .4rem;
+            background: $bi;
+            background-position: -.2rem -.87rem;
+        }
+    }
+    .choice {
+        margin-top: .25rem;
+        width: $width;
+        border: $border;
+        text-align: center;
+        background-color: nth($color, 6);
+        .top {
+            padding: .19rem 0;
+            width: $width;
+            height: .9rem;
+            border-bottom: solid .02rem nth($color, 5);
+            font-size: nth($fs, 2);
+            color: nth($color, 5);
+        }
+        .version {
+            display: block;
+            margin: .28rem .5rem;
+            height: 1.36rem;
+            line-height: 1.36rem;
+            font-size: nth($fs, 3);
+            color: nth($color, 8);
+            background-color: nth($color, 7);
+        }
+        .num {
+            font-size: nth($fs, 4);
+            color: nth($color, 3);
+        }
+        .triangle {
+            float: right;
+            margin: .68rem .08rem 0 0;
+            width: .28rem;
+            height: .56rem;
+            background: $bi;
+            background-position: -.2rem -1.67rem;
+        }
+        .round {
+            padding-top: .13rem;
+            height: .4rem;
+            .round-sm {
+                display: inline-block;
+                margin-right: .09rem;
+                width: .18rem;
+                height: .18rem;
+                background-color: nth($color, 2);
+                border-radius: 50%;
+                &:hover {
+                    background-color: nth($color, 7);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    html {
+        font-size: nth($fs, 5) / 2;
+        .home {
+            margin: .18rem 0 0 .22rem;
+            width: .68rem;
+            height: .54rem;
+            background-position: -.4rem -.4rem;
+            transform: scale(.5);
+        }
+        .next {
+            margin: .18rem .14rem 0 0 !important;
+            width: .48rem !important;
+            height: .8rem !important;
+            background-position: -.4rem -1.74rem !important;
+            transform: scale(.5);
+        }
+        .triangle {
+            margin: .34rem 0 0 0 !important;
+            width: .56rem !important;
+            height: 1.12rem !important;
+            background-position: -.4rem -3.34rem !important;
+            transform: scale(.5);
+        }
+        .round {
+            padding: 0 !important;
+            .round-sm {
+                margin: 0 !important;
+                width: .39rem !important;
+                height: .39rem !important;
+                transform: scale(.5);
+            }
+        }
+    }
+}
