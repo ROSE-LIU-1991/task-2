@@ -1,0 +1,88 @@
+bg-1 {
+    width: 43px; height: 62px;
+    background: url('css_sprites.png') -20px -774px;
+}
+
+x
+.bg-2 {
+    width: 60px; height: 48px;
+    background: url('css_sprites.png') -20px -215px;
+}
+
+x
+.bg-3 {
+    width: 52px; height: 55px;
+    background: url('css_sprites.png') -20px -485px;
+}
+
+x
+.bg-4 {
+    width: 13px; height: 13px;
+    background: url('css_sprites.png') -20px -20px;
+}
+
+x
+.bg-5 {
+    width: 20px; height: 20px;
+    background: url('css_sprites.png') -20px -73px;
+}
+
+x
+.bg-6 {
+    width: 108px; height: 108px;
+    background: url('css_sprites.png') -20px -1304px;
+}
+
+x
+.bg-7 {
+    width: 108px; height: 108px;
+    background: url('css_sprites.png') -20px -1156px;
+}
+
+x
+.bg-8 {
+    width: 108px; height: 108px;
+    background: url('css_sprites.png') -20px -1452px;
+}
+
+x
+.bg-9 {
+    width: 108px; height: 108px;
+    background: url('css_sprites.png') -20px -1008px;
+}
+
+x
+.bg-10 {
+    width: 146px; height: 54px;
+    background: url('css_sprites.png') -20px -391px;
+}
+
+x
+.bg-11 {
+    width: 53px; height: 58px;
+    background: url('css_sprites.png') -20px -676px;
+}
+
+x
+.bg-12 {
+    width: 134px; height: 48px;
+    background: url('css_sprites.png') -20px -303px;
+}
+
+x
+.bg-13 {
+    width: 170px; height: 42px;
+    background: url('css_sprites.png') -20px -133px;
+}
+
+x
+.bg-14 {
+    width: 125px; height: 56px;
+    background: url('css_sprites.png') -20px -580px;
+}
+
+x
+.bg-15 {
+    width: 92px; height: 92px;
+    background: url('css_sprites.png') -20px -876px;
+}

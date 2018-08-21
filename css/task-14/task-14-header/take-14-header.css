@@ -1,0 +1,249 @@
+@charset "UTF-8";
+html {
+  font-size: 625%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 3%;
+}
+
+.container .ctr {
+  float: right;
+  margin: .125rem .02rem .125rem .16rem;
+  width: .25rem;
+  height: .24rem;
+  background: url(./4.png);
+}
+
+.container .btn-1 {
+  background-position: -.2rem -.2rem;
+}
+
+.container .bth-2 {
+  background-position: -.2rem -.84rem;
+}
+
+.container .bth-3 {
+  background-position: -.2rem -1.48rem;
+}
+
+.hotline {
+  padding: .125rem 0;
+  line-height: .25rem;
+  font-size: .14rem;
+  color: #29b078;
+}
+
+nav {
+  background-color: #29b078;
+}
+
+nav .nav-header {
+  height: 1rem;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav .nav-header {
+    float: left;
+    width: auto;
+  }
+}
+
+nav .nav-header .logo {
+  display: block;
+  width: 2rem;
+  height: 100%;
+  background: url(./5.png) no-repeat 0 center;
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav-header .logo {
+    margin-left: -1rem;
+    width: 4rem;
+    transform: scale(0.5);
+  }
+}
+
+.nav-list {
+  font-size: 0;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    margin: 0;
+  }
+}
+
+.nav-list input[type="checkbox"] {
+  display: none;
+}
+
+.nav-list input[type="checkbox"]:checked ~ .drop-dwon {
+  height: 2rem;
+}
+
+.nav-list .nav-bth {
+  display: none;
+  position: absolute;
+  padding: .12rem .08rem;
+  border: solid 0.01rem #fff;
+  background: #47d197;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list .nav-bth {
+    display: inline-block;
+    right: .23rem;
+    top: .76rem;
+  }
+}
+
+.nav-list .nav-bth .nav-bar {
+  display: block;
+  margin-top: .04rem;
+  width: .32rem;
+  height: .02rem;
+  background-color: #000;
+}
+
+.drop-dwon {
+  font-size: .16rem;
+  height: 0rem;
+  transition: height .5s;
+}
+
+.drop-dwon > li {
+  padding: .15rem 3%;
+  height: .5rem;
+}
+
+.drop-dwon > li:hover {
+  border-bottom: solid .04rem #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .drop-dwon > li {
+    display: inline-block;
+    float: right;
+    height: 1rem;
+    line-height: .7rem;
+  }
+}
+
+.drop-dwon > li > a {
+  line-height: .2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container > ul li {
+  list-style: none;
+}
+
+.slider-container > .slider {
+  position: relative;
+  padding-bottom: 31.25%;
+}
+
+.slider-container > .slider > .slider-item {
+  position: absolute;
+  padding-bottom: 31.25%;
+  width: 100%;
+  opacity: 0;
+  animation-duration: 12s;
+  animation-name: item-img;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.slider-container > .slider > .slider-item-1 {
+  background: url(./6.png) no-repeat;
+  background-size: 100%;
+  animation-delay: -1s;
+}
+
+.slider-container > .slider > .slider-item-2 {
+  background: url(./7.png) no-repeat;
+  background-size: 100%;
+  animation-delay: 3s;
+}
+
+.slider-container > .slider > .slider-item-3 {
+  background: url(./8.png) no-repeat;
+  background-size: 100%;
+  animation-delay: 7s;
+}
+
+.focus-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2%;
+  margin: 0 auto;
+  z-index: 7;
+}
+
+.focus-container > .focus {
+  margin-left: calc(50% - .44rem);
+}
+
+.focus-container > .focus > li {
+  float: left;
+  margin-right: .1rem;
+  width: .16rem;
+  height: .16rem;
+  border-radius: 50%;
+  border: solid .02rem #fff;
+}
+
+.focus-container > .focus > li > .focus-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0;
+  animation-duration: 12s;
+  animation-name: item-img;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.focus-container > .focus > li > .focus-item-1 {
+  animation-delay: -1s;
+}
+
+.focus-container > .focus > li > .focus-item-2 {
+  animation-delay: 3s;
+}
+
+.focus-container > .focus > li > .focus-item-3 {
+  animation-delay: 7s;
+}
+
+/*设置动画效果*/
+@keyframes item-img {
+  0% {
+    opacity: 0;
+    z-index: 2;
+  }
+  8% {
+    opacity: 1;
+    z-index: 1;
+  }
+  24% {
+    opacity: 1;
+    z-index: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 0;
+  }
+}

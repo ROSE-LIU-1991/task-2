@@ -1,0 +1,139 @@
+[class^='col-'] {
+  float: left;
+  position: relative;
+  padding-left: .15rem;
+  padding-right: .15rem;
+}
+
+@media screen and (min-width: 992px) {
+  .col-md-3 {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-sm-6 {
+    width: 100%;
+  }
+}
+
+main {
+  background-color: #fafafa;
+}
+
+.row {
+  display: inline-block;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.row > .row-1 {
+  padding: .15rem;
+  height: 2.3rem;
+}
+
+.row > .row-1 > .photo {
+  display: inline-block;
+  background: url(./16.png) no-repeat;
+}
+
+.row > .row-1 > .images-1 {
+  width: .43rem;
+  height: .62rem;
+  background-position: -.2rem -7.74rem;
+}
+
+.row > .row-1 > .photo-word-1 {
+  margin-top: .33rem;
+  font-size: 0.18rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.row > .row-1 > .photo-word-2 {
+  margin-top: .3rem;
+  font-size: 0.16rem;
+  color: #999;
+}
+
+@media screen and (min-width: 992px) {
+  .row > .row-1 > .photo-word-2 {
+    text-align: left;
+  }
+}
+
+.row > .row-1 > .images-2 {
+  width: .6rem;
+  height: .48rem;
+  background-position: -.2rem -2.15rem;
+}
+
+.row > .row-1 > .images-3 {
+  width: .52rem;
+  height: .52rem;
+  background-position: -.2rem -4.85rem;
+}
+
+.col-sm-6 > .count-box {
+  margin: .2rem 0;
+  padding: .3rem 0;
+  height: 1.9rem;
+  border-left: dashed 0.01rem #999;
+  font-size: 0.14rem;
+}
+
+.col-sm-6 > .count-box > .people {
+  display: inline-block;
+  width: .13rem;
+  height: .13rem;
+  background: url(./16.png) no-repeat -20px -20px;
+}
+
+.col-sm-6 > .count-box > .count {
+  font-weight: 600;
+  color: #26a26f;
+}
+
+.col-sm-6 > .count-box > p {
+  color: #999;
+}
+
+.row-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: .44rem;
+  padding-bottom: .44rem;
+}
+
+.row-2 .button {
+  width: .72rem;
+  height: .72rem;
+  border: solid 0.01rem #eeeded;
+  border-radius: 50%;
+  line-height: .72rem;
+  font-size: 0.18rem;
+  color: #26a26f;
+  background-color: #fff;
+}
+
+.row-2 .button-word {
+  margin-top: .07rem;
+  width: 1.8rem;
+  font-weight: 700;
+  font-size: 0.14rem;
+  text-align: left;
+  color: #999;
+}
+
+.row-2 .images-3 {
+  width: .2rem;
+  height: .2rem;
+  background: url(./16.png) no-repeat -0.2rem -0.73rem;
+}
