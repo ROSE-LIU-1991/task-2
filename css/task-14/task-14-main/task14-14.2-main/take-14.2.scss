@@ -1,0 +1,86 @@
+$c1: #fff #333 #63bf95 #fafafa #ededed;
+$c2: #e6e6e6 #29b078 #ff650e #f9a372 #999;
+$fs: .16rem .14rem;
+main {
+    padding-bottom: 2.3rem;
+    background-color: nth($c1, 4);
+    >.top-photo {
+        width: 100%;
+        padding-bottom: 20%;
+        background: url(./1.png) no-repeat;
+        background-size: 100%;
+    }
+    >.top-title {
+        padding-top: .3rem;
+        font-weight: 700;
+        font-size: nth($fs, 1);
+        >.title-1 {
+            color: nth($c1, 2);
+        }
+        >.title-2 {
+            color: nth($c1, 3);
+        }
+    }
+}
+
+.mid-word-left {
+    margin-top: .3rem;
+    padding-bottom: .35rem;
+    box-shadow: 0 0 0.05rem 0.05rem nth($c1, 5);
+    border-radius: .04rem;
+    text-align: center;
+    background-color: nth($c1, 1);
+    >.word-left-1 {
+        margin-bottom: .5rem;
+        padding: .23rem 0;
+        border-bottom: solid 0.01rem nth($c2, 1);
+        font-size: nth($fs, 1);
+        font-weight: 700;
+        background-color: nth($c1, 1);
+    }
+    >.word-left-2 {
+        padding: .18rem 0;
+        &:hover .left-word {
+            color: nth($c2, 4);
+        }
+        &:hover .left-button {
+            background-color: nth($c2, 4);
+        }
+        >.left-button {
+            display: inline-block;
+            margin-right: .1rem;
+            width: 0.1rem;
+            height: 0.1rem;
+            border: solid 0.02rem nth($c2, 3);
+            border-radius: 50%;
+        }
+        >.left-word {
+            font-size: nth($fs, 2);
+            color: nth($c2, 2);
+        }
+    }
+}
+
+.mid-word-right {
+    display: inline-block;
+    margin-top: .3rem;
+    padding: .2rem .6rem 1.4rem .85rem;
+    width: 100%;
+    box-shadow: 0 0 0.05rem 0.05rem nth($c1, 5);
+    border-radius: .04rem;
+    font-size: nth($fs,2);
+    color: nth($c2,5);
+    background-color: nth($c1, 1);
+    .word-right-1 {
+        float: left;
+        margin: .3rem .35rem 0 0;
+        width: 1.25rem;
+        height: .5rem;
+        background: url(./2.png) no-repeat;
+    }
+}
+.word-right-2 {
+    padding: .4rem .15rem .4rem 0;
+    font-size: nth($fs,2);
+    color: nth($c2,5);
+}

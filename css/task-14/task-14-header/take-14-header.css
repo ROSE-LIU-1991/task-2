@@ -4,6 +4,7 @@ html {
 }
 
 .container {
+  display: inline-block;
   width: 100%;
   padding: 0 3%;
 }
@@ -40,12 +41,13 @@ nav {
 }
 
 nav .nav-header {
-  height: 1rem;
+  height: .5rem;
   color: #fff;
 }
 
 @media screen and (min-width: 768px) {
   nav .nav-header {
+    height: 1rem;
     float: left;
     width: auto;
   }
@@ -60,6 +62,7 @@ nav .nav-header .logo {
 
 @media screen and (max-width: 768px) {
   nav .nav-header .logo {
+    margin-top: .03rem;
     margin-left: -1rem;
     width: 4rem;
     transform: scale(0.5);
@@ -88,7 +91,7 @@ nav .nav-header .logo {
 .nav-list .nav-bth {
   display: none;
   position: absolute;
-  padding: .12rem .08rem;
+  padding: .08rem .04rem;
   border: solid 0.01rem #fff;
   background: #47d197;
 }
@@ -97,7 +100,7 @@ nav .nav-header .logo {
   .nav-list .nav-bth {
     display: inline-block;
     right: .23rem;
-    top: .76rem;
+    top: .6rem;
   }
 }
 
@@ -192,7 +195,7 @@ nav .nav-header .logo {
 }
 
 .focus-container > .focus {
-  margin-left: calc(50% - .44rem);
+  margin-left: calc(50% - .24rem);
 }
 
 .focus-container > .focus > li {
@@ -202,6 +205,13 @@ nav .nav-header .logo {
   height: .16rem;
   border-radius: 50%;
   border: solid .02rem #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .focus-container > .focus > li {
+    width: .1rem;
+    height: .1rem;
+  }
 }
 
 .focus-container > .focus > li > .focus-item {
