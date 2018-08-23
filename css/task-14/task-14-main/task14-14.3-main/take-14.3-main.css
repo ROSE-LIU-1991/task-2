@@ -1,0 +1,243 @@
+.occupation > .opn-box1 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+main {
+  padding-bottom: 2.23rem;
+  background-color: #fafafa;
+}
+
+.top-title {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  border-bottom: solid 0.01rem #d0d6d9;
+  font-size: 0.16rem;
+  font-weight: 700;
+}
+
+.top-title .top-title-1 {
+  color: #333333;
+}
+
+.top-title .top-title-2 {
+  color: #29b078;
+}
+
+.occupation {
+  display: flex;
+  border-bottom: solid 0.01rem #edf1f2;
+  font-size: 0.14rem;
+  font-weight: 700;
+  height: .6rem;
+}
+
+@media screen and (max-width: 632px) {
+  .occupation {
+    height: auto;
+  }
+}
+
+.occupation > .opn-box1 .option {
+  display: inline-block;
+  margin-right: .15rem;
+  width: .5rem;
+  vertical-align: middle;
+  color: #999999;
+}
+
+.occupation > .opn-box2 > .opn-option {
+  display: inline-block;
+  margin-right: .15rem;
+  padding: .05rem 0;
+  width: .7rem;
+  height: .3rem;
+  text-align: center;
+  color: #333333;
+}
+
+.occupation > .opn-box2 > .opn-option:hover {
+  color: #ffffff;
+  background-color: #29b078;
+}
+
+@media screen and (min-width: 632px) {
+  .occupation > .opn-box2 > .opn-option {
+    margin-top: .15rem;
+  }
+}
+
+.occupation > .opn-box2 > .opn-option2 {
+  display: inline-block;
+  margin-right: .15rem;
+  width: .7rem;
+  height: .3rem;
+  text-align: center;
+  color: #333333;
+}
+
+.occupation > .opn-box2 > .opn-option2 > span {
+  display: inline-block;
+  padding: .05rem 0;
+  width: .35rem;
+  height: 100%;
+}
+
+.occupation > .opn-box2 > .opn-option2 > span:hover {
+  color: #ffffff;
+  background-color: #29b078;
+}
+
+.top-title-3 {
+  height: .8rem;
+  line-height: .8rem;
+  border-bottom: solid 0.01rem #d0d6d9;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+
+.main-mid {
+  display: inline-block;
+  width: 100%;
+}
+
+.mid-word {
+  display: inline-block;
+  margin-top: .3rem;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 0.02rem 0.02rem #eeeded;
+  border-radius: .05rem;
+  transition: 1s;
+  z-index: 1;
+}
+
+.mid-word:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.mid-word:hover .mid-text {
+  display: inline-block;
+}
+
+.mid-word-1 {
+  display: inline-block;
+  padding: .2rem .1rem;
+  width: 100%;
+}
+
+.mid-word-1 > .mid-image {
+  float: left;
+  margin-right: .08rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(./1.png) no-repeat;
+}
+
+.mid-word-1 > .mid-title {
+  padding: .15rem 0;
+  font-size: 0.16rem;
+  font-weight: 700;
+}
+
+.mid-word-1 > .mid-word-2 {
+  font-size: 0.14rem;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.mid-word-3, .mid-word-7, .mid-word-8 {
+  border: solid 0.01rem #edf1f2;
+}
+
+.mid-word-3 {
+  float: left;
+  padding: 0 .1rem;
+  width: 50%;
+  line-height: .44rem;
+}
+
+.mid-word-3 > .mid-word-4 {
+  display: inline-block;
+  padding-right: .12rem;
+  font-size: 0.12rem;
+  color: #999999;
+}
+
+.mid-word-3 > .mid-word-5 {
+  display: inline-block;
+  font-size: 0.16rem;
+  color: #ff5c00;
+}
+
+.mid-word-3 > .mid-word-6 {
+  display: inline-block;
+  font-weight: bold;
+  color: #f01400;
+}
+
+.mid-word-7 {
+  float: left;
+  padding: .48rem 0;
+  width: 40%;
+  font-size: 0.12rem;
+  text-align: center;
+  color: #999999;
+}
+
+.mid-word-8 {
+  float: right;
+  padding: .09rem .1rem .09rem .25rem;
+  width: 60%;
+  font-size: 0.12rem;
+}
+
+.mid-word-8 > span {
+  float: right;
+}
+
+.mid-word-9 {
+  display: inline-block;
+  padding: .24rem .1rem;
+  width: 100%;
+  border: solid 0.01rem #edf1f2;
+  font-size: 0.14rem;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.mid-word-9 > span {
+  color: #f01400;
+}
+
+.mid-word-10 {
+  display: inline-block;
+  padding: .11rem .1rem;
+  width: 100%;
+  font-size: 0.12rem;
+  color: #999999;
+}
+
+.mid-text {
+  display: none;
+  position: absolute;
+  padding: .85rem .5rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 2;
+}
+
+.mid-text > h1 {
+  font-size: 0.16rem;
+}
+
+.mid-text > p {
+  padding-top: .35rem;
+  font-size: 0.16rem;
+  text-align: left;
+  word-break: break-all;
+}

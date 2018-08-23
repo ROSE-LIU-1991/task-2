@@ -58,6 +58,12 @@ main {
   }
 }
 
+.row > .row-1 > .photo-word-3 {
+  margin-top: .3rem;
+  font-size: 0.16rem;
+  color: #999;
+}
+
 .row > .row-1 > .images-2 {
   margin-bottom: .14rem;
   width: .6rem;

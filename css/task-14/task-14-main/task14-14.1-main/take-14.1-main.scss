@@ -48,6 +48,11 @@ main {
                 text-align: left;
             }
         }
+        >.photo-word-3 {
+            margin-top: .3rem;
+            font-size: nth($fs, 2);
+            color: nth($color, 3);
+        }
         >.images-2 {
             margin-bottom: .14rem;
             width: .6rem;
