@@ -1,0 +1,115 @@
+$fs: .18rem .14rem .16rem .12rem;
+$color: #fff #333 #999 #26a26f #32c086;
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-box1 {
+    background-color: nth($color, 1);
+    text-align: center;
+    >.container {
+        >p {
+            margin: .25rem 0;
+        }
+    }
+}
+
+.top-row {
+    @extend %flex;
+    .row-box {
+        display: inline-block;
+        width: 10%;
+        @media screen and (max-width: 800px) {
+            width: 20%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 50%;
+        }
+        .box-link {
+            display: inline-block;
+            margin-bottom: .15rem;
+            width: 100%;
+            font-size: nth($fs, 2);
+            color: nth($color, 3);
+        }
+    }
+}
+
+%fc31 {
+    font-size: nth($fs, 3);
+    color: nth($color, 1);
+}
+
+%fc21 {
+    font-size: nth($fs, 2);
+    color: nth($color, 1);
+}
+
+.footer-row {
+    height: 1.75rem;
+    &:nth-of-type(3) {
+        float: right;
+        text-align: right;
+        @media screen and (max-width: 1000px) {
+            float: left;
+            text-align: left;
+        }
+    }
+}
+
+.footer-box2 {
+    display: inline-block;
+    width: 100%;
+    border-bottom: solid 0.01rem nth($color, 5);
+    background-color: nth($color, 4);
+    .footer-word1 {
+        padding: .4rem 0;
+        @extend %fc31;
+    }
+    .footer-word2 {
+        padding: .15rem 0 .35rem 0;
+        @extend %fc31;
+        .footer-word3 {
+            @extend %fc21;
+        }
+    }
+    .footer-word4 {
+        padding-top: .4rem;
+        @extend %fc31;
+    }
+    .footer-word5 {
+        padding: 0rem 0 .32rem 0;
+        .footer-word6 {
+            display: inline-block;
+            padding: .18rem 0 0 0;
+            margin-right: .15rem;
+            white-space: nowrap;
+            @extend %fc21;
+        }
+    }
+}
+
+.footer-word6 {
+    padding: .35rem .25rem 0 0;
+    @extend %fc31;
+}
+
+.footer-image {
+    float: right;
+    margin: .05rem .28rem 0 0;
+    width: .92rem;
+    height: .92rem;
+    background: url(./1.png) no-repeat;
+    @media screen and (max-width: 1000px) {
+        float: left;
+    }
+}
+
+.footer-box3 {
+    padding: .06rem 0;
+    text-align: center;
+    font-size: nth($fs,4);
+    color:nth($color,1);
+    background-color: nth($color, 4);
+}
