@@ -121,11 +121,11 @@ nav .nav-header .logo {
 .drop-dwon {
   font-size: .16rem;
   height: 0rem;
+  text-align: center;
   transition: height .5s;
 }
 
 .drop-dwon > li {
-  text-align: center;
   height: .5rem;
 }
 

@@ -95,9 +95,9 @@ nav {
 .drop-dwon {
     font-size: .16rem;
     height: 0rem;
+    text-align: center;
     transition: height .5s;
     &>li {
-        text-align: center;
         height: .5rem;
         &:hover {
             border-bottom: solid .04rem #fff;
