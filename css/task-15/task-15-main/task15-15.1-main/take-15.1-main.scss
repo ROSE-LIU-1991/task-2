@@ -102,6 +102,9 @@ main {
 .row-2 {
     @extend %flex;
     padding: .44rem 0;
+        @media screen and (max-width: 1200px) and (min-width: 768px) {
+        width:50%;
+    }
     >.button {
         width: .72rem;
         height: .72rem;
