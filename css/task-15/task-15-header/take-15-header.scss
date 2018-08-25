@@ -97,6 +97,7 @@ nav {
     height: 0rem;
     transition: height .5s;
     &>li {
+        text-align: center;
         height: .5rem;
         &:hover {
             border-bottom: solid .04rem #fff;
@@ -180,8 +181,7 @@ nav {
             height: .16rem;
             border-radius: 50%;
             border: solid .02rem #fff;
-            @media screen and (max-width: 500px) {
-                width: .1rem;
+            @media screen and (max-width: 500px) {                width: .1rem;
                 height: .1rem;
             }
             >.focus-item {

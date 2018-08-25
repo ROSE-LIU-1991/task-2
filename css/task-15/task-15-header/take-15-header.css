@@ -125,6 +125,7 @@ nav .nav-header .logo {
 }
 
 .drop-dwon > li {
+  text-align: center;
   height: .5rem;
 }
 
