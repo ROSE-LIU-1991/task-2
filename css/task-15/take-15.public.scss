@@ -36,3 +36,159 @@
     overflow: hidden; //设置超出控件范围隐藏； ③text-overflow：ellipsis;
     text-overflow: ellipsis; //设置多余文本隐藏显示；
 }
+
+//职业块
+.web-list-col {
+    position: relative;
+    height: 4.48rem;
+    width: 30%;
+    margin-bottom: 0.2rem;
+    background-color: #ffffff;
+    border: #d3d4d6 solid 0.01rem;
+    //头像
+    .web-peo {
+      border-bottom: #d3d4d6 solid 0.01rem;
+      padding-left: 0.1rem;
+      height: 1.74rem;
+      .web-peo-p {
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-top: 0.2rem;
+      }
+      .web-peo-t {
+        position: relative;
+        bottom: 1.1rem;
+        font-size: 0.14rem;
+        font-weight: bold;
+      }
+      .web-peo-text {
+        font-size: 0.12rem;
+        width: 45%;
+        position: relative;
+        left: 1.25rem;
+        bottom: 1rem;
+      }
+    }
+    //门槛、成长周期等信息
+    .web2 {
+      color: #999999;
+      font-size: 0.12rem;
+      border-bottom: #d3d4d6 solid .01rem;
+      .threshold,.difficult,.grew,.scar {
+        display: inline-block;
+        height: 0.42rem;
+        line-height: 0.42rem;
+      }
+      .threshold {
+        width: 35%;
+        padding-left: 5%;
+        background: url("../img/icon.png") no-repeat -4.3rem -5.87rem;
+      }
+      .difficult {
+        width: 55%;
+        background: url("../img/icon.png") no-repeat -4.3rem -4.87rem;
+      }
+      .grew {
+        width: 35%;
+        padding-left: 5%;
+        .grew-num {
+          color: red;
+          .grew-text {
+            color: black;
+          }
+        }
+      }
+      .scar {
+        width: 55%;
+        .scar-num {
+          color: red;
+          .scar-text {
+            color: black;
+          }
+        }
+      }
+    }
+    //薪资
+    .money {
+      height: 1.06rem;
+      font-size: 0.14rem;
+      color: #999999;
+      .money-t {
+        width: 40%;
+        border: #d3d4d6 solid 0.01rem;
+        border-left: 0;
+        border-top: 0;
+        text-align: center;
+        line-height: 1.1rem;
+      }
+      .money-l {
+        width: 60%;
+        color: #000000;
+        padding: 0;
+        line-height: 0.36rem;
+        .money-one,.money-two,.money-three {
+          border-bottom: #d3d4d6 solid 0.01rem;
+          height: .343rem;
+          line-height: .343rem;
+          .money-onel,.money-twol,.money-threel {
+            padding-left: 0.2rem;
+          }
+          .money-one2,.money-two2,.money-three2 {
+            padding-right: 0.3rem;
+            float: right;
+          }
+        }
+      }
+    }
+    //在学人数
+    .studying {
+      border-bottom: #d3d4d6 solid 0.01rem;
+      height: 0.38rem;
+      line-height: 0.38rem;
+      font-size: 0.15rem;
+      font-weight: bold;
+      .studying-h {
+        padding-left: 0.2rem;
+      }
+      .studying-num {
+        color: red;
+      }
+    }
+    //提示
+    .tips {
+      padding-left: 0.2rem;
+      line-height: 0.2rem;
+      font-size: 0.12rem;
+      color: #c6c6c6;
+    }
+    //ios介绍
+    .web-hover {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -4.26rem;
+      background-color:transparent;
+      font-size: 0.18rem;
+      color: #ffffff;
+      font-weight: bold;
+      &:hover {
+        background-color:rgba(0,0,0,0.6);
+      }
+      &:hover .web-hover-t {
+        display: block;
+      }
+      &:hover .web-hover-text {
+        display: block;
+      }
+      .web-hover-t {
+        height: .5rem;
+        margin-top: -.8rem;
+        display: none;
+      }
+      .web-hover-text {
+        width: 80%;
+        display: none   ;
+      }
+    }
+  }
