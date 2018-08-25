@@ -102,11 +102,7 @@ main {
 .row-2 {
     @extend %flex;
     padding: .44rem 0;
-<<<<<<< HEAD
     @media screen and (max-width: 1200px) and (min-width: 768px) {
-=======
-        @media screen and (max-width: 1200px) and (min-width: 768px) {
->>>>>>> ee80cede12fbf7d1fd1b923ad3f5d171992b7e3c
         width:50%;
     }
     >.button {
