@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-        <title >首页</title>
-        <link href="../rest.css" rel="stylesheet">
-        <link href="./take-13.1.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <a href="#" class="home"></a>
-        </header>
-        <main>
-            <div class="title">
-                上次游戏：捉鬼猜词版
-                <a href="./take-13.3.html" class="next"></a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <title>首页</title>
+    <link href="../rest.css" rel="stylesheet">
+    <link href="./take-13.1.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="home"></a>
+    </header>
+    <main>
+        <div class="title">
+            上次游戏：捉鬼猜词版
+            <a href="./take-13.3.html" class="next"></a>
+        </div>
+        <div class="choice">
+            <p class="top">捉鬼游戏</p>
+            <!--第一种方法要加oclick-->
+            <a class="version" onclick="b()">简化版</a>
+            <p class="num">有1133个用户正在玩此款游戏</p>
+            <!-- 这个是下一布的点击按钮 -->
+            <a href="./take-13.2.html" class="triangle"></a>
+            <a href="./take-13.2.html" class="version">猜词版</a>
+            <p class="num">有1133个用户正在玩此款游戏</p>
+            <a href="./take-13.2.html" class="version">白痴版</a>
+            <p class="num">有1133个用户正在玩此款游戏</p>
+            <div class="round">
+                <div class="round-sm"></div>
+                <div class="round-sm"></div>
+                <div class="round-sm"></div>
+                <div class="round-sm"></div>
             </div>
-            <div class="choice">
-                <p class="top">捉鬼游戏</p>
-                <a href="./take-13.2.html" class="version">简化版</a>
-                <p class="num">有1133个用户正在玩此款游戏</p>
-                <!-- 这个是下一布的点击按钮 -->
-                <a href="./take-13.2.html" class="triangle"></a>
-                <a href="./take-13.2.html" class="version">猜词版</a>
-                <p class="num">有1133个用户正在玩此款游戏</p>
-                <a href="./take-13.2.html" class="version">白痴版</a>
-                <p class="num">有1133个用户正在玩此款游戏</p>
-                <div class="round">
-                    <div class="round-sm"></div>
-                    <div class="round-sm"></div>
-                    <div class="round-sm"></div>
-                    <div class="round-sm"></div>
-                </div>
-            </div>
-        </main>
-    </body>
+        </div>
+    </main>
+    <script src="../../js/task-2/task-2.js"></script>
+</body>
+
 </html>
