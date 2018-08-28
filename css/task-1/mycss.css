@@ -7,3 +7,23 @@
     margin:1%;
     border-radius:3%;
     }
+
+    
+.clearfix::after {
+    content: "";         /*生成内容作为最后一个元素，至于content里面是什么没有影响*/
+    display: block;       /*使得生成的元素以块级元素显示，占满剩余空间*/
+    height: 0;            /*避免生成的内容破坏原有空间的高度*/
+    clear: both;          /*闭合浮动*/
+    visibility: hidden;   /*使得生成内容不可见，并允许可能生成内容盖住的内容进行点击和交互*/
+  }
+
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: solid 1px orange;
+    border-radius: 5px;
+    text-align: center;
+    color: orange;
+}
