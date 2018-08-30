@@ -15,7 +15,7 @@ html {
 }
 
 header {
-    width: $width;
+    width: $width; 
     height: .9rem;
     background-color: nth($color, 1);
     .home {
