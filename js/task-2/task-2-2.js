@@ -121,7 +121,7 @@ function three() {
             all[rand] = p;
         }
         //将数据存储到"all"里（数组）
-        window.sessionStorage.setItem = ionStorage.setItem("all", JSON.stringify(all));
+        window.sessionStorage.setItem("all", JSON.stringify(all));
         window.location.href = "./task-2-3.html";
     }
 
