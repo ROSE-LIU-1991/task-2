@@ -2,12 +2,21 @@
 var textnumber = document.getElementById("TextNumber");
 var rangenumber = document.getElementById("RangeNumber");
 
+//返回按钮的监听
+var B = document.getElementsByClassName("returm");
+B[0].addEventListener("click", home);
+
+function home() {
+    window.location.href = "./task-2-1.html"
+}
 
 //让文本input和滑块Input关联,加了个限制
-textnumber.onchange = function () {
-    var player = this.textContent.value;
+textnumber.addEventListener("change", fChang);
+
+function fChang() {
+    var nPlayer = textnumber.value;
     var NUBM = /^\d+$/;
-    if (NUBM.test(player)) {
+    if (NUBM.test(nPlayer)) {
         if (textnumber.value >= 4 && textnumber.value <= 18) {
             rangenumber.value = textnumber.value;
         } else {
@@ -15,6 +24,7 @@ textnumber.onchange = function () {
         }
     } else {
         alert("只接受数字");
+        return true;
     }
 };
 
@@ -24,7 +34,9 @@ rangenumber.oninput = function () {
 }
 
 //减号按钮监听
-document.getElementById("btn-1").addEventListener("click", function () {
+document.getElementById("btn-1").addEventListener("click", oBtn);
+
+function oBtn() {
     var play = rangenumber;
     if (play.value >= 5) {
         play.value--;
@@ -32,10 +44,12 @@ document.getElementById("btn-1").addEventListener("click", function () {
     } else {
         alert("玩家数不能小于4或大于18");
     }
-})
+}
 
 //加号按钮监听
-document.getElementById("btn-3").addEventListener("click", function () {
+document.getElementById("btn-3").addEventListener("click", oBTN);
+
+function oBTN() {
     var play = rangenumber;
     if (play.value <= 17) {
         play.value++;
@@ -43,12 +57,14 @@ document.getElementById("btn-3").addEventListener("click", function () {
     } else {
         alert("玩家数不能小于4或大于18");
     }
-})
+}
 
 //设置一个全局元素为后面的条件触发买下伏笔
 var one = 0;
 
-document.getElementById("2").addEventListener("click", function () {
+document.getElementById("2").addEventListener("click", oPlayers);
+
+function oPlayers() {
     //获取人数
     var PeopleNumber = textnumber.value;
     //获取杀手数
@@ -87,7 +103,7 @@ document.getElementById("2").addEventListener("click", function () {
         //one值
         one = 1;
     }
-});
+};
 
 //发牌按钮
 document.getElementById("3").addEventListener("click", three);
@@ -99,9 +115,7 @@ function three() {
     var KillerNumber = Math.floor(PeopleNumber / 3);
     //平民
     var CivilianNumber = PeopleNumber - KillerNumber;
-    if (one == 0) {
-        alert("请配比好玩家人数");
-    } else {
+    if (one == 1) {
         //创建空数组
         var all = [];
         //将杀手加入数组
@@ -118,21 +132,15 @@ function three() {
             var rand = Math.floor(Math.random() * (p + 1))
             var i = all[p];
             all[p] = all[rand];
-            all[rand] = p;
+            all[rand] = i;
         }
+        console.log(all);
         //将数据存储到"all"里（数组）
-        window.sessionStorage.setItem = ionStorage.setItem("all", JSON.stringify(all));
+        window.sessionStorage.setItem("all", JSON.stringify(all));
         window.location.href = "./task-2-3.html";
+    } else {
+        alert("请配比好玩家人数");
     }
-
-}
-
-//返回按钮的监听
-var B = document.getElementsByClassName("returm");
-B[0].addEventListener("click", home);
-
-function home() {
-    window.location.href = "./task-2-1.html"
 }
 
 // //2个全局函数
@@ -204,3 +212,19 @@ function home() {
 //         window.location.href = "./flip.html";
 //     }
 // }
+
+
+
+// textnumber.onchange = function () {
+//     var player = this.textContent.value;
+//     var NUBM = /^\d+$/;
+//     if (NUBM.test(player)) {
+//         if (textnumber.value >= 4 && textnumber.value <= 18) {
+//             rangenumber.value = textnumber.value;
+//         } else {
+//             alert("玩家数不能小于4或大于18");
+//         }
+//     } else {
+//         alert("只接受数字");
+//     }
+// };

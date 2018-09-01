@@ -1,0 +1,184 @@
+$c1: #fff #000 #29bde0 #f56b81;
+$c2: #ffedc5 #74d4eb #fbb435 #29bde0 #fca000;
+$fs: .34rem .4rem .48rem .26rem 625%;
+
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0 3%;
+}
+
+html {
+    font-size: nth($fs, 5);
+
+    @media screen and (max-width: 550px) {
+        font-size: nth($fs, 5) / 2;
+    }
+
+    body {
+        background-color: nth($c1, 3);
+    }
+}
+
+header {
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    border-bottom: solid 0.01rem nth($c2, 2);
+    font-size: nth($fs, 1);
+    color: nth($c1, 1);
+    background-color: nth($c1, 3);
+
+    .returm {
+        float: left;
+        margin-top: .2rem;
+        width: .5rem;
+        height: .5rem;
+        background: url(./images/1.png) no-repeat 50% 50%;
+
+        @media screen and (max-width: 550px) {
+            width: 1rem;
+            height: 1rem;
+            transform: scale(.5) translate(0, -.5rem);
+        }
+    }
+
+    .back {
+        float: right;
+        margin-top: .2rem;
+        width: .5rem;
+        height: .5rem;
+        background: url(./images/8.png) no-repeat 50% 50%;
+
+        @media screen and (max-width: 550px) {
+            width: 1rem;
+            height: 1rem;
+            transform: scale(.5) translate(0, -.5rem);
+        }
+    }
+}
+
+main {
+    margin-top: .95rem;
+    margin-bottom: 2.6rem;
+
+    #dwra {
+        position: relative;
+        padding-top: 1.8rem;
+        margin: 0 12.5%;
+        border: solid .05rem nth($c1, 1);
+        text-align: center;
+        background-color: nth($c2, 1);
+        transform: rotateY(180deg);
+        transition: .2s;
+    }
+
+    #dwra-image {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3rem;
+        background: url(./images/9.png) no-repeat 50% 50%;
+        opacity: 1;
+        transform: rotateY(180deg);
+
+        @media screen and (max-width: 550px) {
+            height: 3.2rem;
+            background-size: cover;
+        }
+    }
+
+    .dwra-button {
+        position: absolute;
+        top: -.35rem;
+        left: calc(50% - .35rem);
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        border: solid .03rem nth($c2, 1);
+        background-color: nth($c1, 1);
+        transform: rotateY(180deg);
+
+        .btn-txt {
+            text-align: center;
+            font-size: nth($fs, 2);
+            color: nth($c1, 4);
+        }
+    }
+
+    #dwra-images {
+        position: absolute;
+        top: .56rem;
+        left: calc(50% - 1.5rem);
+        width: 3rem;
+        height: 3rem;
+        background: url(./images/10.png) no-repeat 50% 50%;
+        opacity: 0;
+
+        @media screen and (max-width: 550px) {
+            background-size: cover;
+        }
+    }
+
+    #dwra-images-2 {
+        position: absolute;
+        top: .56rem;
+        left: calc(50% - 1.5rem);
+        width: 3rem;
+        height: 3rem;
+        background: url(./images/11.png) no-repeat 50% 50%;
+        opacity: 0;
+
+        @media screen and (max-width: 550px) {
+            background-size: cover;
+        }
+    }
+
+    .dwra-word {
+        position: absolute;
+        top: 3.6rem;
+        left: calc(50% - 1rem);
+        font-size: nth($fs, 2);
+        color: nth($c2, 4);
+        opacity: 0;
+
+        @media screen and (max-width: 550px) {
+            top: 4.1rem;
+        }
+    }
+
+    .dwra-word-2 {
+        margin-top: .5rem;
+        padding: .25rem .3rem;
+        height: 1.3rem;
+        border-top: solid .02rem nth($c1, 1);
+        font-size: nth($fs, 4);
+        font-weight: bold;
+        color: nth($c2, 5);
+        opacity: 0;
+
+        @media screen and(min-width: 920px) {
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    position: fixed !important;
+    bottom: 0;
+    padding: 0 12%;
+
+    .box5 {
+        margin-bottom: .2rem;
+        height: .9rem;
+        text-align: center;
+        background-color: nth($c2, 3);
+
+        .box5-word {
+            line-height: .9rem;
+            font-size: nth($fs, 3);
+            color: nth($c1, 1);
+        }
+    }
+}
