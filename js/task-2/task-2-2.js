@@ -212,9 +212,6 @@ function three() {
 //         window.location.href = "./flip.html";
 //     }
 // }
-<<<<<<< HEAD
-
-
 
 // textnumber.onchange = function () {
 //     var player = this.textContent.value;
@@ -229,5 +226,3 @@ function three() {
 //         alert("只接受数字");
 //     }
 // };
-=======
->>>>>>> 6e08111b5b11bb88fe8009b38e0bb02548d1a39e
