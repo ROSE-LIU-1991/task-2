@@ -212,6 +212,7 @@ function three() {
 //         window.location.href = "./flip.html";
 //     }
 // }
+<<<<<<< HEAD
 
 
 
@@ -228,3 +229,5 @@ function three() {
 //         alert("只接受数字");
 //     }
 // };
+=======
+>>>>>>> 6e08111b5b11bb88fe8009b38e0bb02548d1a39e
