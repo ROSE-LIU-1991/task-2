@@ -212,22 +212,3 @@ function three() {
 //         window.location.href = "./flip.html";
 //     }
 // }
-<<<<<<< HEAD
-
-
-
-// textnumber.onchange = function () {
-//     var player = this.textContent.value;
-//     var NUBM = /^\d+$/;
-//     if (NUBM.test(player)) {
-//         if (textnumber.value >= 4 && textnumber.value <= 18) {
-//             rangenumber.value = textnumber.value;
-//         } else {
-//             alert("玩家数不能小于4或大于18");
-//         }
-//     } else {
-//         alert("只接受数字");
-//     }
-// };
-=======
->>>>>>> 6e08111b5b11bb88fe8009b38e0bb02548d1a39e

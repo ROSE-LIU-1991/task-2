@@ -4,7 +4,11 @@ $(document).ready(function () {
     var player = JSON.parse(window.sessionStorage.getItem("all"));
     //返回按钮
     $(".returm").click(function () {
-        window.location.href = "./task-2-2.html";
+        var ok = confirm("返回上一页")
+        if (ok == true) {
+            sessionStorage.clear();
+            window.location.href = "./task-2-2.html";
+        }
     });
     //设置点击初始次数
     var sCount = 0;
@@ -23,8 +27,8 @@ $(document).ready(function () {
             //更改分身序号
             $("#3").text("点击隐藏并传递给" + (x + 2) + "号");
             $(".btn-txt").text(x + 1);
-            console.log(x);
-            //再检查随机数组里的分身
+            // console.log(x);
+            //再检查随机数组里的身份
             if (player[x] == "平  民") {
                 $("#dwra-images").css('opacity', "1");
                 $(".dwra-word").text("角色：平民");
