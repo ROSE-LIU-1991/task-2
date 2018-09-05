@@ -211,22 +211,3 @@ function three() {
 //         window.sessionStorage.removeItem('status');
 //         window.location.href = "./flip.html";
 //     }
-<<<<<<< HEAD
-// }
-=======
-// }
-
-// textnumber.onchange = function () {
-//     var player = this.textContent.value;
-//     var NUBM = /^\d+$/;
-//     if (NUBM.test(player)) {
-//         if (textnumber.value >= 4 && textnumber.value <= 18) {
-//             rangenumber.value = textnumber.value;
-//         } else {
-//             alert("玩家数不能小于4或大于18");
-//         }
-//     } else {
-//         alert("只接受数字");
-//     }
-// };
->>>>>>> d044d3f03efe75d5c242e1223a95f489f9ff0a0b

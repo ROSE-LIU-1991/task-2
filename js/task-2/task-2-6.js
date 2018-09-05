@@ -29,13 +29,12 @@ $(document).ready(function () {
         $(".identity-bottom").eq(y).html((y + 1) + "号");
     }
     //选取身份然后变色并且判断
-    //这个跟着师兄写的，还没理解
-    var oS;
+    var oClick;
     console.log(Player);
     $(".identity").click(function () {
         //用索引获取点击后的数组数值（下标）
         let s = $(".identity").index($(this));
-        oS = s;
+        oClick = s;
         //重置按钮
         for (var re = 0; re < player.length; re++) {
             $(".identity").eq(re).removeClass("identity-hover");
@@ -52,5 +51,12 @@ $(document).ready(function () {
         else {
             alert("本游戏不能自杀");
         }
+    });
+    //确定杀人并跳转
+    $("#3").click(function(){
+        //将生存状态改成死亡
+        Player[oClick].death = false;
+        sessionStorage.setItem("click",JSON.stringify("oClick"));
+        window.location.href = "./task-2-5.html";
     });
 });

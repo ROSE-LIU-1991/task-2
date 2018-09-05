@@ -12,33 +12,64 @@
 
 <body>
     <header>
-        <a href="#" class="home"></a>
+        <a class="home"></a>
     </header>
     <main>
         <div class="title">
             上次游戏：捉鬼猜词版
-            <a href="./take-13.3.html" class="next"></a>
         </div>
+        <a class="next"></a>
         <div class="choice">
-            <p class="top">捉鬼游戏</p>
+            <p class="top">捉鬼游戏版本：1</p>
             <!--第一种方法要加onclick-->
-            <a class="version" onclick="b()">简化版</a>
-            <p class="num">有1133个用户正在玩此款游戏</p>
+            <ul id="mode">
+                <li class="mode-0"></li>
+                <li class="mode-1">
+                    <a class="version">简化版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">猜词版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">猜词版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">猜词版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">猜词版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+            </ul>
             <!-- 这个是下一布的点击按钮 -->
-            <a href="./task-2-2.html" class="triangle"></a>
-            <a class="version">猜词版</a>
-            <p class="num">有1133个用户正在玩此款游戏</p>
-            <a class="version">白痴版</a>
-            <p class="num">有1133个用户正在玩此款游戏</p>
+            <span id="tge-1" class="triangle"></span>
+            <span id="tge-2" class="triangle"></span>
             <div class="round">
-                <div class="round-sm"></div>
+                <div class="round-sm active"></div>
                 <div class="round-sm"></div>
                 <div class="round-sm"></div>
                 <div class="round-sm"></div>
             </div>
         </div>
     </main>
-    <script src="../../js/task-2/task-2-1.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./task-2-1.js"></script>
 </body>
 
 </html>
