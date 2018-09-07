@@ -35,7 +35,7 @@ header {
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/1.png) no-repeat 50% 50%;
+        background: url(../images/1.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -49,7 +49,7 @@ header {
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/8.png) no-repeat 50% 50%;
+        background: url(../images/8.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -84,7 +84,7 @@ main {
             margin-top: -.85rem;
             width: .85rem;
             height: .85rem;
-            background: url(./images/12.png) no-repeat 50% 50%;
+            background: url(../images/12.png) no-repeat 50% 50%;
         }
 
         #ul {
@@ -119,6 +119,18 @@ main {
                 }
             }
 
+            .lii {
+                display: inline-block;
+                position: relative;
+                margin-top: .2rem;
+                width: 81%;
+                height: .75rem;
+                line-height: .75rem;
+                font-size: nth($fs, 2);
+                color: nth($c1, 1);
+                background-color: nth($c1, 3);
+            }
+
             #police {
                 background-color: nth($c2, 4);
 
@@ -148,12 +160,12 @@ main {
 
     #btn-2 {
         position: absolute;
-        left: calc(7% - .3rem);
-        top: 1.45rem;
+        left: -.3rem;
+        top: .55rem;
         width: .6rem;
         height: .6rem;
         border-radius: 50%;
-        background: url(./images/13.png);
+        background: url(../images/13.png);
         z-index: 2;
 
         @media screen and (max-width: 550px) {
@@ -165,12 +177,12 @@ main {
 
     #btn-3 {
         position: absolute;
-        left: calc(7% - .3rem);
-        top: 5.9rem;
+        left: -.3rem;
+        top: 5rem;
         width: .6rem;
         height: .6rem;
         border-radius: 50%;
-        background: url(./images/14.png);
+        background: url(../images/14.png);
         z-index: 2;
 
         @media screen and (max-width: 550px) {
@@ -208,4 +220,11 @@ footer {
             background-color: nth($c2, 2);
         }
     }
+}
+
+.text-word {
+    width: 100%;
+    margin: .25rem 0 .05rem 0;
+    font-size: .2rem;
+    color: #fdbc48;
 }

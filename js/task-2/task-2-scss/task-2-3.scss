@@ -35,7 +35,7 @@ header {
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/1.png) no-repeat 50% 50%;
+        background: url(../images/1.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -49,7 +49,7 @@ header {
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/8.png) no-repeat 50% 50%;
+        background: url(../images/8.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -78,7 +78,7 @@ main {
         display: inline-block;
         width: 3.2rem;
         height: 3rem;
-        background: url(./images/9.png) no-repeat 50% 50%;
+        background: url(../images/9.png) no-repeat 50% 50%;
         opacity: 1;
         transform: rotateY(180deg);
 
@@ -112,7 +112,7 @@ main {
         left: calc(50% - 1.5rem);
         width: 3rem;
         height: 3rem;
-        background: url(./images/10.png) no-repeat 50% 50%;
+        background: url(../images/10.png) no-repeat 50% 50%;
         opacity: 0;
 
         @media screen and (max-width: 550px) {
@@ -126,7 +126,7 @@ main {
         left: calc(50% - 1.5rem);
         width: 3rem;
         height: 3rem;
-        background: url(./images/11.png) no-repeat 50% 50%;
+        background: url(../images/11.png) no-repeat 50% 50%;
         opacity: 0;
 
         @media screen and (max-width: 550px) {

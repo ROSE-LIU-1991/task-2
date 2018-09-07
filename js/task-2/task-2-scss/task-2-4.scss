@@ -3,6 +3,7 @@ $c2: #83b09a #fbb435 #00ff7e #b9e9f5;
 $fs: .34rem .26rem .24rem .3rem .2rem .4rem 625%;
 $width: 100%;
 $display: inline-block;
+$bi: url(../images/4.png);
 
 %lc {
     display: flex;
@@ -43,7 +44,7 @@ header {
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/1.png) no-repeat 50% 50%;
+        background: url(../images/1.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -52,12 +53,29 @@ header {
         }
     }
 
+    .home {
+        float: left;
+        margin: .32rem 0 0 .22rem;
+        width: .34rem;
+        height: .27rem;
+        background: $bi;
+        background-position: -.2rem -.2rem;
+
+        @media screen and (max-width: 500px) {
+            margin: .18rem 0 0 .22rem;
+            width: .68rem;
+            height: .54rem;
+            background-position: -.4rem -.4rem;
+            transform: scale(.5);
+        }
+    }
+
     .back {
         float: right;
         margin-top: .2rem;
         width: .5rem;
         height: .5rem;
-        background: url(./images/8.png) no-repeat 50% 50%;
+        background: url(../images/8.png) no-repeat 50% 50%;
 
         @media screen and (max-width: 550px) {
             width: 1rem;
@@ -83,7 +101,7 @@ main {
             margin: .15rem .17rem .15rem 0;
             width: .52rem;
             height: .52rem;
-            background-image: url(./images/15.png);
+            background-image: url(../images/15.png);
 
             @media screen and (max-width: 550px) {
                 margin: -.13rem 0 0 0;
@@ -127,6 +145,7 @@ main {
     }
 
     >.identity {
+        position: relative;
         display: $display;
         margin: 10vw 4vw 3vw 5vw;
         width: 23.3vw;
@@ -172,19 +191,19 @@ main {
     //         box-shadow: 0 0 0.02rem 0.03rem nth($color, 2);
     //     }
     //     &:nth-of-type(1) {
-    //         background: url(./images/8.png) no-repeat;
+    //         background: url(../images/8.png) no-repeat;
     //         background-size: 100% 100%;
     //     }
     //     &:nth-of-type(2) {
-    //         background: url(./images/9.png) no-repeat;
+    //         background: url(../images/9.png) no-repeat;
     //         background-size: 100% 100%;
     //     }
     //     &:nth-of-type(3) {
-    //         background: url(./images/10.png) no-repeat;
+    //         background: url(../images/10.png) no-repeat;
     //         background-size: 100% 100%;
     //     }
     //     &:nth-of-type(4) {
-    //         background: url(./images/11.png) no-repeat;
+    //         background: url(../images/11.png) no-repeat;
     //         background-size: 100% 100%;
     //     }
     // }
@@ -209,5 +228,20 @@ footer {
             font-size: nth($fs, 3);
             color: nth($c1, 2);
         }
+    }
+}
+.death {
+    opacity: .4;
+}
+
+.ptt{
+    position: absolute;
+    bottom: -30%;   
+    left: -.1rem;
+    width: calc(100% + .1rem);
+    font-weight: 700;
+    @media screen and (max-width:500px){
+        font-size: .1rem;
+        left: -0.03rem;
     }
 }

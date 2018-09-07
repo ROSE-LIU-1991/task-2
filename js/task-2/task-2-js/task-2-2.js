@@ -1,3 +1,5 @@
+//读取上个网页数据
+var version =JSON.parse(window.sessionStorage.getItem("version"));
 //获取Input节点
 var textnumber = document.getElementById("TextNumber");
 var rangenumber = document.getElementById("RangeNumber");
@@ -6,7 +8,17 @@ var rangenumber = document.getElementById("RangeNumber");
 var B = document.getElementsByClassName("returm");
 B[0].addEventListener("click", home);
 
+//帮助按钮
+$(".help").click(function () {
+    var help = confirm("观看游戏说明？")
+    if (help == true) {
+        window.location.href = "./task-2-0.html";
+    }
+});
+
 function home() {
+    sessionStorage.clear();
+    window.sessionStorage.setItem("version", JSON.stringify(version));
     window.location.href = "./task-2-1.html"
 }
 

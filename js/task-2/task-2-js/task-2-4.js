@@ -1,35 +1,38 @@
 //文档运行后激活函数
 $(document).ready(function () {
-    //获取上一页已经做好了的打乱数组
-    var player = JSON.parse(window.sessionStorage.getItem("all"));
+    //获取已经储存的数组
+    var version =JSON.parse(window.sessionStorage.getItem("version"));
+    var all = JSON.parse(window.sessionStorage.getItem("all"));
     //返回按钮
     $(".returm").click(function () {
         var ok = confirm("返回上一页")
         if (ok == true) {
             sessionStorage.clear();
-            window.location.href = "./task-2-2.html";
+            window.sessionStorage.setItem("version", JSON.stringify(version));
+            window.sessionStorage.setItem("all", JSON.stringify(all));
+            window.location.href = "./task-2-3.html";
         }
     });
     //添加游戏格子
-    for (var x = 0; x < player.length; x++) {
+    for (var x = 0; x < all.length; x++) {
         $("main").append('<div class="identity"></div>');
         $(".identity").eq(x).append('<p class="identity-top"></p>');
-        $(".identity-top").eq(x).html(player[x]);
+        $(".identity-top").eq(x).html(all[x]);
         $(".identity").eq(x).append('<p class="identity-bottom"></p>');
         $(".identity-bottom").eq(x).html((x + 1) + "号");
     }
     //进入游戏
     $("#3").click(function () {
 
-        let y = [];
-        for (let x = 0; x < player.length; x++) {
-            if (player[x] == "平  民") {
-                y.push({
+        let player = [];
+        for (let x = 0; x < all.length; x++) {
+            if (all[x] == "平  民") {
+                player.push({
                     name: "平民",
                     death: true
                 })
             } else {
-                y.push({
+                player.push({
                     name: "杀手",
                     death: true
                 })
@@ -38,7 +41,7 @@ $(document).ready(function () {
 
         var next = confirm("准备就绪?")
         if (next == true) {
-            sessionStorage.setItem("Player", JSON.stringify(y));
+            sessionStorage.setItem("player", JSON.stringify(player));
             window.location.href = "./task-2-5.html";
         }
     });

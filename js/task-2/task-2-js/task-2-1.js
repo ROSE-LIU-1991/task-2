@@ -100,6 +100,7 @@ $(document).ready(function () {
     $(".home").click(function () {
         var next = confirm("回到主页?")
         if (next == true) {
+            sessionStorage.clear();
             window.location.href = "./task-2-1.html";
         }
     });

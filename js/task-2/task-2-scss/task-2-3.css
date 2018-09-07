@@ -34,7 +34,7 @@ header .returm {
   margin-top: .2rem;
   width: .5rem;
   height: .5rem;
-  background: url(./images/1.png) no-repeat 50% 50%;
+  background: url(../images/1.png) no-repeat 50% 50%;
 }
 
 @media screen and (max-width: 550px) {
@@ -50,7 +50,7 @@ header .back {
   margin-top: .2rem;
   width: .5rem;
   height: .5rem;
-  background: url(./images/8.png) no-repeat 50% 50%;
+  background: url(../images/8.png) no-repeat 50% 50%;
 }
 
 @media screen and (max-width: 550px) {
@@ -81,7 +81,7 @@ main #dwra-image {
   display: inline-block;
   width: 3.2rem;
   height: 3rem;
-  background: url(./images/9.png) no-repeat 50% 50%;
+  background: url(../images/9.png) no-repeat 50% 50%;
   opacity: 1;
   transform: rotateY(180deg);
 }
@@ -117,7 +117,7 @@ main #dwra-images {
   left: calc(50% - 1.5rem);
   width: 3rem;
   height: 3rem;
-  background: url(./images/10.png) no-repeat 50% 50%;
+  background: url(../images/10.png) no-repeat 50% 50%;
   opacity: 0;
 }
 
@@ -133,7 +133,7 @@ main #dwra-images-2 {
   left: calc(50% - 1.5rem);
   width: 3rem;
   height: 3rem;
-  background: url(./images/11.png) no-repeat 50% 50%;
+  background: url(../images/11.png) no-repeat 50% 50%;
   opacity: 0;
 }
 

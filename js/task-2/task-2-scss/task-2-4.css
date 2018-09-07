@@ -40,7 +40,7 @@ header .returm {
   margin-top: .2rem;
   width: .5rem;
   height: .5rem;
-  background: url(./images/1.png) no-repeat 50% 50%;
+  background: url(../images/1.png) no-repeat 50% 50%;
 }
 
 @media screen and (max-width: 550px) {
@@ -51,12 +51,31 @@ header .returm {
   }
 }
 
+header .home {
+  float: left;
+  margin: .32rem 0 0 .22rem;
+  width: .34rem;
+  height: .27rem;
+  background: url(../images/4.png);
+  background-position: -.2rem -.2rem;
+}
+
+@media screen and (max-width: 500px) {
+  header .home {
+    margin: .18rem 0 0 .22rem;
+    width: .68rem;
+    height: .54rem;
+    background-position: -.4rem -.4rem;
+    transform: scale(0.5);
+  }
+}
+
 header .back {
   float: right;
   margin-top: .2rem;
   width: .5rem;
   height: .5rem;
-  background: url(./images/8.png) no-repeat 50% 50%;
+  background: url(../images/8.png) no-repeat 50% 50%;
 }
 
 @media screen and (max-width: 550px) {
@@ -85,7 +104,7 @@ main > .title > .image {
   margin: .15rem .17rem .15rem 0;
   width: .52rem;
   height: .52rem;
-  background-image: url(./images/15.png);
+  background-image: url(../images/15.png);
 }
 
 @media screen and (max-width: 550px) {
@@ -132,6 +151,7 @@ main .identity-hover {
 }
 
 main > .identity {
+  position: relative;
   display: inline-block;
   margin: 10vw 4vw 3vw 5vw;
   width: 23.3vw;
@@ -181,4 +201,23 @@ footer .box5 .box5-word {
   line-height: .9rem;
   font-size: 0.24rem;
   color: #fff;
+}
+
+.death {
+  opacity: .4;
+}
+
+.ptt {
+  position: absolute;
+  bottom: -30%;
+  left: -.1rem;
+  width: calc(100% + .1rem);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .ptt {
+    font-size: .1rem;
+    left: -0.03rem;
+  }
 }

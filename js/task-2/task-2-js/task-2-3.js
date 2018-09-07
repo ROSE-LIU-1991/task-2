@@ -1,12 +1,14 @@
 //文档运行后激活函数
 $(document).ready(function () {
-    //获取上一页已经做好了的打乱数组
-    var player = JSON.parse(window.sessionStorage.getItem("all"));
+    //获取上一页传递过来的数据
+    var version = JSON.parse(window.sessionStorage.getItem("version"));
+    var all = JSON.parse(window.sessionStorage.getItem("all"));
     //返回按钮
     $(".returm").click(function () {
         var ok = confirm("返回上一页")
         if (ok == true) {
             sessionStorage.clear();
+            window.sessionStorage.setItem("version", JSON.stringify(version));
             window.location.href = "./task-2-2.html";
         }
     });
@@ -29,7 +31,7 @@ $(document).ready(function () {
             $(".btn-txt").text(x + 1);
             // console.log(x);
             //再检查随机数组里的身份
-            if (player[x] == "平  民") {
+            if (all[x] == "平  民") {
                 $("#dwra-images").css('opacity', "1");
                 $(".dwra-word").text("角色：平民");
             } else {
@@ -52,7 +54,7 @@ $(document).ready(function () {
             $(".btn-txt").text(x + 1);
             sCount = 0;
         }
-        if ((x) == player.length) {
+        if ((x) == all.length) {
             $(".btn-txt").text(x);
             $("#3").text("法官接管");
             $("#3").click(function () {

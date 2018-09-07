@@ -23,7 +23,7 @@ header .home {
   margin: .32rem 0 0 .22rem;
   width: .34rem;
   height: .27rem;
-  background: url(./images/4.png);
+  background: url(../images/4.png);
   background-position: -.2rem -.2rem;
 }
 
@@ -57,7 +57,7 @@ main .next {
   right: 8%;
   width: .24rem;
   height: .4rem;
-  background: url(./images/4.png);
+  background: url(../images/4.png);
   background-position: -.2rem -.87rem;
   z-index: 99999;
 }
@@ -115,7 +115,7 @@ main .choice .triangle {
   position: absolute;
   width: .28rem;
   height: .56rem;
-  background: url(./images/4.png);
+  background: url(../images/4.png);
   background-position: -.2rem -1.67rem;
   z-index: 2;
   cursor: pointer;
