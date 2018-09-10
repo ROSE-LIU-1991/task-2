@@ -34,24 +34,35 @@ $(document).ready(function () {
     };
     //设置杀人信息
     if (dier.length !== 0) {
-        for (let d = 0; d < dier.length; d++) {
-            let z = dier[d]
-            if ((d + 1) % 2 == 0) {
-                $(".event").eq(d).html("晚上" + z + "号被杀手杀死,他的身份是" + player[z - 1].name);
-            } else {
-                $(".event").eq(d).html("白天" + z + "号被投死杀死,他的身份是" + player[z - 1].name);
+        // console.log(dier)
+        if (lol.length !== 0) {
+            //触发就表示死了人，所以for循环添加杀人信息
+            for (let txt = 0; txt < lol.length; txt++) {
+                // console.log(dier.length)
+                let s = lol[txt].death;
+                let S = lol[txt].num;
+                console.log(S)
+                //警察验人信息
+                if (s == 0) {
+                    $(".event").eq(txt).html("晚上" + S + "号被杀手杀死,他的身份是" + player[S - 1].name);
+                } else if (s == 1) {
+                    $(".event").eq(txt).html("晚上" + S + "号被警察查验,他的身份是" + player[S - 1].name);
+                } else if (s == 2) {
+                    $(".event").eq(txt).html("晚上" + S + "号被狙击死,他的身份是" + player[S - 1].name);
+                } else if (s == 3) {
+                    $(".event").eq(txt).html("晚上" + S + "号被医生救治,他的身份是" + player[S - 1].name);
+                } else if (s == 4) {
+                    $(".event").eq(txt).html("晚上" + S + "号被投票出局,他的身份是" + player[S - 1].name);
+                }
             }
         }
     }
     //判断胜利
     if (winter == "杀手胜利") {
         $("#image-2").css("opacity", "1");
-        $(".text").text("本轮游戏共死掉掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
-
-    } else {
-        $("#image-2").css("opacity", "0");
-        $(".text").text("本轮游戏共抓出杀手" + killer - killer.length + "人,共经历了" + (day.length - 1) + "个白天");
-    };
+    }
+    //设置法官宣言
+    $(".text").text("本轮游戏共死掉掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
     //剩下的人数
     console.log(version)
     $("#num").text('剩余人数' + survivaler.length + '人');
