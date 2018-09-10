@@ -136,29 +136,8 @@ main .main-word #ul .lii {
   background-color: #29bde0;
 }
 
-main .main-word #ul #police {
-  background-color: #ff0000;
-}
-
-main .main-word #ul #police > span {
-  border-right-color: #ff0000;
-}
-
-main .main-word #ul #sniper {
-  background-color: #ff0000;
-}
-
-main .main-word #ul #sniper > span {
-  border-right-color: #ff0000;
-}
-
 main .main-word #ul #doctor {
   margin-bottom: .65rem;
-  background-color: #ff0000;
-}
-
-main .main-word #ul #doctor > span {
-  border-right-color: #ff0000;
 }
 
 main #btn-2 {
@@ -183,7 +162,7 @@ main #btn-2 {
 main #btn-3 {
   position: absolute;
   left: -.3rem;
-  top: 1.5rem;
+  top: 5rem;
   width: .6rem;
   height: .6rem;
   border-radius: 50%;

@@ -92,7 +92,6 @@ $(document).ready(function () {
             //通过判断来确定是白天死的还是晚上的。
             if ((txt) % 2 === 0) {
                 $(".litext").eq(txt).after(`<p class="text-word">` + s + "号被杀害，他的身份是" + player[s - 1].name + '</p>');
-
             } else {
                 $(".litext").eq(txt).after(`<p class="text-word">` + s + "号被放逐，他的身份是" + player[s - 1].name + '</p>');
             }
@@ -138,16 +137,6 @@ $(document).ready(function () {
         } else {
             alert("本居请遵守杀人>遗言>讨论>投票的步骤进行游戏");
         }
-    });
-    //跳过没有的步骤
-    $(".lii").eq(day.length * 3 - 3).click(function () {
-        alert("本局没有警察，请遵守杀人>遗言>讨论>投票的步骤进行游戏");
-    });
-    $(".lii").eq(day.length * 3 - 2).click(function () {
-        alert("本局没有狙击手，遵守杀人>遗言>讨论>投票的步骤进行游戏");
-    });
-    $(".lii").eq(day.length * 3 - 1).click(function () {
-        alert("本局没有狙击手医生，请遵守杀人>遗言>讨论>投票的步骤进行游戏");
     });
     //遗言环节
     $(".li").eq(day.length * 4 - 3).click(function () {

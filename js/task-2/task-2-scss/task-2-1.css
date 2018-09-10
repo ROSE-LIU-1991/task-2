@@ -168,6 +168,16 @@ main .choice .version {
   background-color: #69d1e9;
 }
 
+main .choice .version1 {
+  display: block;
+  margin: .28rem .5rem;
+  height: 1.36rem;
+  line-height: 1.36rem;
+  font-size: 0.32rem;
+  color: #fff;
+  background-color: #69d1e9;
+}
+
 main .choice .num {
   font-size: 0.24rem;
   color: #9a9a9a;

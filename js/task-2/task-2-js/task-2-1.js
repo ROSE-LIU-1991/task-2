@@ -1,7 +1,5 @@
 //文档运行后激活函数
 $(document).ready(function () {
-    var Version = JSON.parse(window.sessionStorage.getItem("version"));
-    console.log(Version)
     //做一个游戏标题数值，下面要用
     var title = ["捉鬼游戏版本：4", "捉鬼游戏版本：3", "捉鬼游戏版本：2", "捉鬼游戏版本：1"];
     //直接设置左箭头点击，并在第一页的时候隐藏
@@ -91,9 +89,21 @@ $(document).ready(function () {
             $("#tge-2").css("opacity", "1");
         }
     });
+    if (JSON.parse(window.sessionStorage.getItem("version"))) {
+        version = JSON.parse(window.sessionStorage.getItem("version"));
+    } else {
+        //创建一个空数组
+        version = new Array();
+    }
     $(".version").click(function () {
-        var version = 1;
+        version = 0;
         window.location.href = "./task-2-2.html";
+        window.sessionStorage.setItem("version", JSON.stringify(version));
+
+    });
+    $(".version1").click(function () {
+        version = 1;
+        window.location.href = "./task-3-2.html";
         window.sessionStorage.setItem("version", JSON.stringify(version));
 
     });
@@ -104,10 +114,15 @@ $(document).ready(function () {
             window.location.href = "./task-2-1.html";
         }
     });
-    if(Version == 1){
-        $(".title").html("上次游戏：简化版1");
-        $(".next").click(function(){
+    if (version == 0) {
+        $(".title").html("上次游戏：简化版");
+        $(".title").click(function () {
             window.location.href = "./task-2-2.html";
+        });
+    } else {
+        $(".title").html("上次游戏：完整版");
+        $(".title").click(function () {
+            window.location.href = "./task-3-2.html";
         });
     }
 });

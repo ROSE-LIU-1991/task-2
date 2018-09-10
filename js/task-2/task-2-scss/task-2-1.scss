@@ -162,6 +162,16 @@ main {
             background-color: nth($color, 7);
         }
 
+        .version1 {
+            display: block;
+            margin: .28rem .5rem;
+            height: 1.36rem;
+            line-height: 1.36rem;
+            font-size: nth($fs, 3);
+            color: nth($color, 8);
+            background-color: nth($color, 7);
+        }
+
         .num {
             font-size: nth($fs, 4);
             color: nth($color, 3);

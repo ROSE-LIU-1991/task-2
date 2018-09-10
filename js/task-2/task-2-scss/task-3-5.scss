@@ -131,29 +131,8 @@ main {
                 background-color: nth($c1, 3);
             }
 
-            #police {
-                background-color: nth($c2, 4);
-
-                >span {
-                    border-right-color: nth($c2, 4);
-                }
-            }
-
-            #sniper {
-                background-color: nth($c2, 4);
-
-                >span {
-                    border-right-color: nth($c2, 4);
-                }
-            }
-
             #doctor {
                 margin-bottom: .65rem;
-                background-color: nth($c2, 4);
-
-                >span {
-                    border-right-color: nth($c2, 4);
-                }
             }
         }
     }
@@ -178,7 +157,7 @@ main {
     #btn-3 {
         position: absolute;
         left: -.3rem;
-        top: 1.5rem;
+        top: 5rem;
         width: .6rem;
         height: .6rem;
         border-radius: 50%;

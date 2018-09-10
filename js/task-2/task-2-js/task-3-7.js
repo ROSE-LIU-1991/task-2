@@ -8,7 +8,12 @@ $(document).ready(function () {
     var winter = window.sessionStorage.getItem("winter");
     var survivaler = JSON.parse(window.sessionStorage.getItem("survivaler"));
     var killer = JSON.parse(window.sessionStorage.getItem("killer"));
+    var civier = JSON.parse(window.sessionStorage.getItem("civier"));
+    var police = JSON.parse(window.sessionStorage.getItem("police"));
+    var sniper = JSON.parse(window.sessionStorage.getItem("sniper"));
+    var doctor = JSON.parse(window.sessionStorage.getItem("doctor"));
     var activation = JSON.parse(window.sessionStorage.getItem("activation"));
+    var lol = JSON.parse(window.sessionStorage.getItem("lol"));
     //老规矩各个按钮的事件
     $(".home").click(function () {
         var a = confirm("确定回到主页？")
@@ -17,12 +22,6 @@ $(document).ready(function () {
             sessionStorage.setItem("version", JSON.stringify(version));
             window.location.href = "./task-2-1.html";
         };
-    });
-    $(".help").click(function () {
-        var b = confirm("查看游戏帮助？")
-        if (b == true) {
-            window.location.href = "./task-2-0.html";
-        }
     });
     //设置天数
     for (var c = 2; c <= day.length; c++) {
@@ -47,14 +46,21 @@ $(document).ready(function () {
     //判断胜利
     if (winter == "杀手胜利") {
         $("#image-2").css("opacity", "1");
-        $(".text").text("本轮游戏共死掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
+        $(".text").text("本轮游戏共死掉掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
+
+    } else {
+        $("#image-2").css("opacity", "0");
+        $(".text").text("本轮游戏共抓出杀手" + killer - killer.length + "人,共经历了" + (day.length - 1) + "个白天");
     };
-    //设置法官宣言
     //剩下的人数
     console.log(version)
     $("#num").text('剩余人数' + survivaler.length + '人');
     $("#num-1").text("杀手" + killer.length + "人")
-    $("#num-2").text("平民" + killer.length + "人")
+    $("#num-2").text("平民" + civier.length + "人")
+    console.log(police)
+    $("#num-3").text("警察" + police.length + "人")
+    $("#num-4").text("狙击手" + sniper.length + "人")
+    $("#num-5").text("医生" + doctor.length + "人")
     //再来一局按钮
     $(".button").click(function () {
         let y = confirm("再来一局")
