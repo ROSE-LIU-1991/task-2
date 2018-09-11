@@ -101,12 +101,11 @@ $(document).ready(function () {
         window.sessionStorage.setItem("version", JSON.stringify(version));
 
     });
-    $(".version1").click(function () {
-        version = 1;
-        window.location.href = "./task-3-2.html";
-        window.sessionStorage.setItem("version", JSON.stringify(version));
-
-    });
+    //$(".version1").click(function () {
+        //version = 1;
+        //window.location.href = "./task-3-2.html";
+        //window.sessionStorage.setItem("version", JSON.stringify(version));
+   //});
     $(".home").click(function () {
         var next = confirm("回到主页?")
         if (next == true) {
