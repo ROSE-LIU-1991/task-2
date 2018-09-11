@@ -91,6 +91,7 @@ function oPlayers() {
     }
     if (PeopleNumber < 4 || PeopleNumber > 18) {
         alert("玩家数量错误")
+        one = 0;
     } else {
         //添加杀手
         for (var NUB = 0; NUB < KillerNumber; NUB++) {

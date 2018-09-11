@@ -54,7 +54,7 @@ function oBtn() {
         play.value--;
         rangenumber.oninput();
     } else {
-        alert("玩家数不能小于4或大于18");
+        alert("玩家数最少为12人");
     }
 }
 
@@ -67,7 +67,7 @@ function oBTN() {
         play.value++;
         rangenumber.oninput();
     } else {
-        alert("玩家数不能小于4或大于18");
+        alert("玩家数最大为18人");
     }
 }
 
@@ -87,16 +87,17 @@ function oPlayers() {
     var sniperNumber = 1;
     //设置医生数
     var doctorNumber = 1;
-    //平民
-    var CivilianNumber = PeopleNumber - KillerNumber - policeNumber - sniperNumber - doctorNumber;
+    //平民torNumber;
+    var CivilianNumber = PeopleNumber - KillerNumber - policeNumber - sniperNumber - doctorNumber
     //设置点击还原
     var UL = document.getElementById("1");
     var LI2 = document.getElementsByTagName("li");
     for (var nub = LI2.length; nub > 0; nub--) {
         UL.removeChild(LI2[0]);
     }
-    if (PeopleNumber < 4 || PeopleNumber > 18) {
-        alert("玩家数量错误")
+    if (PeopleNumber < 12 || PeopleNumber > 18) {
+        alert("玩家数量错误");
+        one = 0;
     } else {
         //添加警察
         for (var NUB = 0; NUB < policeNumber; NUB++) {

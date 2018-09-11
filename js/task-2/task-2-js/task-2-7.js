@@ -33,29 +33,14 @@ $(document).ready(function () {
         $(".one").eq(c - 2).html("第" + (c - 1) + "天");
         console.log(c)
     };
-    //根据死亡素组里数值判断添加文本
+    //设置杀人信息
     if (dier.length !== 0) {
-        // console.log(dier)
-        //根据死亡素组里数值判断添加文本
-        if (lol.length !== 0) {
-            //触发就表示死了人，所以for循环添加杀人信息
-            for (let txt = 0; txt < lol.length; txt++) {
-                // console.log(dier.length)
-                let s = lol[txt].death;
-                let S = lol[txt].num;
-                console.log(S)
-                //警察验人信息
-                if (s == 0) {
-                    $(".event").eq(txt).after(`<p class="text-word">` + S + "号被杀害，他的身份是" + player[S - 1].name + '</p>');
-                } else if (s == 1) {
-                    $(".event").eq(txt).after(`<p class="text-word">` + S + "号被查验，他的身份是" + player[S - 1].name + '</p>');
-                } else if (s == 2) {
-                    $(".event").eq(txt).after(`<p class="text-word">` + S + "号被狙击，他的身份是" + player[S - 1].name + '</p>');
-                } else if (s == 3) {
-                    $(".event").eq(txt).after(`<p class="text-word" style="margin-top:-.4rem">` + S + "号被医治，他的身份是" + player[S - 1].name + '</p>');
-                } else if (s == 4) {
-                    $(".event").eq(txt).after(`<p class="text-word">` + S + "号被投死，他的身份是" + player[S - 1].name + '</p>');
-                }
+        for (let d = 0; d < dier.length; d++) {
+            let z = dier[d]
+            if ((d + 1) % 2 == 0) {
+                $(".event").eq(d).html("晚上" + z + "号被杀手杀死,他的身份是" + player[z - 1].name);
+            } else {
+                $(".event").eq(d).html("白天" + z + "号被投死杀死,他的身份是" + player[z - 1].name);
             }
         }
     }
@@ -63,13 +48,17 @@ $(document).ready(function () {
     if (winter == "杀手胜利") {
         $("#image-2").css("opacity", "1");
         $(".text").text("本轮游戏共死掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
+    } else {
+        $("#image-2").css("opacity", "0");
+        $(".text").text("本轮游戏共死掉了" + dier.length + "人,共经历了" + (day.length - 1) + "个白天");
     };
     //设置法官宣言
     //剩下的人数
     console.log(version)
     $("#num").text('剩余人数' + survivaler.length + '人');
+    console.log(survivaler)
     $("#num-1").text("杀手" + killer.length + "人")
-    $("#num-2").text("平民" + killer.length + "人")
+    $("#num-2").text("平民" + (survivaler.length - killer.length) + "人")
     //再来一局按钮
     $(".button").click(function () {
         let y = confirm("再来一局")

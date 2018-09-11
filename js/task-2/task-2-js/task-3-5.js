@@ -82,7 +82,6 @@ $(document).ready(function () {
         //创建一个空数组
         dier = new Array();
     }
-
     //创建一个数组，表示晚上被选取身份的人
     if (JSON.parse(window.sessionStorage.getItem("lol"))) {
         lol = JSON.parse(window.sessionStorage.getItem("lol"));
@@ -90,11 +89,6 @@ $(document).ready(function () {
         //创建一个空数组
         lol = new Array();
     }
-
-
-
-
-
     //根据死亡素组里数值判断添加文本
     if (dier.length !== 0) {
         // console.log(dier)
@@ -114,16 +108,14 @@ $(document).ready(function () {
                 } else if (s == 2) {
                     $(".litext").eq(txt).after(`<p class="text-word">` + S + "号被狙击，他的身份是" + player[S - 1].name + '</p>');
                 } else if (s == 3) {
-                    $("#btn-3").css("top","5.2rem")
+                    $("#btn-3").css("top", "5.2rem")
                     $(".litext").eq(txt).after(`<p class="text-word" style="margin-top:-.4rem">` + S + "号被医治，他的身份是" + player[S - 1].name + '</p>');
                 } else if (s == 4) {
                     $(".litext").eq(txt).after(`<p class="text-word">` + S + "号被投死，他的身份是" + player[S - 1].name + '</p>');
                 }
             }
         }
-
     }
-
     //创建函数没出发一次，给click数字里加一个0，在diarcolor数组里加一个0
     function boutton_operation() {
         //点击次数
@@ -175,15 +167,15 @@ $(document).ready(function () {
             activation++;
             boutton_operation();
             seesionOver();
-            if (policer[0].death == true) {
+            if (policer[0].death == false && diarycolor.length > 4) {
+                $(".li").eq(day.length * 7 - 6).css("background-color", "#83b09a");
+                $("li>span").eq(day.length * 7 - 6).css("border-right-color", "#83b09a");
+                alert("警察已经被杀手干死了")
+            } else {
                 $(".li").eq(day.length * 7 - 6).css("background-color", "#83b09a");
                 $("li>span").eq(day.length * 7 - 6).css("border-right-color", "#83b09a");
                 alert("警察独自一人开始验人.")
                 window.location.href = "./task-3-6.html";
-            } else {
-                $(".li").eq(day.length * 7 - 6).css("background-color", "#83b09a");
-                $("li>span").eq(day.length * 7 - 6).css("border-right-color", "#83b09a");
-                alert("警察已经被杀手干死了")
             }
         } else {
             alert("请遵守游戏步骤进行游戏");
@@ -198,15 +190,15 @@ $(document).ready(function () {
             activation++;
             boutton_operation();
             seesionOver();
-            if (sniper[0].death == true) {
+            if (sniper[0].death == false && diarycolor.length > 4) {
+                $(".li").eq(day.length * 7 - 5).css("background-color", "#83b09a");
+                $("li>span").eq(day.length * 7 - 5).css("border-right-color", "#83b09a");
+                alert("狙击手已经被干死了")
+            } else {
                 $(".li").eq(day.length * 7 - 5).css("background-color", "#83b09a");
                 $("li>span").eq(day.length * 7 - 5).css("border-right-color", "#83b09a");
                 alert("狙击手开始狙击.")
                 window.location.href = "./task-3-6.html";
-            } else {
-                $(".li").eq(day.length * 7 - 5).css("background-color", "#83b09a");
-                $("li>span").eq(day.length * 7 - 5).css("border-right-color", "#83b09a");
-                alert("狙击手已经被干死了")
             }
         } else {
             alert("请遵守游戏步骤进行游戏");
@@ -221,15 +213,15 @@ $(document).ready(function () {
             activation++;
             boutton_operation();
             seesionOver();
-            if (doctor[0].death == true) {
+            if (doctor[0].death == false && diarycolor.length > 4) {
+                $(".li").eq(day.length * 7 - 4).css("background-color", "#83b09a");
+                $("li>span").eq(day.length * 7 - 4).css("border-right-color", "#83b09a");
+                alert("医生已经被干死了")
+            } else {
                 $(".li").eq(day.length * 7 - 4).css("background-color", "#83b09a");
                 $("li>span").eq(day.length * 7 - 4).css("border-right-color", "#83b09a");
                 alert("医生开始救人.")
                 window.location.href = "./task-3-6.html";
-            } else {
-                $(".li").eq(day.length * 7 - 4).css("background-color", "#83b09a");
-                $("li>span").eq(day.length * 7 - 4).css("border-right-color", "#83b09a");
-                alert("医生已经被干死了")
             }
         } else {
             alert("请遵守游戏步骤进行游戏");

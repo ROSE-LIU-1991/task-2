@@ -82,7 +82,6 @@ main > .texts > p {
 main > .text-bottom > .txt {
   padding: 0 12.5% .16rem 12.5%;
   width: 100%;
-  height: 1.8rem;
   border-top: solid 0.02rem #dddddd;
   background-color: #fff;
 }
