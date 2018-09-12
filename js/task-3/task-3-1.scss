@@ -1,0 +1,116 @@
+html {
+    font-size: 625%;
+
+    body {
+        margin: 0;
+        padding: 2.1rem 0;
+        background: url(./images/timg.jpg) no-repeat;
+        background-size: cover;
+        
+        @media screen and(max-width: 400px) {
+            padding: 1.1rem 0;
+        }
+ 
+
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: .15rem;
+            width: 33%;
+            border-radius: 3%;
+            text-align: center;
+            background-color: rgba($color: #fff, $alpha: 0.7);
+
+            @media screen and(max-width: 1000px) {
+                width: 40%;
+            }
+
+            @media screen and(max-width: 800px) {
+                width: 46%;
+            }
+
+            @media screen and(max-width: 550px) {
+                width: 50%;
+            }
+
+            @media screen and(max-width: 400px) {
+                width: 75%;
+            }
+
+            .box-txt {
+                margin: 0;
+                padding: .15rem 0;
+                line-height: .25rem;
+                font-size: .18rem;
+                font-weight: 700;
+                color: #03a9f4;
+            }
+
+            .box-input {
+                margin-top: .12rem;
+                margin-left: auto;
+                margin-right: auto;
+                padding: .05rem 0 .05rem .1rem;
+                width: 80%;
+                height: .45rem;
+                border-radius: .05rem;
+                background: #fff;
+
+                .nameige {
+                    float: left;
+                    margin: .04rem 0;
+                    width: .25rem;
+                    height: .35rem;
+                    background: url(./images/1.png);
+                    background-size: cover;
+                }
+
+                .passige {
+                    float: left;
+                    margin: .03rem 0;
+                    width: .25rem;
+                    height: .37rem;
+                    background: url(./images/2.png);
+                    background-size: cover;
+                }
+
+                .BIC {
+                    float: right;
+                    margin: .125rem 0;
+                    padding: 0 0 0 .1rem;
+                    width: calc(100% - .5rem);
+                    height: .2rem;
+                    border: none;
+                    border-left: solid .01rem #e9e9e9;
+                    outline: none;
+                }
+            }
+
+            .gin {
+                margin-top: .35rem;
+                margin-left: auto;
+                margin-right: auto;
+                padding: .11rem 0 .11rem .1rem;
+                width: 80%;
+                line-height: .16rem;
+                border-radius: .05rem;
+                font-size: .14rem;
+                background-color: #03a9f4;
+            }
+
+            >p {
+                margin: 0;
+            }
+
+            .nameige {
+                background-image: url(./images/1.png);
+            }
+
+            .passige {
+                background-image: url(./images/2.png);
+            }
+        }
+    }
+}
