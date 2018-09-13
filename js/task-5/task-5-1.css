@@ -100,6 +100,18 @@ html body .input-box .box-input .BIC {
   outline: none;
 }
 
+html body .input-box .box-input input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 20px white inset;
+}
+
+html body .input-box #info {
+  margin: 0;
+  font-size: .14rem;
+  line-height: .2rem;
+  color: #ff0000;
+  transform: translateY(0.2rem);
+}
+
 html body .input-box .gin {
   margin-top: .35rem;
   margin-left: auto;
