@@ -1,0 +1,95 @@
+html {
+    font-size: 625%;
+}
+
+body {
+    position: relative;
+    background-color: #fbfbfb;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 2.5rem);
+    height: .5rem;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom: solid .01rem #ededed;
+    z-index: 9999;
+
+    .identity {
+        width: .7rem;
+        line-height: .3rem;
+        border-right: solid .01rem #c9c9c9;
+        text-align: center;
+        font-size: .16rem;
+        color: #333;
+    }
+
+    .quit {
+        width: .5rem;
+        line-height: .5rem;
+        text-align: center;
+    }
+}
+
+.OrganMian {
+    display: flex;
+
+    .Organ {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2.5rem;
+        text-align: center;
+        background-color: #232a3a;
+
+        .OrganTitle {
+            margin-bottom: .2rem;
+            text-align: center;
+            line-height: .5rem;
+            font-size: .2rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: solid .01rem #4a5e6b;
+        }
+
+        .panel-heading {
+            padding: 15px 0;
+            color: #fff;
+            background-color: #232a3a;
+            cursor: pointer;
+        }
+    }
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.organcolor2 {
+    padding: .15rem 0;
+    font-size: .14rem;
+    font-weight: 700;
+    color: #fff;
+
+    &:hover {
+        background-color: #74d9ff;
+    }
+}
+
+h4 a:hover {
+    text-decoration: none;
+}
+
+.hellow {
+    position: absolute;
+    top: 1rem;
+    right: 20%;
+    font-size: .2rem;
+    color: #333;
+}

@@ -1,0 +1,221 @@
+$color: #29bde0 #f0f0f0 #9a9a9a #e7e7e7 #fbb435 #fff #69d1e9 #fff;
+$fs: .35rem .38rem .32rem .24rem 625%;
+$width: 100%;
+$bi: url(../images/4.png);
+$border:solid .01rem nth($color, 3);
+
+%ta {
+    text-align: center;
+}
+
+html {
+    font-size: nth($fs, 5);
+
+    @media screen and (max-width: 500px) {
+        font-size: nth($fs, 5) / 2;
+    }
+}
+
+header {
+    width: $width;
+    height: .9rem;
+    background-color: nth($color, 1);
+
+    .home {
+        float: left;
+        margin: .32rem 0 0 .22rem;
+        width: .34rem;
+        height: .27rem;
+        background: $bi;
+        background-position: -.2rem -.2rem;
+
+        @media screen and (max-width: 500px) {
+            margin: .18rem 0 0 .22rem;
+            width: .68rem;
+            height: .54rem;
+            background-position: -.4rem -.4rem;
+            transform: scale(.5);
+        }
+    }
+}
+
+main {
+    margin: .26rem .35rem .61rem .35rem;
+
+    .title {
+        width: $width;
+        height: 1.16rem;
+        border: $border;
+        line-height: 1.16rem;
+        @extend %ta;
+        font-size: nth($fs, 1);
+        color: nth($color, 3);
+        background-color: nth($color, 6);
+    }
+
+    .next {
+        position: absolute;
+        top: 1.54rem;
+        right: 8%;
+        width: .24rem;
+        height: .4rem;
+        background: $bi;
+        background-position: -.2rem -.87rem;
+        z-index: 99999;
+
+        @media screen and (max-width: 500px) {
+            top: 1.34rem;
+            width: .48rem;
+            height: .8rem;
+            background-position: -.4rem -1.74rem;
+            transform: scale(.5);
+        }
+    }
+
+    .choice {
+        position: relative;
+        margin-top: .25rem;
+        width: $width;
+        border: $border;
+        text-align: center;
+        background-color: nth($color, 6);
+
+        .top {
+            padding: .19rem 0;
+            width: $width;
+            height: .9rem;
+            border-bottom: solid .02rem nth($color, 5);
+            font-size: nth($fs, 2);
+            color: nth($color, 5);
+        }
+
+        #mode {
+            position: relative;
+            width: 100%;
+
+            .mode-0 {
+                opacity: 0;
+                padding: 3.42rem 0;
+                z-index: -1;
+            }
+
+            .mode-1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                border-left: solid 0.01rem #9a9a9a;
+                background-color: nth($color, 6);
+                transition: .3s;
+            }
+        }
+
+        // 直接切图的三角形
+        .triangle {
+            position: absolute;
+            width: .28rem;
+            height: .56rem;
+            background: $bi;
+            background-position: -.2rem -1.67rem;
+            z-index: 2;
+            cursor: pointer;
+
+            @media screen and (max-width: 500px) {
+                width: .56rem;
+                height: 1.12rem;
+                background-position: -.4rem -3.34rem;
+            }
+        }
+
+        #tge-1 {
+            float: right;
+            right: .1rem;
+            top: calc(50% - .28rem);
+
+            @media screen and (max-width: 500px) {
+                top: calc(50% - .5rem);
+                right: -.05rem;
+                transform: scale(.5);
+            }
+        }
+
+        #tge-2 {
+            float: left;
+            left: .1rem;
+            top: calc(50% - .28rem);
+            transform: rotateY(180deg);
+
+            @media screen and (max-width: 500px) {
+                top: calc(50% - .5rem);
+                left: -.05rem;
+                transform: scale(.5) rotateY(180deg);
+            }
+        }
+
+        .version {
+            display: block;
+            margin: .28rem .5rem;
+            height: 1.36rem;
+            line-height: 1.36rem;
+            font-size: nth($fs, 3);
+            color: nth($color, 8);
+            background-color: nth($color, 7);
+        }
+
+        .version1 {
+            display: block;
+            margin: .28rem .5rem;
+            height: 1.36rem;
+            line-height: 1.36rem;
+            font-size: nth($fs, 3);
+            color: nth($color, 8);
+            background-color: nth($color, 7);
+        }
+
+        .num {
+            font-size: nth($fs, 4);
+            color: nth($color, 3);
+        }
+
+        .round {
+            padding: .13rem 0;
+            height: .4rem;
+
+            @media screen and (max-width: 500px) {
+                padding: 0;
+            }
+
+            .round-sm {
+                display: inline-block;
+                margin-right: .09rem;
+                width: .18rem;
+                height: .18rem;
+                border: solid .01rem nth($color, 1);
+                border-radius: 50%;
+
+                @media screen and (max-width: 500px) {
+                    margin: 0;
+                    width: .39rem;
+                    height: .39rem;
+                    transform: scale(.5);
+                }
+
+                // &:hover {
+                //     background-color: nth($color, 7);
+                // }
+            }
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.tfx {
+    transform: translateX(-100%);
+}
+
+.active {
+    background-color: #29bde0;
+}

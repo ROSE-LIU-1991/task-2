@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <title>捉鬼游戏</title>
+    <link href="../rest.css" rel="stylesheet">
+    <link href="./task-2-scss/task-2-1.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="home"></a>
+    </header>
+    <main>
+        <div class="title">
+            上次游戏：捉鬼猜词版
+        </div>
+        <a class="next"></a>
+        <div class="choice">
+            <p class="top">捉鬼游戏版本：1</p>
+            <!--第一种方法要加onclick-->
+            <ul id="mode">
+                <li class="mode-0"></li>
+                <li class="mode-1">
+                    <a class="version">简化版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version1">完整版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版4</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version1">完整版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">完整版3</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version1">完整版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版2</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+                <li class="mode-1">
+                    <a class="version">简化版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version1">完整版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                    <a class="version">白痴版1</a>
+                    <p class="num">有1133个用户正在玩此款游戏</p>
+                </li>
+            </ul>
+            <!-- 这个是下一布的点击按钮 -->
+            <span id="tge-1" class="triangle"></span>
+            <span id="tge-2" class="triangle"></span>
+            <div class="round">
+                <div class="round-sm active"></div>
+                <div class="round-sm"></div>
+                <div class="round-sm"></div>
+                <div class="round-sm"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./task-2-js/task-2-1.js"></script>
+</body>
+
+</html>

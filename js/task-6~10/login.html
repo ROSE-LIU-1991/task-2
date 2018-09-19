@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <link rel="stylesheet" type="text/css" href="../rest.css">
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./login.css" />
+</head>
+<!-- 给body设置ng-app指令，告诉Angularjs应用当前的body是根元素 -->
+
+<body ng-app="myApp">
+    <div ui-view class="container-fluid"></div>
+    <!-- ng-controller为div添加控制器 -->
+    <div class="box" ng-controller="loginCtrl">
+        <!-- 制作表单，ng-invalid表示你设定的规则是否验证未通过，ng-invalid-required表示未通过验证时是否请求。
+        ng-pristine则表示表单是否未输入过值。novalidate 属性规定当提交表单时不对其进行验证。ng-submit 指令用于在表单提交后执行指定函数。-->
+        <form class="input-box" name="longinform" novalidate ng-submit="loginSubmit()">
+            <p class="box-txt">后台登陆</p>
+            <div class="box-input">
+                <div class="nameige"></div>
+                <!-- required 属性规定必需在提交之前填写输入字段。 ng-untouched: 控件未失去焦点 ng-empty表示控件为空的-->
+                <input ng-model="username" type="text" id="ipt-1" name="username" placeholder="用户名" required class="BIC">
+            </div>
+            <div class="box-input">
+                <div class="passige"></div>
+                <input ng-model="password" type="password" id="ipt-2" name="password" placeholder="密码" required class="BIC">
+            </div>
+            <div class="infoHidden">
+                <!-- ng-hide 指令在表达式为 true 时隐藏 HTML 元素。ng-show则相反 bind为单项绑定，错误时返回（loginForm) -->
+                <P id="info" ng-show="showTxt">{{message}}</P>
+            </div>
+            <!-- g-disabled 指令设置表单输入字段的 disabled 属性。disabled则为禁用一个input元素在这则表示在某种情况下按钮不能提交 -->
+            <button id="login" type="submit" class="btn gin" ng-disabled="longinform.$invalid" disabled="disabled">
+                登陆 </button>
+        </form>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular-messages.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="https://cdn.bootcss.com/sass.js/0.11.0-beta.1/sass.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+
+</html>

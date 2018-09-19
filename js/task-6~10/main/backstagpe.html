@@ -1,0 +1,35 @@
+<div ng-controller="AccordionDemoCtrl" class="OrganMian">
+    <div>
+        <div class="Organ">
+            <h1 class="OrganTitle">
+                后台管理系统
+            </h1>
+            <!-- uib-accordin是ui-bootstrap的一个组件它有2个属性close-others和template-url -->
+            <!-- close-others="oneAtATime"表示一次只能打开一个面板，并且打开面板的时候关闭其他打开的面板 -->
+            <uib-accordion close-others="oneAtATime">
+                <!-- ng-repeat循环输出，is-open控制面板展开，go-click每次点击排序 -->
+                <div uib-accordion-group class="panel-default" is-open="group.open" ng-repeat="group in groups"
+                    ng-click="clickopen($index)" style="margin:0;border-radius: 0;background-color: #7a7e88;border: 0;">
+                    <!-- heading是面板头部标题,{{group.title}}则是配合repeat获取的双向绑定信息 -->
+                    <uib-accordion-heading>
+                        {{group.title}}
+                        <!-- pull-right,整体右浮动，glyphicon右键图片都为bottstrap组件 -->
+                        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
+                    </uib-accordion-heading>
+                    <div ng-repeat="x in group.content">
+                        <div class="organcolor2" ng-click="clickclass($parent.$index,$index)"
+                            ui-sref={{x.url}}>
+                            {{x.a}}
+                            <span class="pull-right glyphicon glyphicon-chevron-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </uib-accordion>
+        </div>
+        <header>
+            <i class="quit glyphicon glyphicon-off" ng-click="quitclick()"></i>
+            <a class="identity" href="">admin</a>
+            <a class="identity" href="">管理员</a>
+        </header>
+    </div>
+    <div ui-view></div>
