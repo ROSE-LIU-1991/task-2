@@ -14,13 +14,34 @@
             <div class="calendar-txt"></div>
             <input ytpe="text">
         </div>
-        状态<input type="text">
-        类型<input type="text">
+        <div class="article-title">
+            <p class="calendar-title">状态</p>
+            <input type="text">
+        </div>
+        <div class="article-title">
+            <p class="calendar-title">类型</p>
+            <input type="text">
+        </div>
         <input type="button" value="清空">
         <input type="button" value="搜索">
     </div>
-    <h1>Article管理</h1>
+    <!-- <h1>Article管理</h1>
     <input type="button" value="保存排序">
     <input type="button" value="+新增">
-    <div ng-repeat="abc in abcd">{{abc.a}}</div>
+    <div ng-repeat="abc in abcd">{{abc.a}}</div> -->
+    <table>
+        <tr>
+            <th ng-repeat="title in list">{{title.a}}</th>
+        </tr>
+        <tr ng-repeat="list in articleList">
+            <td>{{$index+1}}</td>
+            <td><img src="{{list.img}}" width="100px"></td>
+            <td>{{list.title}}</td>
+            <td>{{list.type}}</td>
+            <td>{{list.author}}</td>
+            <td>{{list.createAt | date:'yyyy/MM/dd hh:mm:ss'}}</td>
+            <td>{{list.updateAt | date:'yyyy/MM/dd hh:mm:ss'}}</td>
+            <td>{{list.status | putaway}}</td>
+        </tr>
+    </table>
 </div>

@@ -89,7 +89,7 @@ h4 a:hover {
 .hellow {
   position: absolute;
   top: 1rem;
-  right: 20%;
+  left: 50%;
   font-size: .2rem;
   color: #333;
 }
