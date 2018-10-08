@@ -1,5 +1,26 @@
-<div>
-    <div>
-        <h1>Page 3 content goes here...</h1>
+<div ng-controller="ArticleListCtrl" class="article">
+    <div class="article-topbox">
+        <div class="article-title">
+            <p class="article-txt">标&emsp;题</p>
+            <input type="text">
+        </div>
+        <div class="article-title">
+            <p class="article-txt">创建者</p>
+            <input type="text">
+        </div>
+        <div class="calendar">
+            <p class="calendar-title">修改时间</p>
+            <input ytpe="text">
+            <div class="calendar-txt"></div>
+            <input ytpe="text">
+        </div>
+        状态<input type="text">
+        类型<input type="text">
+        <input type="button" value="清空">
+        <input type="button" value="搜索">
     </div>
+    <h1>Article管理</h1>
+    <input type="button" value="保存排序">
+    <input type="button" value="+新增">
+    <div ng-repeat="abc in abcd">{{abc.a}}</div>
 </div>

@@ -1,0 +1,31 @@
+myApp.controller('ArticleListCtrl',function($scope){
+    $scope.abcd =[
+    {
+        a:'序号'
+    },
+    {
+        a:'图片'
+    },
+    {
+        a:'标题'
+    },
+    {
+        a:'类型'
+    },
+    {
+        a:'创建者'
+    },
+    {
+        a:'创建时间'
+    },
+    {
+        a:'修改时间'
+    },
+    {
+        a:'状态'
+    },
+    {
+        a:'操作'
+    }
+    ];
+});

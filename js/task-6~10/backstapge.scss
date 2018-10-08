@@ -93,3 +93,44 @@ h4 a:hover {
     font-size: .2rem;
     color: #333;
 }
+
+.article {
+    position: absolute;
+    left: 2.8rem;
+    top: .8rem;
+    right: .3rem;
+}
+
+.article-topbox {
+    width: 100%;
+    border-radius: .1rem;
+    background-color: #e6e6e6;
+}
+
+.article-title {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.article-txt {
+    font-size: .14rem;
+    font-weight: 700;
+}
+
+.calendar {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.calendar-title {
+    font-size: .14rem;
+    font-weight: 700;
+}
+
+.calendar-txt{
+    width: 15px;
+    border: 2px solid #000;
+}

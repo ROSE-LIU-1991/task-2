@@ -147,3 +147,7 @@ body::after{
     display: table;
     content: "";
 }
+
+.over{
+    box-shadow: 0 0 .01rem .01rem #ff0000;
+}

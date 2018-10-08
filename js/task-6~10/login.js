@@ -24,8 +24,11 @@ myApp.controller('loginCtrl', function ($scope, $http, $state, $timeout) {
                     console.log(xhr)
                     if (xhr.data.code == 0) {
                         $scope.showTxt = false;
+                        $scope.over = false;
+                        $scope.overs = false;
                         $state.go('backstagpe.text');
-                    } else {
+                    } else if (xhr.data.code == -5003) {
+                        $scope.over = true;
                         $scope.message = xhr.data.message;
                         console.log($scope.message)
                         //提示行显示+++
@@ -33,6 +36,18 @@ myApp.controller('loginCtrl', function ($scope, $http, $state, $timeout) {
                         //延迟显示提示行+++
                         $scope.timeout = $timeout(function () {
                             $scope.showTxt = false;
+                            $scope.over = false;
+                        }, 1000);
+                    } else {
+                        $scope.overs = true;
+                        $scope.message = xhr.data.message;
+                        console.log($scope.message)
+                        //提示行显示+++
+                        $scope.showTxt = true;
+                        //延迟显示提示行+++
+                        $scope.timeout = $timeout(function () {
+                            $scope.showTxt = false;
+                            $scope.overs = false;
                         }, 1000);
                     }
                     console.log('登录系统正常');
