@@ -10,7 +10,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state("loginPage", {//登陆页+++
             url: "/loginPage",
-            templateUrl: "./loginPage.html"
+            templateUrl: "./loginPage.html",
+            controller: 'loginCtrl'
         })
         .state("backstagpe", {//后台页+++
             url: "/backstagpe",
@@ -21,8 +22,9 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl:"./text.html"
         })
         .state("backstagpe.list", {//Article列表页+++
-            url: "/list",
-            templateUrl: "./list.html"
+            url: "/list?page&size&startAt&endAt&title&author&type&status",
+            templateUrl: "./list.html",
+            controller: 'ArticleListCtrl'
         })
         .state("backstagpe.details", {//Article详情页+++
             url: "/details",
