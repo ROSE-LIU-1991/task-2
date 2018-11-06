@@ -21,3 +21,18 @@ myApp.filter('putaways', function (draft) {
         return draft[index]
     }
 })
+
+
+//类型过滤
+myApp.constant('form', {
+    0: '首页Banner',
+    1: '找职位Banner',
+    2: '找精英Banner',
+    3: '行业大图'
+});
+
+myApp.filter('job', function (form) {
+    return function (index) {
+        return form[index]
+    }
+});

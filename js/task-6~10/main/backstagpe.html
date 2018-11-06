@@ -17,7 +17,8 @@
                         <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
                     </uib-accordion-heading>
                     <div ng-repeat="x in group.content">
-                        <div class="organcolor2" ng-click="clickclass($parent.$index,$index)"
+                        <!-- $parent.$index父级索引，$index子级索引 -->
+                        <div class="organcolor2" ng-class="{true:'organcolor1'}[x.isOrgancolor1]" ng-click="clickclass($parent.$index,$index)"
                             ui-sref={{x.url}}>
                             {{x.a}}
                             <span class="pull-right glyphicon glyphicon-chevron-right"></span>

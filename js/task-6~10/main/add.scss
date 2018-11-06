@@ -1,0 +1,99 @@
+.add-box {
+    position: absolute;
+    left: 2.8rem;
+    top: .8rem;
+    right: .3rem;
+    border: solid .01rem #a2a2a2;
+    border-radius: .05rem;
+}
+
+.add-title {
+    padding: .1rem 0;
+    border-bottom: solid .01rem #a2a2a2;
+    color: #fff;
+    background-color: #616663;
+}
+
+.add-txt {
+    padding-left: .2rem;
+    font-size: .14rem;
+    font-weight: 700;
+}
+
+.add-word {
+    padding: .2rem 1rem;
+}
+
+.add-inputbox {
+    padding: .1rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.add-input {
+    margin-left: .2rem;
+    padding-left: .1rem;
+    width: 80%;
+    height: .3rem;
+    border-radius: .05rem;
+    border: solid .01rem #a9a9a9;
+}
+
+.add-select {
+    margin-left: .2rem;
+    width: 1.4rem;
+    border-radius: .05rem;
+    border: solid .01rem #a9a9a9
+}
+
+.add-file {
+    position: absolute;
+    left: 1.96rem;
+    width: .82rem;
+    height: .3rem;
+    z-index: 22;
+    opacity: 0;
+}
+
+.add-img {
+    position: relative;
+    left: .2rem;
+    display: inline-block;
+    padding: .01rem;
+    max-width: 4.3rem;
+    max-height: 3rem;
+    line-height: 3rem;
+    vertical-align: middle;
+    border: 0.01rem transparent dashed;
+}
+
+.add-button {
+    display: inline-block;
+}
+
+.add-hint {
+    margin-left: .2rem;
+    color: #ff0000;
+}
+
+.add-hints {
+    margin-top: .15rem;
+    margin-left: .2rem;
+    width: 100%;
+    text-align: center;
+    color: #ff0000;
+}
+
+.add-bottom {
+    position: absolute;
+    left: 2.8rem;
+    bottom: -200px;
+    right: .3rem;
+    width: 100%;
+    height: 1px;
+}
+
+#images {
+    max-width: 3rem;
+}

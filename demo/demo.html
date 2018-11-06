@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>demo</title>
     <script>
-        var a = 10;
-        function c() {
-            a = 20;
-            console.log(a); //因为局部变量的优先级，a被覆盖成了20.
-            var b = 20;
-        }
-        c();
-        console.log(b); //因为b是函数c的局部变量，如果这个方法要调用b，则会报错。
+      function a(callbackFunction){
+          alert("这是函数a");
+          var m =1;
+          var n =3;
+          return callbackFunction(m,n);
+      }
+      function b(m,n){
+          alert("这是回调函数b");
+          return m+n;
+      }
+      $(function(){
+          var result = a(b);
+          alert("result" = ''+ result);
+      })
     </script>
 </head>
 

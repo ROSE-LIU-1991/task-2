@@ -1,9 +1,16 @@
-myApp.controller('loginCtrl', function ($scope, $http, $state, $timeout) {
+myApp.controller('loginCtrl', function ($scope, $http, $state, $timeout,$location) {
     //$on用于接收event与data，$on接受数据
     // $scope.$on('$locationChangeStart', function (event, next, current) {
     //     //preventDefault() 方法阻止元素发生默认的行为
     //     event.preventDefault();
     // });
+    var pathUrl = $location.path() 
+    if (pathUrl == "/loginPage") {
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    }
     $scope.loginSubmit = function () {
         //发送请求验证用户名密码+++
         // $http.post('/carrots-admin-ajax/a/login', 'name=' + $scope.username + '&pwd=' + $scope.password, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})

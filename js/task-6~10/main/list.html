@@ -53,7 +53,7 @@
     <div class="arti">
         <div class="arti-title">
             Article管理
-            <button class="arti-btn">+新增</button>
+            <button class="arti-btn" ng-click="add()">+新增</button>
         </div>
         <div class="arti-box">
             <table class="table">
@@ -69,8 +69,11 @@
                     <td>{{list.createAt | date:'yyyy/MM/dd hh:mm:ss'}}</td>
                     <td>{{list.updateAt | date:'yyyy/MM/dd hh:mm:ss'}}</td>
                     <td style="width:80px">{{list.status | putaway}}</td>
-                    <td style="width:150px"><button class="list-btn" ng-class="list.status == 1?'btn-1':'btn-2'">{{list.status
-                            | putaways}}</button><button class="list-btn btn-3">编辑</button><button class="list-btn btn-4">删除</button></td>
+                    <td style="width:150px">
+                        <button class="list-btn" ng-class="list.status == 1?'btn-1':'btn-2'" ng-click="onlinenet()">{{list.status
+                            | putaways}}</button>
+                        <button class="list-btn btn-3" ng-click="compile(list.id)">编辑</button>
+                        <button class="list-btn btn-4" ng-click="delete()">删除</button></td>
                 </tr>
             </table>
         </div>

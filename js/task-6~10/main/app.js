@@ -30,4 +30,9 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             url: "/details",
             templateUrl: "./details.html"
         })
+        .state("backstagpe.add",{//Article新增页
+            url:"/add?id",
+            templateUrl:"./add.html",
+            controller:"addCtrl"
+        })
 });

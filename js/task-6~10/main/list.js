@@ -1,4 +1,5 @@
-myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParams) {
+myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParams, $location) {
+    var pathUrl = $location.path()
     $scope.list = [{
             a: '序号'
         },
@@ -28,43 +29,41 @@ myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParam
         }
     ];
 
-    function article() {
-        $http({
-            method: "get",
-            url: "/carrots-admin-ajax/a/article/search",
-            params: {
-                page: $stateParams.page,
-                size: $stateParams.size,
-                startAt: $stateParams.startAt,
-                endAt: $stateParams.endAt,
-                title: $stateParams.title,
-                author: $stateParams.author,
-                type: $stateParams.type,
-                status: $stateParams.status
-            }
-        }).then(function (res) {
-                console.log(res);
-                console.log("获取成功");
-                //列表数据
-                $scope.articleList = res.data.data.articleList;
-                $scope.totalItems = res.data.data.total;
-                //分页数据
-                $scope.size = res.data.data.size;
-                $scope.inputsize = res.data.data.size;
-                $scope.maxSize = 5;
-                $scope.currentPage = $stateParams.page;
-                $scope.inputPage = $stateParams.page;
-                //搜索数据
-                $scope.dt1 = parseInt($stateParams.startAt);
-                $scope.dt2 = parseInt($stateParams.endAt);
-                $scope.title = $stateParams.title;
-                $scope.author = $stateParams.author;
-            },
-            function (res) {
-                console.log("获取失败")
-            });
-    }
-    article();
+    $http({
+        method: "get",
+        url: "/carrots-admin-ajax/a/article/search",
+        params: {
+            page: $stateParams.page,
+            size: $stateParams.size,
+            startAt: $stateParams.startAt,
+            endAt: $stateParams.endAt,
+            title: $stateParams.title,
+            author: $stateParams.author,
+            type: $stateParams.type,
+            status: $stateParams.status
+        }
+    }).then(function (res) {
+            console.log(res);
+            console.log("获取成功");
+            //列表数据
+            $scope.articleList = res.data.data.articleList;
+            $scope.totalItems = res.data.data.total;
+            //分页数据
+            $scope.size = res.data.data.size;
+            $scope.inputsize = res.data.data.size;
+            $scope.maxSize = 5;
+            $scope.currentPage = $stateParams.page;
+            $scope.inputPage = $stateParams.page;
+            //搜索数据
+            $scope.dt1 = parseInt($stateParams.startAt);
+            $scope.dt2 = parseInt($stateParams.endAt);
+            $scope.title = $stateParams.title;
+            $scope.author = $stateParams.author;
+        },
+        function (res) {
+            console.log("获取失败")
+        });
+
 
     $scope.changes = function () {
         $state.go('backstagpe.list', {
@@ -158,26 +157,25 @@ myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParam
     // }else{
     //     $scope.status = $scope.statusselect[0].id;
     // }
-    $scope.status = $stateParams.status == undefined?$scope.statusselect[0].id:parseInt($stateParams.status);
+    $scope.status = $stateParams.status == undefined ? $scope.statusselect[0].id : parseInt($stateParams.status);
     //类型
-    $scope.typeselect =[{
+    $scope.typeselect = [{
         id: null,
-        name:"全部"
-    },{
-        id:0,
-        name:"首页banner"
-    },{
-        id:1,
-        name:"找职位banner"
-    },{
-        id:2,
-        name:"找精英banner"
-    },{
-        id:3,
-        name:"行业大图"
-    }
-    ];
-    $scope.type = $stateParams.type == undefined?$scope.typeselect[0].id:parseInt($stateParams.type);
+        name: "全部"
+    }, {
+        id: 0,
+        name: "首页banner"
+    }, {
+        id: 1,
+        name: "找职位banner"
+    }, {
+        id: 2,
+        name: "找精英banner"
+    }, {
+        id: 3,
+        name: "行业大图"
+    }];
+    $scope.type = $stateParams.type == undefined ? $scope.typeselect[0].id : parseInt($stateParams.type);
     //搜索跳转
     $scope.search = function () {
         var date1, time1, date2, time2
@@ -188,8 +186,20 @@ myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParam
         }
         if ($scope.dt2) {
             date2 = new Date($scope.dt2)
-            time2 = date2.valueOf()
+            //判断第一个条件，2个取值的日期是不是同一天
+            if (time1 == date2.valueOf()) {
+                //一天的事件戳是60*60*24 =86400，不过我们js里是一毫秒为单位，所以要加3个0
+                time2 = date1.valueOf() + 86399000
+            } //再进行第二个条件的判断，2个取值的日期是不是相邻的一天
+            else if (date2.valueOf - time1 <= 86400000) {
+                time2 = date2.valueOf() + 86399000
+            } //都不是则是正常赋值
+            else {
+                time2 = date2.valueOf()
+            }
         }
+        // console.log(time1)
+        // console.log(time2)
         $state.go('backstagpe.list', {
             title: $scope.title,
             author: $scope.author,
@@ -200,7 +210,6 @@ myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParam
         }, {
             reload: true
         });
-        console.log($stateParams.status)
     }
     //清空跳转
     $scope.empty = function () {
@@ -215,55 +224,86 @@ myApp.controller('ArticleListCtrl', function ($scope, $http, $state, $stateParam
             reload: true
         });
     }
-    // 传参
-    //     title: $scope.title,
-    //     author: $scope.author,
-    //     type: $scope.type,
-    //     status: $scope.status,
-    //     page: 1
 
-    // var tomorrow = new Date();
-    // tomorrow.setDate(tomorrow.getDate() + 1);
-    // var afterTomorrow = new Date();
-    // afterTomorrow.setDate(tomorrow.getDate() + 1);
-    // $scope.events = [{
-    //         date: tomorrow,
-    //         status: 'full'
-    //     },
-    //     {
-    //         date: afterTomorrow,
-    //         status: 'partially'
-    //     }
-    // ];
-
-    // function getDayClass(data) {
-    //     var date = data.date,
-    //         mode = data.mode;
-    //     if (mode === 'day') {
-    //         var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
-
-    //         for (var i = 0; i < $scope.events.length; i++) {
-    //             var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
-
-    //             if (dayToCheck === currentDay) {
-    //                 return $scope.events[i].status;
-    //             }
-    //         }
-    //     }
-
-    //     return '';
-    // }
-});
-//类型过滤
-myApp.constant('form', {
-    0: '首页Banner',
-    1: '找职位Banner',
-    2: '找精英Banner',
-    3: '行业大图'
-});
-
-myApp.filter('job', function (form) {
-    return function (index) {
-        return form[index]
+    //article上下线
+    $scope.onlinenet = function () {
+        var id = this.list.id;
+        var Status
+        this.list.status == 1 ? Status = 2 : Status = 1;
+        console.log(id)
+        console.log(Status)
+        $http({
+            method: "put",
+            url: "/carrots-admin-ajax/a/u/article/status",
+            params: {
+                id: id,
+                status: Status
+            }
+        }).then(function (res) {
+            $state.reload();
+            var dialog = bootbox.dialog({
+                message: Status == 2 ? "上架成功" : "下架成功",
+                closeButton: false
+            });
+            setTimeout(function () {
+                dialog.modal('hide');
+            }, 800);
+        })
+    }
+    //article图片删除
+    $scope.delete = function () {
+        var id = this.list.id;
+        console.log(id);
+        bootbox.confirm({
+            message: "确定删除图片?",
+            buttons: {
+                confirm: {
+                    label: '确定',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '取消',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                // console.log(result)
+                if (result == true) {
+                    $http({
+                        method: "delete",
+                        url: "/carrots-admin-ajax/a/u/article/" + id,
+                    }).then(function (res) {
+                        if (res.data.message == "success") {
+                            $state.reload();
+                            var dialog = bootbox.dialog({
+                                message: "删除成功",
+                                closeButton: false
+                            });
+                            setTimeout(function () {
+                                dialog.modal('hide');
+                            }, 800);
+                        } else {
+                            var dialog = bootbox.dialog({
+                                message: "删除失败",
+                                closeButton: false
+                            });
+                            setTimeout(function () {
+                                dialog.modal('hide');
+                            }, 800);
+                        }
+                    })
+                } else {}
+            }
+        });
+    }
+    //新增页面的跳转
+    $scope.add = function () {
+        $state.go('backstagpe.add');
+    }
+    //编辑页面
+    $scope.compile = function (id) {
+        $state.go('backstagpe.add', {
+            id: id
+        })
     }
 });

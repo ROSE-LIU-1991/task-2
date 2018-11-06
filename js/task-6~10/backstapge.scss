@@ -71,6 +71,10 @@ header {
     padding: 0;
 }
 
+.organcolor1 {
+    background-color: #74d9ff;
+}
+
 .organcolor2 {
     padding: .15rem 0;
     font-size: .14rem;
@@ -256,4 +260,8 @@ h4 a:hover {
     color: #fff;
     background-color: #ff0000;
     text-decoration: none;
+}
+
+.modal {
+    top: 25%;
 }

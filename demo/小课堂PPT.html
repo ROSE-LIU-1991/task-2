@@ -37,8 +37,8 @@
 		<div class="slides">
 			<section class="txt">
 				<h1></h1>
-				<h2>小课堂【js-01】</h2>
-				<h4>课题：JS有哪些数据类型？</h4>
+				<h2>小课堂【js-04】</h2>
+				<h4>课题：json是什么，如何处理转义？</h4>
 				<p>分享人：吴胜</p>
 			</section>
 
@@ -61,13 +61,9 @@
 					</h3>
 				</section>
 				<section>
-					<h3 class="txt-word-2">
-						js中有两种数据类型<br><br>
-					</h3>
 					<h5 class="txt-word-3">
-						&emsp;&emsp;简单数据类型（也称基本数据类型）：它分别是Undefined;Null;Boolean;Number和String。<br><br>
-						&emsp;&emsp;引用数据类型（也称复杂数据类型），其中包括Object；Array；Function等等。<br><br>
-					</h5>
+						&emsp;&emsp;最早的程序猿们使用XML来进行传递数据。虽然XML本身不算复杂，但是，加上DTD、XSD、XPath、XSLT等一大堆复杂的规范以后 ，XML使用起来很繁琐了。2001年由 Douglas
+						Crockford 提出JSON 格式后，JSON便慢慢取代了繁琐笨重的 XML 格式。
 				</section>
 			</section>
 
@@ -76,131 +72,130 @@
 					<h3>2.知识剖析</h3>
 				</section>
 				<section>
-					<img src="./img/demo/1.png">
+					<h5 class="txt-word-3">&emsp;&emsp;JSON (JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。相比 XML 格式，JSON
+						格式有两个显著的优点：书写简单，一目了然；符合 JavaScript
+						原生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已经成为各大网站交换数据的标准格式，并被写入标准。</h5>
+					<h5 class="txt-word-3">PS:每个 JSON 对象就是一个值,可能是一个数组或对象,也可能是一个原始类型的值。总之,只能是一个值，不能是两个或更多的值。</h5>
 				</section>
 				<section>
-					<h3>辨别数据</h3>
-					<h5 class="txt-word-3">一般情况下我们可以用typeof()来辨别数据的类型</h5>
-					<p class="txt-word-3"> typeof （ 123 ）　　 //Number<br>
-						typeof （ 'abc' ）　　//String<br>
-						typeof （ true ） //Boolean<br>
-						typeof （ undefined ） //Undefined<br>
-						typeof （ null ） //Object<br>
-						typeof （ { } ） //Object<br>
-						typeof （ [ ] ） //Object<br>
-						typeof （ function (){} ） //Function
-					</p>
+					<h3>JSON 对值的类型和格式规定</h3>
+					<ul>
+						<li>复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。
+						</li>
+						<li>原始类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和null（不能使用NaN, Infinity, -Infinity和undefined）。
+						</li>
+						<li>字符串必须使用双引号表示，不能使用单引号。
+						</li>
+						<li>对象的键名必须放在双引号里面。
+						</li>
+						<li>数组或对象最后一个成员的后面，不能加逗号。
+						</li>
+						<br>
+						<h5 class="txt-word-3">ps:注意，null、空数组和空对象都是合法的 JSON 值。</h5>
+					</ul>
 				</section>
 				<section>
-					<h4 class="txt-word-3">经过试验后发现，typeof虽然能够辨别出数据的类型，但是因为null、{}、[]都是算是一个空的对象，所以它返回的都是Object，typeof 返回值有6中类型：
-						“number,” “string,” “boolean,” “object,” “function,” 和 “undefined.”。</h4>
+					<h3>JSON语法</h3>
+					<ul>
+						<li>数据在名称/值对,中 </li>
+						<li> 数据由逗号分隔</li>
+						<li> 大括号保存对象</li>
+						<li>中括号保存数组</li>
+					</ul>
 				</section>
 				<section>
-					<h3>基本数据和引用数据的特点和区别</h3>
-					<h4 class="txt-word-3">基本数据类型</h4>
-					<p class="txt-word-3"> 基本数据类型的值是不可变的<br>
-						任何方法都无法改变一个基本类型的值<br>
-						比如有一个字符串：<br>
-						var s = "hello";<br>
-						s.toUpperCase()//HELLO;<br>
-						alert(s)//hello<br>
-					</p>
-					<h4 class="txt-word-3">虽然s.toUpperCase()将hello改变为了HELLO，但是s的值没有变化，可得知：这里调用toUpperCase()方法后返回的只是一个新的字符串，跟原先定义的变量s并没有关系。</h4>
-				</section>
-				<section>
-					<h4>基本数据类型不可以添加属性和方法</h4>
-					<p class="txt-word-3">
-						var p = "change";<br>
-						p.age = 29;<br>
-						p.method = function(){alert(name)};<br>
-						alert(p.age)//undefined<br>
-						alert(p.method)//undefined<br>
-					</p>
-					<h4 class="txt-word-3">通过上面的代码，我们发现不能给基本类型添加属性和方法 ,也再次说明基本类型是不可变的</h4>
-				</section>
-				<section>
-					<h4>基本数据类型的赋值是简单赋值</h4>
-					<p class="txt-word-3">
-						如果从一个变量向另一个变量赋值基本类型的值，会在变量对象上创建一个新值， 然后把该值复制到为新变量分配的位置上<br>
-						var a = 10;<br>
-						var b = a;<br>
-						a++;<br>
-						alert(a)//11<br>
-						alert(b)//10
-					</p>
-					<h4 class="txt-word-3">上面的代码中，a中保存的值是10.当使用a的值来初始化b时， b中也保存了值10.但b中的10和a中的10是没有任何关联的。
-						b值中的10只是a值中的一个副本. 所以这a,b两个变量可以参与任何操作而不会相互影响。</h4>
-				</section>
-				<section>
-					<h4>基本数据类型的比较是值的比较</h4>
-					<p class="txt-word-3">
-						var person1 = 'abc';<br>
-						var person2 = 'abc';<br>
-						alert(person1 == person2); // true;<br>
-						var person1 = 'abc';<br>
-						var person2 = 'abcd';<br>
-						alert(person1 == person2); // false;<br>
-						var person1 = 1;<br>
-						var person2 = true;<br>
-						alert(person1 == person2); // true;
-					</p>
-					<h4 class="txt-word-3">从person1 和person2的3个对比，我可以发现，它们的数据对比是它们值的比较，而不是数据类型的比较.</h4>
-				</section>
-				<section>
-					<h4 class="txt-word-3">引用数据类型</h4>
-					<h5 class="txt-word-3">引用数据类型的特点和基本数据类型相反。
+					<h5 class="txt-word-3">
+						var json = {<br>
+						"password":123456,<br>
+						"name":"myname",<br>
+						"Booleans":true,<br>
+						"Array":[x,y,z],<br>
+						"object":{}<br>
+						}
 					</h5>
-					<h5 class="txt-word-3">引用类型的值是可以改变的</h5>
-					<p class="txt-word-3">
-						引用数据类型<br>
-						引用类型的值是可以改变的<br>
-						var a = [1,2,3];<br>
-						a[0] = 0;//更改数组的一个元素<br>
-						a[3] = 4;//给数组增加一个元素<br>
-						alert（a);//0.2.3.4;
-					</p>
-					<h4 class="txt-word-3">上面代码中可以看到，a的数组第一个1更改为了0，而且还添加一个a原来没有的第四个值4.我们可得知引用类型的值是可以改变的。</h4>
 				</section>
 				<section>
-					<h4 class="txt-word-3">引用类型可以添加属性和方法</h4>
-					<p class="txt-word-3">
-						var person = {};<br>
-						person.name = "change";<br>
-						person.say = function(){alert("hello");}<br>
-						alert(person.name)//change<br>
-						alert(person.say)//function(){alert("hello");}<br>
-					</p>
-					<h4 class="txt-word-3">上面代码中可以得知，引用类型的数据可以给其添加属性和方法。</h4>
+					<h3>json的嵌套使用</h4>
+						<p class="txt-word-3">
+							myObj = {<br>
+							"name":"jnshu",<br>
+							"alexa":1000,<br>
+							"sites": {<br>
+							"site1":"www.jnshu.com",<br>
+							"site2":"m.jnshu.com",<br>
+							"site3":"c.jnshu.com"<br>
+							}<br>
+							}<br>
+							console.log(myObj)<br>
+							//输出结果：<br>
+							// Object {name: "jnshu", alexa: 1000, sites: Object}
+						</p>
 				</section>
 				<section>
-					<h4 class="txt-word-3">引用类型的赋值是对象引用</h4>
+					<h3>json对象</h3>
+					<p class="txt-word-3">&emsp;&emsp;JSON对象是 JavaScript 的原生对象，用来处理 JSON 格式数据。
+						通俗点讲，每个符合JSON格式的值就是一个JSON对象。也就是说，每个JSON对象，都是一个值。一个JSON对象对应且只对应一个值，要么是简单类型的值，要么是复合类型的值。</p>
+					<h4 class="txt-word-3">它有两个方法：JSON.stringify()和JSON.parse()。</h4>
+				</section>
+				<section>
+					<h3>JSON.stringify有三个参数</h3>
 					<p class="txt-word-3">
-						var a = {};<br>
-						var b= a;<br>
-						a.name = "change";<br>
-						alert(a.name)//change;<br>
-						alert(b.name)//change；<br>
-						b.age = 29;<br>
-						alert(a.age)//29<br>
-						alert(b.age)//29
+						JSON.stringify(value [, replacer] [, space])<br>
+						<br>
+						value：是必须要的字段。就是你输入的值，比如数组啊，对象啊等等。<br>
+						<br>
+						replacer：这个是可选的。它又分为2种方式，一种是方法，第二种是数组。<br>
 					</p>
 				</section>
 				<section>
-					<h4 class="txt-word-3">当从一个变量向另一个变量赋值引用类型的值时， 同样也会将储存在变量中对象的值复制一份放到为新变量分配的空间中.
-						因为引用类型保存在变量中的值是对象在堆内存中的地址（这个地址就是指向对象在堆内存里的指针)，所以两个变量都保存了同一个对象的地址，
-						而这两个地址指向了同一个对象，因此，对于这2个变量，我们改变任何一个变量，都会互相影响。</h4>
+					<h5 class="txt-word-3">当replacer是方法时，其作用类似给传入的对象的每一个符合方法条件的值一个方法进行迭代</h5>
+					<p class="txt-word-3">
+						var obj2 ={<br>
+						a:1,<br>
+						b:2
+						};
+						<br>
+						var j2 =JSON.stringify(obj2,function(key,value){<br>
+						if(typeof value === "number"){<br>
+						value = 2 * value;<br>
+						}<br>
+						return value;<br>
+						});<br>
+						conlose.log(j2); //("a":2,"b":4)<br>
+					</p>
+					<h5 class="txt-word-3">对原对象中符合要求的每一个值传入一个方法，类似于数组中的迭代，返回迭代后的值。</h5>
 				</section>
 				<section>
-					<h4 class="txt-word-3">引用类型的比较是引用的比较</h4>
+					<h5 class="txt-word-3">当replacer是数组时，其作用是对传入的对象值进行筛选
+					</h5>
 					<p class="txt-word-3">
-						var person1 = {};<br>
-						var person2 = {};<br>
-						alert.log(person1 == person2)//false<br>
+						var obj2 ={
+						a:1,<br>
+						b:2,<br>
+						c:3,<br>
+						d:4<br>
+						};<br>
+						var j3 = josn.stringify(obj3,["d","c"]);<br>
+						conlose.log(j3);//("d":4,"c":3)
 					</p>
-					<h4 class="txt-word-3">
-						引用类型的比较是引用的比较，换句话说，就是比较两个对象保存在栈区的指向堆内存的地址是否相同，此时，
-						虽然p1和p2看起来 都是一个字符串，但是他们保存在栈区中的指向堆内存的地址却是不同的，所以两个对象不相等。
-					</h4>
+					<h5 class="txt-word-3">对obj3对象的值进行了筛选，只能选择和数组中的值相等的key的值</h5>
+				</section>
+				<section>
+					<h5 class="txt-word-3">第三个参数是对显示数据进行排版，对每一个键值对换行处理。值可以是数字或字符串。当起为数字时，一个数字代表键值对前面的空格，
+						数字不大于10。字符串同理，只是将空格换成相应的字符，字符最多不能大于10个。</h5>
+					<p class="txt-word-3">
+						var obj4= {
+						p1:1,
+						p2:2
+						};<br>
+						var j4 = json.stringify(obj4,null,4);<br>
+						console.log(jf);<br>
+						//{<br>
+						//&emsp;&emsp; "p1":1,<br>
+						// &emsp;&emsp;"p2":2<br>
+						//}
+					</p>
+					<h5 class="txt-word-3">每一项键值对独占一行并且缩进四个空格</h5>
 				</section>
 			</section>
 			<section>
@@ -208,36 +203,44 @@
 					<h3>3.常见问题</h3>
 				</section>
 				<section>
-					<h3 class="txt">jAVAScirpt数据能否转换？</h3>
+					<ul>
+						<li>为什么需要转义？</li>
+						<li>json如何处理转义？</li>
+						<li>由JSON字符串生成JSON对象时的转义问题？</li>
+					</ul>
 				</section>
 			</section>
 			<section>
 				<section>
 					<h3>4.解决方案</h3>
-					<h4 class="txt-word-3">js中的不同类型数据在运算过程中会自动进行转换。</h4>
-					<h4 class="txt-word-3">
-						var str1 = "a";<br>
-						var num1 = "1";<br>
-						var bool1 = "true";<br>
-						var bool2 = "false";<br>
-						alert.log(str1 + num1);<br>
-						alert.log(str1 + bool1);<br>
-						alert.log(num1 + bool1);<br>
-						alert.log(bool1 + bool2);<br>
-					</h4>
 				</section>
 				<section>
-					<h4 class="txt-word-3">
-						运算时数据转换的运算规则为：<br>
-						Number+String=String<br>
-						数值和字符串相加等于字符串。<br>
-						Number+Boolean=Number<br>
-						数值和布尔值相加等于数值。<br>
-						String+Boolean=String<br>
-						字符串和布尔值相加等于字符串。<br>
-						Boolean+Boolean=Number<br>
-						布尔值和布尔值相加等于数值。
-					</h4>
+					<h3>为什么需要转义？</h3>
+					<p class="txt-word-3">
+						在js中我们使用的js对象进行处理，但是在与后端数据交换的时候，我们需要发送规定的json格式的字符串，所以在给后端发送或接受数据的时候，需要转义。
+					</p>
+				</section>
+				<section>
+					<h3>json如何处理转义</h3>
+					<ul>
+						<li>json字符串转js对象，调用parse方法：<br>
+							js对象 = JSON.parse(json字符串);</li>
+						<li>
+							js对象转json字符串，调用stringify方法：<br>
+							json字符串 = JSON.stringify(js对象);
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>由JSON字符串生成JSON对象时的转义问题
+					</h3>
+					<h5 class="txt-word-3">&emsp;&emsp;原因：在用JSON.parse解析JSON对象时会对其中的转义符进行两次解析。<br></h5>
+					<p class="txt-word-3">
+						&emsp;&emsp;比如'{"a":"b","b":"\\\\"}' //{a: "b", b: "\"}，<br>
+						首先解析器提取单引号括起来的字符串时认为第一个‘\’是用来转义第二个‘\’的 ,第三个‘\是用来’转义第四个‘\’， 结果输出字符串是{“a”:“b”,“b”:"\"}。<br>
+						然后正式转为js对象的时候还有一次转义， 也就是实际输出字符转中的第一个\转义第二个\（此时只有两个\），结果输出字符串是{“a”:“b”,“b”:""}。<br>
+						&emsp;&emsp;所以说我们想要输出"“时需要输入四个”"，不然会出错。
+					</p>
 				</section>
 			</section>
 			<section>
@@ -252,77 +255,39 @@
 				</section>
 				<section>
 					<h4 class="txt-word-3">
-						栈，堆是什么？
+						我们先看2串代码
 					</h4>
-				</section>
-				<section>
-
 					<h4 class="txt-word-3">
-						在ECMAScript中，变量可以存放两种类型的值，即原始值和引用值。<br>
-						原始值指的就是代表原始数据类型（基本数据类型）的值，<br>
-						引用值指的就是复合数据类型(引用数据类型)的值。<br>
-						原始值与引用值对应存在两种结构的内存即栈和堆
-					</h4>
-				</section>
-				<section>
-					<img src="./img/demo/3.png"><br>
-					<h4 class="txt-word-3">
-						栈是一种后进先出的数据结构。原始值是存储在栈中的简单数据，它们的值直接存储在变量访问的位置
-					</h4>
-				</section>
-				<section>
-					<img src="./img/demo/4.png">
-					<h4 class="txt-word-3">
-						堆是基于散列算法的数据结构。<br>
-						在javascript中，引用值是用来引用存储在堆中的对象，引用出来的对象是存放在堆中的。<br>
-						也就是说，存储在变量处的值(即指向对象的变量，存储在栈中）是一个指针，指向存储在堆中的实际对象<br>
+						{name:“myname”,password:123456}//它是js对象<br>
+						和<br>
+						{“name”:“myname”,“password”:123456}//它是json<br>
+						那么js对象和json有什么不一样的地方？<br>
 					</h4>
 				</section>
 				<section>
 					<h4 class="txt-word-3">
-						我看来下面这串代码<br>
-						var obj = new Object();<br>
-						obj存储在栈中，它指向于new Object()这个对象，<br>
-						而new Object()是存放在堆中的。
+						JSON 是 JS 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。
 					</h4>
+					<p class="txt-word-3">
+						例：<br>
+						var obj = {a: 'Hello', b: 'World'}; //这是一个对象，注意键名也是可以使用引号包裹的<br>
+						<br>
+						var json = '{"a": "Hello", "b": "World"}'; //这是一个 JSON 字符串，本质是一个字符串
+					</p>
+				</section>
+				<section>
+					<h3>它们的区别</h3>
+					<img style="border:none;box-shadow: none;" src="./img/2018-11-7.C组-js4/5.png">
 				</section>
 			</section>
 			<section>
 				<h3>7.参考文献</h3>
-				<h4><a class="txt-a" href="https://blog.csdn.net/liuguochao1024/article/details/79147418">js的数据类型</a></h4>
-				<h4><a class="txt-a" href="https://www.cnblogs.com/chaoyuehedy/p/7894971.html">引用类型与原始类型的区别</a></h4>
-				<h4><a class="txt-a" href="https://blog.csdn.net/weixin_42392456/article/details/81213864">js常见问题总结（1）——数据类型相关</a></h4>
-				<h4><a class="txt-a" href="https://www.jb51.net/article/135920.htm">JavaScript基础心法 数据类型</a></h4>
+				<h4><a class="txt-a" href="http://javascript.ruanyifeng.com/stdlib/json.html">json对象</a></h4>
+				<h4><a class="txt-a" href="http://www.w3school.com.cn/json/json_syntax.asp">json语法</a></h4>
+				<h4><a class="txt-a" href="https://blog.csdn.net/robotech_er/article/details/40260377">json转义问题</a></h4>
 			</section>
 			<section>
 				<h3>8.更多讨论</h3>
-			</section>
-			<section>
-				<h4 class="txt-word-3">
-					那为什么引用值要放在堆中，而原始值要放在栈中.
-				</h4>
-			</section>
-			<section>
-				<h4 class="txt-word-3">
-					js中有一句话：能量是守衡的，无非是时间换空间，空间换时间的问题。<br>
-					<br>
-					&emsp;&emsp;堆比栈大，栈比堆的运算速度快。<br>
-					&emsp;&emsp;引用数据类型是一个复杂的结构，并且可以自由扩展，如：数组
-					可以无限扩充，对象可以自由添加属性。将他们放在堆
-					<!-- 
-				    -->中是为了不影响栈的效率。而是通过引用的方式查找到
-					<!-- 
-				    -->堆中的实际对象再进行操作。<br>
-					&emsp;&emsp;相对于引用数据类型而言，简单数据类型就比较稳定，
-					<!-- 
-					-->并且它只占据很小的内存。不将简单数据类型放在堆是
-					<!-- 
-					-->因为通过引用到堆中查找实际对象是要花费时间的，而
-					<!-- 
-					 -->这个综合成本远大于直接从栈中取得实际值的成本。所
-					<!-- 
-					 -->以简单数据类型的值直接存放在栈中。
-				</h4>
 			</section>
 			<section>
 				<h4>鸣谢</h4>
