@@ -1,0 +1,32 @@
+/* introduce.wxss */
+.border1 {
+  border-bottom: 1px solid #ccc;
+  padding:.1rem;
+}
+
+.table1 {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.table {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+}
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #eee;  
+    text-align: center;  
+    line-height: 80rpx;
+    background: #fff;
+    font-size: 14px;
+}  
+.on{ 
+  border-bottom: 5rpx solid rgb(54, 190, 54);
+}  
+.swiper-tab-list{   
+    display: inline-block;  
+    width: 33.3%; 
+}
